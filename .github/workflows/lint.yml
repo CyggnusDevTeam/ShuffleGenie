@@ -1,11 +1,16 @@
-name: CI/Lint
-on: push
+name: reviewdog
+on: [pull_request, push]
 jobs:
-  build:
+  eslint:
+    name: runner / eslint
     runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      pull-requests: write 
     steps:
-    - uses: actions/checkout@v2
-    - name: Install modules
-      run: npm i
-    - name: Run ESLint
-      run: npm run lint
+      - uses: actions/checkout@v2
+      - uses: reviewdog/action-eslint@v1
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          reporter: github-pr-review # Change reporter.
+          eslint_flags: 'src/'
