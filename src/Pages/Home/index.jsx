@@ -1,13 +1,13 @@
 import React from 'react';
-import logo from '../Img/logo.svg';
-import './App.css';
+import logo from '../../Img/logo.svg';
+import './Home.css';
 
-function App() {
+function Home() {
   return (
     <div className="App">
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
-        <p>
+        <p className="mx-auto bg-gray-200 rounded-xl shadow border p-8 m-10">
           Edit <code>src/App.js</code> and save to reload.
         </p>
         <a
@@ -22,4 +22,4 @@ function App() {
   );
 }
 
-export default App;
+export default Home;
