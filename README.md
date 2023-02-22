@@ -1,46 +1,17 @@
-# My Awesome Project
+# Shuffle Genie
 
-# Context
-This project is a back-office tool for storing and seeking error data that occurred with customers.
+## Try it [*here*](https://cyggnus.github.io/ShuffleGenie/).
+
+## About
+With this web app, you can create random Marvel Snap decks in a fun way using cards from your collection.
 
 ## Used Technologies
 
-Front-end:
-> Developed using: React, Redux, CSS3, HTML5, Redis, ES6
+> Developed using: React, Context, TailwindCSS, HTML5, Cheerio...
 
-Back end:
-> Developed using: Nodejs, Expressjs, Mongodb, MySQL, ES6
+## Important Info
+All card data comes from [Marvel Snap Zone©](https://marvelsnapzone.com/) & [MarvelSnap.Pro©](https://marvelsnap.pro/).
 
+To use this app you just need to provide your [_profile url_](https://marvelsnapzone.com/users/).
 
-## Installing dependencies
-
-> Backend
-`` `Bash
-CD API/
-NPM Install
-`` `
-> Frontand
-`` `Bash
-CD SRC/
-NPM Install
-`` `
-## Performing application
-
-* To run the back end:
-
-  `` `
-  CD API/ && NPM START
-  `` `
-* To run the front end:
-
-  `` `
-    CD SRC/ && NPM START
-  `` `
-
-## Performing tests
-
-* To run all the tests:
-
-  `` `
-    NPM TEST
-  `` `
+_Shuffle Genie is not affiliated with Marvel, Nuverse, Second Dinner or Marvel Snap Zone._
