@@ -8,13 +8,14 @@ jobs:
       contents: read
       pull-requests: write
     steps:
+      - uses: actions/checkout@v3
       - uses: actions/setup-node@v3
         with:
           node-version: '18.13'
-          cache: 'yarn'
-      - uses: reviewdog/action-setup@v1
-      - uses: reviewdog/action-eslint@v1
+
+      - name: eslint
+        uses: reviewdog/action-eslint@v1
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          reporter: github-pr-review # Change reporter.
+          reporter: github-check
           eslint_flags: 'src/'
