@@ -1,6 +1,8 @@
 name: reviewdog
 on: [pull_request, push]
 jobs:
+  setup-reviewdog:
+    uses: reviewdog/action-setup@v1
   eslint:
     name: runner / eslint
     runs-on: ubuntu-latest

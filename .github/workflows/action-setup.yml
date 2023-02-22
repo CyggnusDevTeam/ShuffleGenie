@@ -1,6 +1,0 @@
-- name: Setup reviewdog
-jobs:
-  setup-reviewdog:
-    steps:
-      - uses: reviewdog/action-setup@v1
-      - run: reviewdog -version
