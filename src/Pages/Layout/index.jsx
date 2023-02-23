@@ -10,11 +10,13 @@ function Layout() {
             <Link to="/">Home</Link>
           </li>
           <li>
+            <Link to="/sync">Sync your collection</Link>
+          </li>
+          <li>
             <Link to="/help">Help</Link>
           </li>
         </ul>
       </nav>
-
       <Outlet />
     </>
   );

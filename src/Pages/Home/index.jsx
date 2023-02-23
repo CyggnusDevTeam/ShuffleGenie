@@ -1,23 +1,20 @@
-import React from 'react';
-import logo from '../../Img/logo.svg';
+import React, { useContext } from 'react';
+import AppContext from '../../Context/AppContext';
 import './Home.css';
+import Card from '../../Components/Card';
+import Spinner from '../../Components/Spinner';
 
 function Home() {
+  const { collection, isLoading, cardsNum } = useContext(AppContext);
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p className="mx-auto bg-gray-200 rounded-xl shadow border p-8 m-10">
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer">
-          Learn React
-        </a>
-      </header>
+    <div>
+      {isLoading && <Spinner />}
+      {collection && <p>{`You have ${cardsNum} cards on your collection!`}</p>}
+      {collection &&
+        collection.map((card) => (
+          <Card key={card.name} cardName={card.name} cardImg={card.imgUrl} />
+        ))}
     </div>
   );
 }
