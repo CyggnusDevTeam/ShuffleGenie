@@ -52,9 +52,9 @@ function AppProvider({ children }) {
         setCollection,
         lastCalledTime,
         setLCT,
-        setIsLoading
+        setIsLoading,
+        setCardsNum,
       );
-      setCardsNum(collection.length + 1);
     };
     getCollectionData();
   }, [username]);
