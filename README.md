@@ -12,6 +12,6 @@ With this web app, you can create random Marvel Snap decks in a fun way using ca
 ## Important Info
 All card data comes from [Marvel Snap Zone©](https://marvelsnapzone.com/) & [MarvelSnap.Pro©](https://marvelsnap.pro/).
 
-To use this app you just need to provide your [_profile url_](https://marvelsnapzone.com/users/).
+To use this app you just need to provide your [_username_](https://marvelsnapzone.com/users/).
 
 _Shuffle Genie is not affiliated with Marvel, Nuverse, Second Dinner or Marvel Snap Zone._
