@@ -1,8 +1,26 @@
-import React from 'react';
+import React, { useContext } from 'react';
+// import AppContext from '../../Context/AppContext';
 import logo from '../../Img/logo.svg';
 import './Home.css';
 
 function Home() {
+
+  // const {
+  //   collection,
+  // } = useContext(AppContext);
+
+  // useEffect(() => {
+  //   const checkURL = () => {
+  //     const urlFromLocal = localStorage.getItem('profileURL');
+  //     if (urlFromLocal !== null) {
+  //       setProfileURL(urlFromLocal)
+  //     } else {
+  //       setProfileURL(DEFAULT_URL)
+  //     }
+  //   }
+  //   checkURL();
+  // }, []);
+
   return (
     <div className="App">
       <header className="App-header">
