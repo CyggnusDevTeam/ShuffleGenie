@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/ShuffleGenie/static/css/main.b9229e7c.css",
+    "main.js": "/ShuffleGenie/static/js/main.82bf9ae9.js",
+    "static/js/787.9d39fc0f.chunk.js": "/ShuffleGenie/static/js/787.9d39fc0f.chunk.js",
+    "index.html": "/ShuffleGenie/index.html",
+    "main.b9229e7c.css.map": "/ShuffleGenie/static/css/main.b9229e7c.css.map",
+    "main.82bf9ae9.js.map": "/ShuffleGenie/static/js/main.82bf9ae9.js.map",
+    "787.9d39fc0f.chunk.js.map": "/ShuffleGenie/static/js/787.9d39fc0f.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.b9229e7c.css",
+    "static/js/main.82bf9ae9.js"
+  ]
+}
