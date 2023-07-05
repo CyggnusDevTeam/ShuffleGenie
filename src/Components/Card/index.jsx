@@ -4,8 +4,8 @@ import PropTypes from 'prop-types';
 function Card({ cardName, cardImg }) {
   return (
     <div className="inline-block">
-      <h2>{cardName}</h2>
-      <img className="max-w-sm" src={cardImg} alt={cardName} />
+        <h2 className='text-gray-text text-center'>{cardName}</h2>
+        <img className="max-w-sm" src={cardImg} alt={cardName} />
     </div>
   );
 }

@@ -2,6 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 import createRoutes from './Router/index';
 import reportWebVitals from './reportWebVitals';
+import './styles/global.css';
 import './index.css';
 
 export default function App() {

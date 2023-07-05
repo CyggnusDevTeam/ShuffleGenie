@@ -1,22 +1,11 @@
 import React from 'react';
-import { Outlet, Link } from 'react-router-dom';
+import { Outlet } from 'react-router-dom';
+import Nav from '../../Components/Nav';
 
 function Layout() {
   return (
     <>
-      <nav>
-        <ul>
-          <li>
-            <Link to="/">Home</Link>
-          </li>
-          <li>
-            <Link to="/sync">Sync your collection</Link>
-          </li>
-          <li>
-            <Link to="/help">Help</Link>
-          </li>
-        </ul>
-      </nav>
+      <Nav/>
       <Outlet />
     </>
   );
