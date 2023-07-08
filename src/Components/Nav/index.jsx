@@ -7,33 +7,24 @@ function Nav() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20">
         <div className="flex items-center justify-between h-20">
           <div className="flex items-center">
-            <h1 className="text-white text-2xl font-bold">ShuffleGenie</h1>
+            <h1 className="text-white text-3xl font-bold">ShuffleGenie</h1>
           </div>
           <div className="flex items-center">
             <ul className="flex space-x-4">
               <li>
-                <Link
-                  to="/"
-                  className="text-white hover:bg-gray-700 px-3 py-2 rounded-md text-md font-medium"
-                >
+                <Link to="/" className="navLink">
                   Home
                 </Link>
               </li>
 
               <li>
-                <Link
-                  to="/sync"
-                  className="text-white hover:bg-gray-700 px-3 py-2 rounded-md text- font-medium"
-                >
+                <Link to="/" className="navLink">
                   lorem input
                 </Link>
               </li>
 
               <li>
-                <Link
-                  to="/help"
-                  className="text-white hover:bg-gray-700 px-3 py-2 rounded-md text- font-medium"
-                >
+                <Link to="/help" className="navLink">
                   Help
                 </Link>
               </li>
@@ -41,7 +32,7 @@ function Nav() {
           </div>
           <div>
             <button type="button" className="defaultButton">
-              HELP
+              Profile
             </button>
           </div>
         </div>

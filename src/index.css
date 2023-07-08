@@ -18,9 +18,10 @@ code {
 
 /*----------Custom Styles----------*/
 
+/* Default Button */
 @layer components {
   .defaultButton {
-    @apply font-bold px-12 py-4 text-sm text-white bg-violet-1 rounded-full shadow-md focus:outline-none focus:ring-1 focus:ring-violet-1 focus:ring-opacity-75;
+    @apply max-w-fit font-bold px-12 py-4 text-sm text-white bg-violet-1 rounded-full shadow-md focus:outline-none focus:ring-1 focus:ring-violet-1 focus:ring-opacity-75;
   }
   .defaultButton:hover {
     @apply bg-violet-2;
@@ -28,5 +29,30 @@ code {
 
   .defaultButton:active {
     @apply transform scale-95;
+  }
+}
+
+/* Nav Link */
+@layer components {
+  .navLink {
+    @apply text-white px-3 py-2 rounded-md font-medium;
+  }
+
+  .navLink:hover {
+    @apply bg-gray-1;
+  }
+}
+
+/* Title 1 */
+@layer components {
+  .h1Title {
+    @apply text-gray-text text-center font-bold text-6xl;
+  }
+}
+
+/* Default Page Text */
+@layer components {
+  .defaultPageText {
+    @apply text-gray-text text-center font-bold text-lg;
   }
 }

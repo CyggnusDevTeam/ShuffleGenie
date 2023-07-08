@@ -1,4 +1,4 @@
-import { DEFAULT_USER } from './variables';
+import { DEFAULT_USER } from "./variables";
 
 const { REACT_APP_API_URL } = process.env;
 
@@ -15,6 +15,7 @@ const makeRequest = async (
     const response = await fetch(`${API_URL}${DEFAULT_USER}`);
     const data = await response.json();
     setCollection(data);
+
     setCardsNum(data.length + 1);
     setIsLoading(false);
   } else {
@@ -34,7 +35,7 @@ const fetchCollection = async (
   setIsLoading,
   setCardsNum
 ) => {
-  if (lastCalledTime === 'first') {
+  if (lastCalledTime === "first") {
     await makeRequest(user, setCollection, setLCT, setIsLoading, setCardsNum);
   }
   // Do not call the API too many times
