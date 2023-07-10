@@ -1,22 +1,38 @@
-import React, { useContext } from "react";
-import { useNavigate } from "react-router-dom";
-import AppContext from "../../Context/AppContext";
+import React, { useContext } from 'react';
+import { useNavigate } from 'react-router-dom';
+import AppContext from '../../Context/AppContext';
+import populateCollectionData from '../../Utils/populateCollectionData';
 
 function SyncPage() {
-  const { setUsername, setCollection } = useContext(AppContext);
+  const {
+    lastCalledTime,
+    setCardsNum,
+    setCollection,
+    setIsLoading,
+    setLCT,
+    setNeedSync,
+    setUsername,
+  } = useContext(AppContext);
   const navigate = useNavigate();
 
-  const handleChangeUser = (event) => {
-    event.preventDefault();
-    setCollection([]);
-    const user = event.target.elements.username.value;
-    localStorage.setItem("username", user);
+
+  const handleChangeUser = (user) => {
+    localStorage.setItem('activeUser', user);
+    populateCollectionData(user, setCollection, setCardsNum, setIsLoading, lastCalledTime);
     setUsername(user);
-    navigate("/deckPage");
+    setLCT(Date.now());
+    setNeedSync(false);
+    navigate('/collection');
   };
 
+  const handleSubmit = (event) => {
+    event.preventDefault();
+    const userFromEvent = event.target.elements.username.value;
+    handleChangeUser(userFromEvent);
+  }
+  
   return (
-    <form onSubmit={handleChangeUser} className="flex flex-col items-center">
+    <form onSubmit={handleSubmit} className="flex flex-col items-center">
       <label htmlFor="username" className="mb-2 text-gray-text">
         Username:
         <input
@@ -28,7 +44,7 @@ function SyncPage() {
         />
       </label>
       <button className="defaultButton" type="submit">
-        Change user
+        SYNC COLLECTION
       </button>
     </form>
   );
