@@ -1,63 +1,52 @@
 import React, { useState, useMemo, useEffect } from 'react';
 import PropTypes from 'prop-types';
 import AppContext from './AppContext';
-import fetchCollection from '../Utils/dataScraper';
-import { DEFAULT_USER } from '../Utils/variables';
 
 function AppProvider({ children }) {
-  const [collection, setCollection] = useState([]);
-  const [lastCalledTime, setLCT] = useState('first');
-  const [username, setUsername] = useState('');
-  const [isLoading, setIsLoading] = useState(true);
   const [cardsNum, setCardsNum] = useState(0);
+  const [collection, setCollection] = useState([]);
+  const [isLoading, setIsLoading] = useState(true);
+  const [lastCalledTime, setLCT] = useState('first');
+  const [needSync, setNeedSync] = useState(true);
+  const [username, setUsername] = useState('');
 
   const context = useMemo(
     () => ({
-      collection,
-      setCollection,
-      lastCalledTime,
-      setLCT,
-      username,
-      setUsername,
-      isLoading,
-      setIsLoading,
       cardsNum,
       setCardsNum,
+      collection,
+      setCollection,
+      isLoading,
+      setIsLoading,
+      lastCalledTime,
+      setLCT,
+      needSync,
+      setNeedSync,
+      username,
+      setUsername,
     }),
     [collection]
   );
 
-  const checkUser = () => {
-    const usrFromLocal = localStorage.getItem('username');
-    if (usrFromLocal !== null) {
-      if (usrFromLocal !== username) {
-        setUsername(usrFromLocal);
-      }
-    } else {
-      setUsername(DEFAULT_USER);
+  const retrieveUserFromLocalStorage = () => {
+    const usrFromLocal = localStorage.getItem('activeUser');
+    const storedCollection = localStorage.getItem('collection');
+    if (usrFromLocal !== '') {
+      setUsername(usrFromLocal);
+    }
+    if (storedCollection) {
+      const parsedCollection = JSON.parse(storedCollection);
+      const { numOfCards, data } = parsedCollection;
+      setCardsNum(numOfCards);
+      setCollection(data);
+      setNeedSync(false);
+      setIsLoading(false);
     }
   };
 
   useEffect(() => {
-    checkUser();
+    retrieveUserFromLocalStorage();
   }, []);
-
-  useEffect(() => {
-    const getCollectionData = () => {
-      let usrName = username;
-      if (usrName === '') usrName = localStorage.getItem('username');
-      setIsLoading(true);
-      fetchCollection(
-        usrName,
-        setCollection,
-        lastCalledTime,
-        setLCT,
-        setIsLoading,
-        setCardsNum,
-      );
-    };
-    getCollectionData();
-  }, [username]);
 
   return <AppContext.Provider value={context}>{children}</AppContext.Provider>;
 }
