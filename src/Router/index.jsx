@@ -14,7 +14,7 @@ const createRoutes = () => (
       <Routes>
         <Route path="/" element={<Layout />}>
           <Route index element={<Home />} />
-          <Route path="deckPage" element={<DeckPage />} />
+          <Route path="collection" element={<DeckPage />} />
           <Route path="sync" element={<SyncPage />} />
           <Route path="help" element={<Help />} />
           <Route path="*" element={<NoPage />} />
