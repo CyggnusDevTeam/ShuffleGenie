@@ -24,8 +24,8 @@ function Home() {
       {needSync ? (
         <NoUserOutlet />
       ) : (
-        <section>
-          <button type="button" onClick={handleClick} className="defaultButton">
+        <section className='h-screen bg-gray-1'>
+          <button type='button' onClick={handleClick} className='defaultButton'>
             Generate Random Deck
           </button>
           {isBuildingDeck && <DeckBuilder userDeck={randomDeck} />}

@@ -1,5 +1,5 @@
 import React, { useContext, useState } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import AppContext from '../../Context/AppContext';
 import populateCollectionData from '../../Utils/populateCollectionData';
 
@@ -36,28 +36,41 @@ function Nav() {
     }, 30000);
   };
 
+  const navigate = useNavigate();
+
   return (
-    <nav className="bg-gray-3 mb-12">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20">
-        <div className="flex items-center justify-between h-20">
-          <div className="flex items-center">
-            <Link to="/" className="navLink">
-              <h1 className="text-white text-3xl font-bold">ShuffleGenie</h1>
+    <nav className='bg-gray-3'>
+      <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20'>
+        <div className='flex items-center justify-between h-20'>
+          <div className='flex items-center'>
+            <Link to='/' className='navLink'>
+              <h1 className='text-white text-3xl font-bold'>ShuffleGenie</h1>
             </Link>
           </div>
-          <div className="flex items-center">
-            <ul className="flex space-x-4">
+          <div className='flex items-center'>
+            <ul className='flex space-x-4'>
               {!needSync && (
                 <li>
-                  <Link to="/collection" className="navLink">
-                    Collection
+                  <Link to='/profile' className='navLink'>
+                    <button
+                      type='button'
+                      onClick={handleClick}
+                      disabled={isButtonDisabled}
+                    >
+                      ReSync
+                    </button>
                   </Link>
                 </li>
               )}
-
+              {APIError && <p className='text-red'>Failed to contact API!</p>}
               <li>
-                <Link to="/help" className="navLink">
+                <Link to='/help' className='navLink'>
                   Help
+                </Link>
+              </li>
+              <li>
+                <Link to='/about' className='navLink'>
+                  About Us
                 </Link>
               </li>
             </ul>
@@ -65,14 +78,13 @@ function Nav() {
           <div>
             {!needSync && (
               <button
-                type="button"
-                onClick={handleClick}
-                disabled={isButtonDisabled}
-                className="defaultButton">
-                Sync
+                type='button'
+                onClick={() => navigate('/profile')}
+                className='defaultButton'
+              >
+                Profile
               </button>
             )}
-            {APIError && <p className="text-red">Failed to contact API!</p>}
           </div>
         </div>
       </div>

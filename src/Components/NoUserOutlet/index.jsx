@@ -10,31 +10,33 @@ function NoUserOutlet() {
 
   return (
     <>
-      <section className="flex justify-around bg-gray-1 h-screen">
-        <div className="flex flex-col justify-center items-center max-w-screen w-4/12 space-y-16">
-          <h2 className="text-violet-1 h2Title">
+      <section className='flex justify-around bg-gray-1 h-screen'>
+        <div className='flex flex-col justify-center items-center max-w-screen w-4/12 space-y-16'>
+          <h2 className='text-violet-1 h2Title'>
             Welcome to the ShuffleGenie 👋
           </h2>
-          <h1 className="h1Title">Create a new random deck with your cards!</h1>
-          <p className="defaultPageText">
+          <h1 className='h1Title'>Create a new random deck with your cards!</h1>
+          <p className='defaultPageText'>
             Sync your Marvel Snap Zone account username to generate a new
             completely random deck with cards from your snap collection.
           </p>
           <button
-            type="button"
+            type='button'
             onClick={focusSyncSection}
-            className="defaultButton">
+            className='defaultButton'
+          >
             SYNC YOUR COLLECTION
           </button>
         </div>
-        <div className="flex flex-col justify-center">
-          <img className="flex max-w-xs max-h-96" src={cardImg} alt="card" />
+        <div className='flex flex-col justify-center'>
+          <img className='flex max-w-xs max-h-96' src={cardImg} alt='card' />
         </div>
       </section>
       <section
         ref={syncSectionRef}
-        id="sync-section"
-        className="flex justify-around bg-gray-2">
+        id='sync-section'
+        className='bg-gray-2 h-96 flex flex-col justify-center'
+      >
         <SyncPage />
       </section>
     </>

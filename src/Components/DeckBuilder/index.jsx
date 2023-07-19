@@ -1,10 +1,10 @@
-import React from "react";
-import PropTypes from "prop-types";
-import Card from "../Card";
+import React from 'react';
+import PropTypes from 'prop-types';
+import Card from '../Card';
 
 function DeckBuilder({ userDeck }) {
   return (
-    <div>
+    <div className='flex flex-wrap justify-center mx-auto px-20'>
       {userDeck &&
         userDeck.map((card) => (
           <Card key={card.name} cardName={card.name} cardImg={card.imgUrl} />

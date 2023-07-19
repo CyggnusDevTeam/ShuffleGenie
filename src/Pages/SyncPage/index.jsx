@@ -15,38 +15,46 @@ function SyncPage() {
   } = useContext(AppContext);
   const navigate = useNavigate();
 
-
   const handleChangeUser = (user) => {
     localStorage.setItem('activeUser', user);
-    populateCollectionData(user, setCollection, setCardsNum, setIsLoading, lastCalledTime);
+    populateCollectionData(
+      user,
+      setCollection,
+      setCardsNum,
+      setIsLoading,
+      lastCalledTime
+    );
     setUsername(user);
     setLCT(Date.now());
     setNeedSync(false);
-    navigate('/collection');
+    navigate('/profile');
   };
 
   const handleSubmit = (event) => {
     event.preventDefault();
     const userFromEvent = event.target.elements.username.value;
     handleChangeUser(userFromEvent);
-  }
-  
+  };
+
   return (
-    <form onSubmit={handleSubmit} className="flex flex-col items-center">
-      <label htmlFor="username" className="mb-2 text-gray-text">
-        Username:
-        <input
-          type="text"
-          name="username"
-          id="username"
-          min="2"
-          className="border border-gray-300 px-2 py-1 rounded-md"
-        />
-      </label>
-      <button className="defaultButton" type="submit">
-        SYNC COLLECTION
-      </button>
-    </form>
+    <div className='bg-gray-2 flex justify-center'>
+      <form onSubmit={handleSubmit} className='flex flex-col space-y-14'>
+        <label htmlFor='username' className='mb-2 text-gray-text'>
+          Username:
+          <br />
+          <input
+            type='text'
+            name='username'
+            id='username'
+            min='2'
+            className='border border-gray-300 px-2 py-1 rounded-md'
+          />
+        </label>
+        <button className='defaultButton' type='submit'>
+          SYNC COLLECTION
+        </button>
+      </form>
+    </div>
   );
 }
 
