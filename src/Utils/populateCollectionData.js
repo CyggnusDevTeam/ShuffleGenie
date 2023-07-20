@@ -1,6 +1,12 @@
 import fetchCollection from './GenieAPI';
 
-const populateCollectionData = async (user, setCollection, setCardsNum, setIsLoading, lastCalledTime) => {
+const populateCollectionData = async (
+  user,
+  setCollection,
+  setCardsNum,
+  setIsLoading,
+  lastCalledTime
+) => {
   setIsLoading(true);
   try {
     const data = await fetchCollection(user, lastCalledTime);
