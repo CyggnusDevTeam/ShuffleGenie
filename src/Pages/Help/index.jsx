@@ -1,34 +1,40 @@
-import React from "react";
-import { useNavigate } from "react-router-dom";
-import Footer from "../../Components/Footer/index";
+import React, { useContext } from 'react';
+import AppContext from '../../Context/AppContext';
+import SyncForm from '../../Components/SyncForm';
 
 function Help() {
-  const navigate = useNavigate();
+  const { needSync } = useContext(AppContext);
 
   return (
-    <>
-      <section className="flex justify-around bg-gray-1 h-screen">
-        <div className="flex flex-col justify-center itens-center">
-          <p className="defaultPageText">
-            Create a account in &apos;MarvelSnapZone&apos;.
-          </p>
-          <p className="defaultPageText">
-            To use your collection, click on &apos;Sync your collection&apos;
-            and provide your MarvelSnapZone username.
-          </p>
+    <section className="flex justify-around bg-gray-1 h-screen">
+      <div className="flex flex-col justify-center itens-center">
+        <p className="defaultPageText">
+          To Sync Your Collection you will need a{' '}
+          <a
+            href="https://marvelsnapzone.com/login/"
+            target="_blank"
+            rel="noopener noreferrer">
+            MarvelSnapZone
+          </a>{' '}
+          account.
+        </p>
+        <p className="defaultPageText">
+          To use your collection provide your{' '}
+          <a
+            href="https://marvelsnapzone.com/users/"
+            target="_blank"
+            rel="noopener noreferrer">
+            MarvelSnapZone
+          </a>{' '}
+          username bellow then click on &apos;Sync your collection&apos;.
+        </p>
+        {needSync && (
           <div className="flex justify-center itens-center">
-            <button
-              onClick={() => navigate("/")}
-              type="button"
-              className="defaultButton"
-            >
-              Go to home
-            </button>
+            <SyncForm />
           </div>
-        </div>
-      </section>
-      <Footer />
-    </>
+        )}
+      </div>
+    </section>
   );
 }
 
