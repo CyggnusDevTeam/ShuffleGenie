@@ -37,19 +37,19 @@ function SyncPage() {
   };
 
   return (
-    <form onSubmit={handleSubmit} className="flex flex-col items-center">
-      <label htmlFor="username" className="mb-2 text-gray-text">
+    <form onSubmit={handleSubmit} className='flex flex-col items-center'>
+      <label htmlFor='username' className='mb-2 text-gray-text'>
         Username:
         <input
-          type="text"
-          name="username"
-          id="username"
-          defaultValue="DefaultPool2"
-          min="2"
-          className="border border-gray-300 px-2 py-1 rounded-md"
+          type='text'
+          name='username'
+          id='username'
+          defaultValue='DefaultPool2'
+          min='2'
+          className='border border-gray-300 px-2 py-1 rounded-md'
         />
       </label>
-      <button className="defaultButton" type="submit">
+      <button className='defaultButton' type='submit'>
         SYNC COLLECTION
       </button>
     </form>
