@@ -81,61 +81,63 @@ function Nav() {
   }
 
   return (
-    <nav className="bg-gray-800">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20">
-        <div className="flex items-center justify-between h-20">
-          <div className="flex items-center">
-            <Link to="/" title="Home" className="navLink">
-              <h1 className="text-white text-3xl font-bold">ShuffleGenie</h1>
+    <nav className='bg-gray-3'>
+      <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20'>
+        <div className='flex items-center justify-between h-20'>
+          <div className='flex items-center'>
+            <Link to='/' title='Home' className='navLink'>
+              <h1 className='text-white text-3xl font-bold'>ShuffleGenie</h1>
             </Link>
           </div>
-          <div className="flex items-center space-x-4">
+          <div className='flex items-center space-x-4'>
             {!needSync && (
               <button
-                type="button"
+                type='button'
                 onClick={handleClick}
                 disabled={isButtonDisabled}
-                title="ReSync Your Collection"
-                className="defaultButton">
+                title='ReSync Your Collection'
+                className='defaultButton'
+              >
                 <FontAwesomeIcon
-                  className="fa-spin-hover"
+                  className='fa-spin-hover'
                   icon={faArrowsRotate}
                 />
               </button>
             )}
-            {APIError && <p className="text-red-500">Failed to contact API!</p>}
-            <Link to="/help" title="Go to help page" className="navLink">
+            {APIError && <p className='text-red-500'>Failed to contact API!</p>}
+            <Link to='/help' title='Go to help page' className='navLink'>
               Help
             </Link>
-            <Link to="/about" title="Go to about us page" className="navLink">
+            <Link to='/about' title='Go to about us page' className='navLink'>
               About Us
             </Link>
           </div>
-          <div className="flex items-center space-x-4">
+          <div className='flex items-center space-x-4'>
             {!needSync && (
               <button
-                type="button"
-                title="Go to profile"
+                type='button'
+                title='Go to profile'
                 onClick={() => navigate('/profile')}
-                className="defaultButton">
+                className='defaultButton'
+              >
                 Profile
               </button>
             )}
             {!needSync && (
               <button
-                type="button"
-                title="LogOut"
+                type='button'
+                title='LogOut'
                 onClick={() => {
                   confirmAlert();
                 }}
-                className="defaultButton">
+                className='defaultButton'
+              >
                 <FontAwesomeIcon icon={faRightFromBracket} />
               </button>
             )}
           </div>
         </div>
       </div>
-      <hr />
     </nav>
   );
 }
