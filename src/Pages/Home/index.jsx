@@ -1,4 +1,4 @@
-import React, { useContext, useState } from 'react';
+import React, { useContext, useState, useEffect } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCopy } from '@fortawesome/free-regular-svg-icons';
 import Swal from 'sweetalert2';
@@ -13,7 +13,7 @@ function Home() {
   const [randomDeck, setRandomDeck] = useState([]);
   const { collection, needSync } = useContext(AppContext);
 
-  const handleClick = () => {
+  const generateRandomDeck = () => {
     setRandomDeck(shuffleDeck(collection));
     setIsBuildingDeck(true);
   };
@@ -37,30 +37,41 @@ function Home() {
       });
   };
 
+  useEffect(() => {
+    generateRandomDeck();
+  }, []);
+
   return (
     <>
       <div />
       {needSync ? (
         <NoUserOutlet />
       ) : (
-        <section className="h-screen bg-gray-1">
-          <button
-            type="button"
-            title="Generate a new random Deck"
-            onClick={handleClick}
-            className="defaultButton">
-            New Random Deck
-          </button>
-          {isBuildingDeck && (
+        <section className='h-screen bg-gray-1 mt-[5%]'>
+          <div className='flex flex-col justify-center items-center'>
             <button
-              type="button"
-              title="Copy Deck Code"
-              onClick={copyDeckCode}
-              className="defaultButton">
-              <FontAwesomeIcon icon={faCopy} />
+              type='button'
+              title='Generate a new random Deck'
+              onClick={generateRandomDeck}
+              className='defaultButton'
+            >
+              New Random Deck
             </button>
-          )}
-          {isBuildingDeck && <DeckBuilder userDeck={randomDeck} />}
+            {isBuildingDeck && <DeckBuilder userDeck={randomDeck} />}
+          </div>
+
+          <div className='flex flex-col justify-center items-center'>
+            {isBuildingDeck && (
+              <button
+                type='button'
+                title='Copy Deck Code'
+                onClick={copyDeckCode}
+                className='defaultButton'
+              >
+                <FontAwesomeIcon icon={faCopy} />
+              </button>
+            )}
+          </div>
         </section>
       )}
     </>

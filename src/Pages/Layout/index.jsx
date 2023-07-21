@@ -6,12 +6,12 @@ import BackToTopButton from '../../Components/BackToTopButton';
 
 function Layout() {
   return (
-    <>
+    <div className='bg-gray-1'>
       <Nav />
       <Outlet />
       <BackToTopButton />
       <Footer />
-    </>
+    </div>
   );
 }
 
