@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import PropTypes from 'prop-types';
-import lazyCard from '../../Img/lazyCard.png';
+import lazyCard from '../../Img/lazyCard.webp';
 
 function Card({ cardName, cardImg }) {
   const convertToSlug = (inputString) =>
