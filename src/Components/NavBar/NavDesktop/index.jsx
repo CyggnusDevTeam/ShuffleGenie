@@ -23,6 +23,7 @@ function NavDesktop() {
   const navigate = useNavigate();
 
   const handleClick = () => {
+    setIsLoading(true);
     handleSync(
       setIsButtonDisabled,
       setLCT,

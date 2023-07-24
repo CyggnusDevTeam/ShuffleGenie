@@ -29,6 +29,7 @@ function NavMobile() {
   };
 
   const handleClick = () => {
+    setIsLoading(true);
     handleSync(
       setIsButtonDisabled,
       setLCT,

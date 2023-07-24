@@ -5,6 +5,7 @@ import Swal from 'sweetalert2';
 import AppContext from '../../Context/AppContext';
 import DeckBuilder from '../../Components/DeckBuilder';
 import NewUser from '../NewUser';
+import Spinner from '../../Components/Spinner';
 import generateDeckCode from '../../Utils/generateDeckCode';
 import shuffleDeck from '../../Utils/shuffler';
 
@@ -43,7 +44,9 @@ function Home() {
 
   return (
     <div>
-      {!isLoading && (
+      {isLoading ? (
+        <Spinner />
+      ) : (
         <>
           <div />
           {needSync ? (
