@@ -29,7 +29,7 @@ function NavBar() {
   }
 
   return (
-    <nav className='bg-gray-3 w-full'>
+    <nav className='bg-gray-3 w-full mb-2 overflow-hidden'>
       {isUserOnMobile ? <NavMobile /> : <NavDesktop />}
     </nav>
   );

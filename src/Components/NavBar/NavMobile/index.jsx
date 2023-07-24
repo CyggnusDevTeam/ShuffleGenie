@@ -50,7 +50,11 @@ function NavMobile() {
     <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 relative'>
       <div className='flex items-center justify-between h-20'>
         <div className='flex items-center'>
-          <Link to='/' title='Home' className='navLink'>
+          <Link
+            to='/'
+            onClick={handleLinkClick}
+            title='Home'
+            className='navLink'>
             <h1 className='text-white text-3xl font-bold'>ShuffleGenie</h1>
           </Link>
         </div>

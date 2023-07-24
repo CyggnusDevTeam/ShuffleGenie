@@ -5,12 +5,12 @@ import { Link } from 'react-router-dom';
 
 function About() {
   return (
-    <section className='flex flex-col justify-center h-screen my-[5%] bg-gray-1'>
+    <section className='flex flex-col justify-center mt-5 my-[5%] bg-gray-1'>
       <div>
-        <h1 className='h1Title text-white'>About Us</h1>
+        <h1 className='h1Title text-white mb-5'>About Us</h1>
       </div>
 
-      <div className='flex justify-center items-center'>
+      <div className='grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-8'>
         <div className='flex flex-col justify-center items-center'>
           <img
             className='rounded-[80px] max-w-[250px]'
@@ -29,7 +29,7 @@ function About() {
           </Link>
         </div>
 
-        <div className='flex flex-col justify-center items-center ml-96'>
+        <div className='flex flex-col justify-center items-center md:ml-0'>
           <img
             className='rounded-[80px] max-w-[250px]'
             src='https://github.com/LeonardoKleimpaul.png'
@@ -48,7 +48,7 @@ function About() {
         </div>
       </div>
 
-      <div className='flex flex-col justify-center items-center mt-56'>
+      <div className='flex flex-col justify-center items-center mt-10 md:mt-20'>
         <div className='flex flex-col justify-center items-center space-y-6'>
           <img
             className='w-32 h-32 rounded-2xl'
