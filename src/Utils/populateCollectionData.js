@@ -1,4 +1,5 @@
 import fetchCollection from './GenieAPI';
+import { ERROR_FAILED_COLLECTION } from './variables';
 
 const populateCollectionData = async (
   user,
@@ -10,6 +11,9 @@ const populateCollectionData = async (
   setIsLoading(true);
   try {
     const data = await fetchCollection(user, lastCalledTime);
+    if (data === '' || data.length === 0) {
+      throw new Error(ERROR_FAILED_COLLECTION);
+    }
     const numOfCards = data.length + 1;
     const collectionData = JSON.stringify({ user, numOfCards, data });
     localStorage.setItem('collection', collectionData);
@@ -17,7 +21,8 @@ const populateCollectionData = async (
     setCardsNum(numOfCards);
     setIsLoading(false);
   } catch (error) {
-    console.error(error.message);
+    setIsLoading(false);
+    throw new Error(ERROR_FAILED_COLLECTION);
   }
 };
 

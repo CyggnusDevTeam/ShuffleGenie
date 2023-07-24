@@ -11,7 +11,7 @@ import shuffleDeck from '../../Utils/shuffler';
 function Home() {
   const [isBuildingDeck, setIsBuildingDeck] = useState(false);
   const [randomDeck, setRandomDeck] = useState([]);
-  const { collection, needSync } = useContext(AppContext);
+  const { collection, isLoading, needSync } = useContext(AppContext);
 
   const generateRandomDeck = () => {
     setRandomDeck(shuffleDeck(collection));
@@ -38,41 +38,46 @@ function Home() {
   };
 
   useEffect(() => {
-    generateRandomDeck();
-  }, []);
+    if (!isLoading && !needSync) generateRandomDeck();
+  }, [isLoading, needSync]);
 
   return (
-    <>
-      <div />
-      {needSync ? (
-        <NewUser />
-      ) : (
-        <section className='h-screen bg-gray-1 mt-[5%]'>
-          <div className='flex flex-col justify-center items-center'>
-            <button
-              type='button'
-              title='Generate a new random Deck'
-              onClick={generateRandomDeck}
-              className='defaultButton'>
-              New Random Deck
-            </button>
-            {isBuildingDeck && <DeckBuilder userDeck={randomDeck} />}
-          </div>
-
-          <div className='flex flex-col justify-center items-center'>
-            {isBuildingDeck && (
-              <button
-                type='button'
-                title='Copy Deck Code'
-                onClick={copyDeckCode}
-                className='defaultButton'>
-                <FontAwesomeIcon icon={faCopy} />
-              </button>
-            )}
-          </div>
-        </section>
+    <div>
+      {!isLoading && (
+        <>
+          <div />
+          {needSync ? (
+            <NewUser />
+          ) : (
+            <section className='bg-gray-1 mt-[5%]'>
+              <div className='flex flex-col justify-center items-center space-y-2'>
+                <h4 className='text-white font-medium text-sm defaultPageText md:py-2 lg:py-0'>
+                  Easily generate new random decks using your MarvelSnap©
+                  collection.
+                </h4>
+                <button
+                  type='button'
+                  title='Generate a new random Deck'
+                  onClick={generateRandomDeck}
+                  className='defaultButton'>
+                  New Random Deck
+                </button>
+                {isBuildingDeck && (
+                  <button
+                    type='button'
+                    title='Copy Deck Code'
+                    onClick={copyDeckCode}
+                    className='defaultButton'>
+                    <FontAwesomeIcon icon={faCopy} />
+                  </button>
+                )}
+              </div>
+              {isBuildingDeck && <DeckBuilder userDeck={randomDeck} />}
+            </section>
+          )}
+        </>
       )}
-    </>
+    </div>
   );
 }
 

@@ -25,22 +25,30 @@ const handleSync = async (
       setCardsNum,
       setIsLoading,
       lastCalledTime
-    );
-    Swal.fire({
-      title: 'Synchronized with success!',
-      icon: 'success',
-      allowOutsideClick: true,
-      allowEscapeKey: true,
-      timer: 2000,
-    }).then((result) => {
-      if (result.isDismissed) {
-        reloadApp(false, navigate, '/profile');
-      }
-      if (result.isConfirmed) {
-        reloadApp(false, navigate, '/profile');
-      }
+    ).then(() => {
+      Swal.fire({
+        title: 'Synchronized with success!',
+        icon: 'success',
+        allowOutsideClick: true,
+        allowEscapeKey: true,
+        timer: 2000,
+      }).then((result) => {
+        if (result.isDismissed) {
+          reloadApp(false, navigate, '/profile');
+        }
+        if (result.isConfirmed) {
+          reloadApp(false, navigate, '/profile');
+        }
+      });
     });
   } catch (error) {
+    Swal.fire({
+      title: 'Failed to contact API!',
+      icon: 'error',
+      text: 'Something went wrong!',
+      allowOutsideClick: true,
+      allowEscapeKey: true,
+    });
     console.error(error);
   }
   setLCT(Date.now());

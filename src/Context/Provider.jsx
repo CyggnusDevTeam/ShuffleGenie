@@ -25,7 +25,7 @@ function AppProvider({ children }) {
       username,
       setUsername,
     }),
-    [collection]
+    [collection, isLoading]
   );
 
   const retrieveUserFromLocalStorage = () => {
@@ -40,12 +40,12 @@ function AppProvider({ children }) {
       setCardsNum(numOfCards);
       setCollection(data);
       setNeedSync(false);
-      setIsLoading(false);
     }
   };
 
   useEffect(() => {
     retrieveUserFromLocalStorage();
+    setIsLoading(false);
   }, []);
 
   return <AppContext.Provider value={context}>{children}</AppContext.Provider>;
