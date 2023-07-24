@@ -1,0 +1,20 @@
+{
+  "name": "shufflegenie-carddefids-creator",
+  "version": "1.1.0",
+  "description": "Simple node script using puppeteer to generate scr/data/cardDefIds.js.",
+  "main": "index.js",
+  "scripts": {
+    "grab": "node index.js"
+  },
+  "author": "lkotlarenko",
+  "license": "MIT",
+  "homepage": "https://github.com/Cyggnus/ShuffleGenie#readme",
+  "dependencies": {
+    "cheerio": "^1.0.0-rc.12",
+    "dotenv": "^16.3.1",
+    "puppeteer": "^20.9.0",
+    "puppeteer-core": "^20.9.0",
+    "puppeteer-extra": "^3.3.6",
+    "puppeteer-extra-plugin-stealth": "^2.11.2"
+  }
+}
