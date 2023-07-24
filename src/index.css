@@ -35,7 +35,7 @@ code {
 /* Nav Link */
 @layer components {
   .navLink {
-    @apply text-white px-3 py-2 rounded-md font-medium;
+    @apply text-white font-bold text-center px-3 py-2 rounded-md;
   }
 
   .navLink:hover {

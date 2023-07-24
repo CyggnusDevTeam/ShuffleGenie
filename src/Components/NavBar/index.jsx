@@ -5,29 +5,25 @@ import NavMobile from './NavMobile';
 
 function NavBar() {
   const [isUserOnMobile, setIsUserOnMobile] = useState(false);
-  const [hasResized, setHasResized] = useState(false); // State to track initial resize
+  const [hasResized, setHasResized] = useState(false);
 
   useEffect(() => {
     function handleResize() {
-      setIsUserOnMobile(window.innerWidth <= 768); // Preferred breakpoint (e.g., 768px for mobile)
-      setHasResized(true); // Set the flag to true on initial resize
+      setIsUserOnMobile(window.innerWidth <= 800);
+      setHasResized(true);
     }
 
-    // Initial check when the component mounts
     handleResize();
 
-    // Add event listener for window resize with debouncing
-    const debouncedHandleResize = debounce(handleResize, 1400); // Adjust the debounce delay as needed (e.g., 200ms)
+    const debouncedHandleResize = debounce(handleResize, 1400);
 
     window.addEventListener('resize', debouncedHandleResize);
 
-    // Clean up the event listener when the component unmounts
     return () => {
       window.removeEventListener('resize', debouncedHandleResize);
     };
   }, []);
 
-  // Render null until the first resize occurs to prevent flickering
   if (!hasResized) {
     return null;
   }
