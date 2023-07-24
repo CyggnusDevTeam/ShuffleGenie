@@ -53,8 +53,7 @@ function Home() {
               type='button'
               title='Generate a new random Deck'
               onClick={generateRandomDeck}
-              className='defaultButton'
-            >
+              className='defaultButton'>
               New Random Deck
             </button>
             {isBuildingDeck && <DeckBuilder userDeck={randomDeck} />}
@@ -66,8 +65,7 @@ function Home() {
                 type='button'
                 title='Copy Deck Code'
                 onClick={copyDeckCode}
-                className='defaultButton'
-              >
+                className='defaultButton'>
                 <FontAwesomeIcon icon={faCopy} />
               </button>
             )}

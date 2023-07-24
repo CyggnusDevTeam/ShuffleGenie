@@ -16,8 +16,7 @@ function Footer() {
           <a
             href='https://marvelsnapzone.com/'
             target='_blank'
-            rel='noopener noreferrer'
-          >
+            rel='noopener noreferrer'>
             MarvelSnapZone©
           </a>
           .
@@ -39,8 +38,7 @@ function Footer() {
             <a
               href='https://github.com/Cyggnus'
               target='_blank'
-              rel='noopener noreferrer'
-            >
+              rel='noopener noreferrer'>
               Cyggnus
             </a>
           </h1>

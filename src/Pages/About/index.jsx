@@ -22,8 +22,7 @@ function About() {
             title="lkotlarenko's LinkedIn"
             target='_blank'
             rel='noopener noreferrer'
-            className='navLink'
-          >
+            className='navLink'>
             <button className='defaultButton mt-2' type='button'>
               <FontAwesomeIcon icon={faLinkedin} />
             </button>
@@ -41,8 +40,7 @@ function About() {
             title="Kleimpaul's LinkedIn"
             target='_blank'
             rel='noopener noreferrer'
-            className='navLink'
-          >
+            className='navLink'>
             <button className='defaultButton mt-2' type='button'>
               <FontAwesomeIcon icon={faLinkedin} />
             </button>
@@ -69,8 +67,7 @@ function About() {
           title='Cyggnus Organization'
           target='_blank'
           rel='noopener noreferrer'
-          className='navLink'
-        >
+          className='navLink'>
           <button className='defaultButton mt-2' type='button'>
             <FontAwesomeIcon icon={faGithub} />
           </button>

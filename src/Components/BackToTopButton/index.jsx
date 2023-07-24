@@ -10,8 +10,7 @@ function BackToTopButton() {
       }`}
       id='backToTopButton'
       type='button'
-      onClick={backToTopAction}
-    >
+      onClick={backToTopAction}>
       <img src={arrowUp} alt='arrowUp' />
     </button>
   );
