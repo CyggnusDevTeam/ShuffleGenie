@@ -4,7 +4,7 @@ import { faCopy } from '@fortawesome/free-regular-svg-icons';
 import Swal from 'sweetalert2';
 import AppContext from '../../Context/AppContext';
 import DeckBuilder from '../../Components/DeckBuilder';
-import NoUserOutlet from '../../Components/NoUserOutlet';
+import NewUser from '../NewUser';
 import generateDeckCode from '../../Utils/generateDeckCode';
 import shuffleDeck from '../../Utils/shuffler';
 
@@ -45,7 +45,7 @@ function Home() {
     <>
       <div />
       {needSync ? (
-        <NoUserOutlet />
+        <NewUser />
       ) : (
         <section className='h-screen bg-gray-1 mt-[5%]'>
           <div className='flex flex-col justify-center items-center'>

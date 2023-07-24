@@ -1,8 +1,8 @@
 import React, { useRef } from 'react';
-import SyncForm from '../SyncForm';
+import SyncForm from '../../Components/SyncForm';
 import cardImg from '../../Img/card.png';
 
-function NoUserOutlet() {
+function NewUser() {
   const syncSectionRef = useRef(null);
   const focusSyncSection = () => {
     syncSectionRef.current.scrollIntoView({ behavior: 'smooth' });
@@ -43,4 +43,4 @@ function NoUserOutlet() {
   );
 }
 
-export default NoUserOutlet;
+export default NewUser;
