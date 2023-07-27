@@ -4,7 +4,7 @@ import Card from '../Card';
 
 function DeckBuilder({ userDeck }) {
   return (
-    <div className='flex flex-wrap justify-center mx-auto mt-[4%] px-20'>
+    <div className='flex flex-wrap justify-center mx-auto mt-[4%] lg:px-20 md:px-10 px-3'>
       {userDeck &&
         userDeck.map((card) => (
           <Card key={card.name} cardName={card.name} cardImg={card.imgUrl} />

@@ -73,9 +73,18 @@ function NavMobile() {
           id='hamburger-items'
           className={`${
             isOpen
-              ? 'flex flex-col items-start space-y-7 pt-12 fixed top-20 right-0 mx-4 my-2 bg-gray-3 w-full h-screen rounded-md shadow-md z-50'
+              ? 'flex flex-col items-start space-y-7 pt-12 fixed top-20 right-0 bg-violet-1 w-full h-screen shadow-md z-50'
               : 'hidden'
           }`}>
+          <div className='w-full'>
+            <Link
+              to='/'
+              title='Go to Home'
+              className='navLink block w-full'
+              onClick={handleLinkClick}>
+              Home
+            </Link>
+          </div>
           <div className='w-full'>
             <Link
               to='/help'

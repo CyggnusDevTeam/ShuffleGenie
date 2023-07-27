@@ -11,7 +11,7 @@ function Help() {
       {isLoading ? (
         <Spinner />
       ) : (
-        <div className='flex flex-col justify-center itens-center'>
+        <div className='flex flex-col justify-center itens-center space-y-10 p-6'>
           <p className='defaultPageText'>
             To Sync Your Collection you will need a{' '}
             <a

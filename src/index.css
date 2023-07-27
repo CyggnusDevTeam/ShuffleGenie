@@ -13,6 +13,10 @@ body,
   background: #13171b;
 }
 
+button {
+  margin: 0;
+}
+
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
@@ -40,7 +44,7 @@ footer {
 /* Default Button */
 @layer components {
   .defaultButton {
-    @apply max-w-fit font-bold px-12 py-4 text-sm text-white bg-violet-1 rounded-full shadow-md focus:outline-none focus:ring-1 focus:ring-violet-1 focus:ring-opacity-75;
+    @apply max-w-fit font-bold px-12 py-4 m-0 text-sm text-white bg-violet-1 rounded-full shadow-md focus:outline-none focus:ring-1 focus:ring-violet-1 focus:ring-opacity-75;
   }
   .defaultButton:hover {
     @apply bg-violet-2;
@@ -65,14 +69,14 @@ footer {
 /* Title 1 */
 @layer components {
   .h1Title {
-    @apply text-gray-text text-center font-bold text-6xl;
+    @apply text-gray-text text-center font-bold text-4xl lg:text-5xl;
   }
 }
 
 /* Default Page Text */
 @layer components {
   .defaultPageText {
-    @apply text-white text-xl font-bold text-center;
+    @apply text-white lg:text-xl font-bold text-center;
   }
 }
 

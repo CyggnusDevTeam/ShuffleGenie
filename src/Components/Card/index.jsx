@@ -24,13 +24,13 @@ function Card({ cardName, cardImg }) {
         title={`View ${cardName} on MarvelSnapZone©`}>
         {!imageLoaded && (
           <img
-            className='lg:max-w-[230px] lg:max-h-[230px] md:max-w-[140px] md:max-h-[140px] cursor-pointer transition-transform duration-300 transform-gpu group-hover:-translate-y-1 group-hover:scale-105'
+            className='lg:max-w-[230px] lg:max-h-[230px] md:max-w-[140px] md:max-h-[140px] max-w-[140px] max-h-[140px] cursor-pointer transition-transform duration-300 transform-gpu group-hover:-translate-y-1 group-hover:scale-105'
             src={lazyCard}
             alt={cardName}
           />
         )}
         <img
-          className={`lg:max-w-[230px] lg:max-h-[230px] md:max-w-[140px] md:max-h-[140px] cursor-pointer transition-transform duration-300 transform-gpu group-hover:-translate-y-1 group-hover:scale-105 ${
+          className={`lg:max-w-[230px] lg:max-h-[230px] md:max-w-[140px] md:max-h-[140px] max-w-[140px] max-h-[140px] cursor-pointer transition-transform duration-300 transform-gpu group-hover:-translate-y-1 group-hover:scale-105 ${
             !imageLoaded ? 'hidden' : ''
           }`}
           src={cardImg}

@@ -52,12 +52,12 @@ function Home() {
           {needSync ? (
             <NewUser />
           ) : (
-            <section className='bg-gray-1 mt-[5%]'>
-              <div className='flex flex-col justify-center items-center space-y-2'>
-                <h4 className='text-white font-medium text-sm defaultPageText md:py-2 lg:py-0'>
-                  Easily generate new random decks using your MarvelSnap©
-                  collection.
-                </h4>
+            <section className='bg-gray-1'>
+              <h4 className='text-white font-medium text-sm defaultPageText p-8'>
+                Easily generate new random decks using your MarvelSnap©
+                collection.
+              </h4>
+              <div className='flex justify-around items-center'>
                 <button
                   type='button'
                   title='Generate a new random Deck'

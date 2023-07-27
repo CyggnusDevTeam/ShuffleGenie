@@ -14,15 +14,15 @@ function Profile() {
       ) : (
         <>
           {collection && (
-            <div className='my-[5%] flex items-start justify-center'>
+            <div className='my-[5%] px-3 flex items-start justify-center'>
               {isDefaultUser ? (
-                <h2 className='defaultPageText'>{`Welcome to our app👽, you are exploring the Default Collection with ${cardsNum} cards! Enjoy the diverse selection of cards from Pool 2 and below.`}</h2>
+                <h2 className='defaultPageText'>{`Welcome to our app 👽, you are exploring the Default Collection with ${cardsNum} cards! Enjoy the diverse selection of cards from Pool 2 and below.`}</h2>
               ) : (
-                <h2 className='defaultPageText'>{`Hi ${username}👽, here is your snap collection of ${cardsNum} cards!`}</h2>
+                <h2 className='defaultPageText'>{`Hi ${username} 👽, here is your snap collection of ${cardsNum} cards!`}</h2>
               )}
             </div>
           )}
-          <div className='flex flex-wrap justify-center mx-auto px-20'>
+          <div className='flex flex-wrap justify-center mx-auto lg:px-20 md:px-10 px-3'>
             {collection &&
               collection.map((card) => (
                 <Card

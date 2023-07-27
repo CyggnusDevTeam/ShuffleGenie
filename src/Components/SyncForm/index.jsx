@@ -37,8 +37,10 @@ function SyncPage() {
   };
 
   return (
-    <form onSubmit={handleSubmit} className='flex flex-col items-center'>
-      <label htmlFor='username' className='mb-2 text-gray-text'>
+    <form
+      onSubmit={handleSubmit}
+      className='flex flex-col items-center space-y-10'>
+      <label htmlFor='username' className='relative mb-2 text-gray-3'>
         Username:
         <input
           type='text'
@@ -46,7 +48,8 @@ function SyncPage() {
           id='username'
           defaultValue='DefaultPool2'
           min='2'
-          className='border border-gray-300 px-2 py-1 rounded-md'
+          className='peer block w-full min-h-[auto] border border-gray-3 px-2 py-1 rounded-md bg-transparent outline-none transition-all duration-200 ease-in-out focus:ring-2 focus:ring-blue-500 focus:border-transparent placeholder-gray-3 peer-focus:pl-[0.5rem] peer-focus:text-primary'
+          placeholder='Example label'
         />
       </label>
       <button className='defaultButton' type='submit'>
