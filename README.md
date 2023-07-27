@@ -1,8 +1,10 @@
+_Esse README esta disponível em [português](https://github.com/Cyggnus/ShuffleGenie/blob/main/README_PT-BR.md)._
+
 # Shuffle Genie - Marvel Snap Deck Generator
 
-![Shuffle Genie](link_to_our_logo.png)
+![Shuffle Genie](https://github.com/Cyggnus/ShuffleGenie/blob/main/src/Img/cardHome.webp)
 
-Shuffle Genie is a web app developed by [Leonardo Kleimpaul](https://github.com/LeonardoKleimpaul) and [Leonardo Kotlarenko](https://github.com/lkotlarenko) that allows marvel snap playes to generate random decks and easily copy the code to try that new random deck in-game. The card data is sourced from MarvelSnapZone.com and MarvelSnap.Pro. The project is fully open source and built using React, Tailwind CSS, SweetAlerts2, and FontAwesome icons.
+Shuffle Genie is a web app developed by [Leonardo Kleimpaul](https://github.com/LeonardoKleimpaul) and [Leonardo Kotlarenko](https://github.com/lkotlarenko) that allows Marvel Snap players to generate random decks and easily copy the code to try that new random deck in-game. The card data is sourced from MarvelSnapZone.com and MarvelSnap.Pro. The project is fully open source and built using React, Tailwind CSS, SweetAlerts2, and FontAwesome icons.
 
 ## Try It Out
 
