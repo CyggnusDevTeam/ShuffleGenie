@@ -30,6 +30,10 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
+body.no-scroll {
+  overflow: hidden;
+}
+
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
@@ -70,6 +74,13 @@ footer {
 
   .defaultButton:active {
     @apply transform scale-95;
+  }
+}
+
+/* NavBar */
+@layer components {
+  .navBar {
+    @apply bg-gray-3 w-full mb-2 overflow-hidden;
   }
 }
 
