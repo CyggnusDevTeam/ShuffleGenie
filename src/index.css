@@ -2,6 +2,27 @@
 @tailwind components;
 @tailwind utilities;
 
+html,
+body,
+#root {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  background: #13171b;
+}
+
+button {
+  margin: 0;
+  -webkit-tap-highlight-color: transparent;
+  user-select: none;
+}
+
+button:active {
+  transform: scale(90%);
+}
+
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
@@ -11,7 +32,91 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
+body.no-scroll {
+  overflow: hidden;
+}
+
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+#root {
+  flex: 1;
+}
+
+footer {
+  flex-shrink: 0;
+}
+
+.backToTop {
+  transform: translateY(0%);
+  transition: ease-out 200ms;
+  transition-property: transform, background-color;
+}
+
+.backToTop:hover {
+  transform: translateY(-10%);
+}
+
+.backToTop:active {
+  transform: scale(90%);
+}
+
+/*----------Custom Styles----------*/
+
+/* Default Button */
+@layer components {
+  .defaultButton {
+    @apply max-w-fit font-bold px-12 py-4 m-0 text-sm text-white bg-violet-1 rounded-full shadow-md focus:outline-none focus:ring-1 focus:ring-violet-1 focus:ring-opacity-75;
+  }
+  .defaultButton:hover {
+    @apply bg-violet-2;
+  }
+
+  .defaultButton:active {
+    @apply transform scale-95;
+  }
+}
+
+/* NavBar */
+@layer components {
+  .navBar {
+    @apply bg-gray-3 w-full mb-2 overflow-hidden;
+  }
+}
+
+/* Nav Link */
+@layer components {
+  .navLink {
+    @apply text-white font-bold text-center px-3 py-2 rounded-md;
+  }
+
+  .navLink:hover {
+    @apply bg-gray-1;
+  }
+}
+
+/* Title 1 */
+@layer components {
+  .h1Title {
+    @apply text-gray-text text-center font-bold text-4xl lg:text-5xl;
+  }
+}
+
+/* Default Page Text */
+@layer components {
+  .defaultPageText {
+    @apply text-white lg:text-xl font-bold text-center;
+  }
+}
+
+/* Font Awesome Icons Spin on Hover */
+@layer components {
+  .fa-spin-hover:hover {
+    -webkit-animation: fa-spin 2s infinite linear;
+    -moz-animation: fa-spin 2s infinite linear;
+    -o-animation: fa-spin 2s infinite linear;
+    animation: fa-spin 2s infinite linear;
+  }
 }

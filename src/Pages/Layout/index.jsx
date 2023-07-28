@@ -1,24 +1,17 @@
 import React from 'react';
-import { Outlet, Link } from 'react-router-dom';
+import { Outlet } from 'react-router-dom';
+import Footer from '../../Components/Footer';
+import NavBar from '../../Components/NavBar';
+import BackToTopButton from '../../Components/BackToTopButton';
 
 function Layout() {
   return (
-    <>
-      <nav>
-        <ul>
-          <li>
-            <Link to="/">Home</Link>
-          </li>
-          <li>
-            <Link to="/sync">Sync your collection</Link>
-          </li>
-          <li>
-            <Link to="/help">Help</Link>
-          </li>
-        </ul>
-      </nav>
+    <div className='bg-gray-1'>
+      <NavBar />
       <Outlet />
-    </>
+      <BackToTopButton />
+      <Footer />
+    </div>
   );
 }
 
