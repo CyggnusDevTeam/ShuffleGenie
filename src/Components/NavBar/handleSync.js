@@ -1,5 +1,6 @@
 import Swal from 'sweetalert2';
 import populateCollectionData from '../../Utils/populateCollectionData';
+import { API_ISSUE_REPORT } from '../../Utils/variables';
 
 const reloadApp = (logOut, navigate, route) => {
   if (logOut) localStorage.clear();
@@ -43,9 +44,12 @@ const handleSync = async (
     });
   } catch (error) {
     Swal.fire({
-      title: 'Failed to contact API!',
+      title: 'Failed to contact our API!',
       icon: 'error',
-      text: 'Something went wrong!',
+      text: 'Sorry, something went wrong!',
+      html: `<b>If this error persists you can report an issue
+          <a target='_blank' rel='noopener noreferrer' href=${API_ISSUE_REPORT}>here.</a>
+          </b>`,
       allowOutsideClick: true,
       allowEscapeKey: true,
     });
@@ -74,4 +78,4 @@ const confirmAlert = (navigate) => {
   });
 };
 
-export { handleSync, confirmAlert };
+export { confirmAlert, handleSync, reloadApp };

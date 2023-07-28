@@ -127,7 +127,7 @@ function NavMobile() {
                   ReSync
                   <FontAwesomeIcon
                     className='pl-2'
-                    size='md'
+                    size='sm'
                     icon={faArrowsRotate}
                   />
                 </button>
