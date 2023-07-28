@@ -1,5 +1,5 @@
 import React from 'react';
-import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import { Routes, Route, HashRouter } from 'react-router-dom';
 import Help from '../Pages/Help/index';
 import Profile from '../Pages/Profile';
 import Layout from '../Pages/Layout';
@@ -11,7 +11,7 @@ import About from '../Pages/About';
 
 const createRoutes = () => (
   <AppProvider>
-    <BrowserRouter basename={process.env.PUBLIC_URL}>
+    <HashRouter>
       <Routes>
         <Route path='/' element={<Layout />}>
           <Route index element={<Home />} />
@@ -22,7 +22,7 @@ const createRoutes = () => (
           <Route path='*' element={<NoPage />} />
         </Route>
       </Routes>
-    </BrowserRouter>
+    </HashRouter>
   </AppProvider>
 );
 
