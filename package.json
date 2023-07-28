@@ -1,7 +1,6 @@
 {
   "name": "shufflegenie",
   "version": "0.1.5",
-  "private": true,
   "homepage": "https://cyggnus.github.io/ShuffleGenie",
   "repository": {
     "type": "git",
@@ -18,9 +17,7 @@
     "@fortawesome/free-regular-svg-icons": "^6.4.0",
     "@fortawesome/free-solid-svg-icons": "^6.4.0",
     "@fortawesome/react-fontawesome": "^0.2.0",
-    "@testing-library/jest-dom": "^5.16.5",
-    "@testing-library/react": "^13.4.0",
-    "@testing-library/user-event": "^13.5.0",
+    "@material-tailwind/react": "2.0.5",
     "base-64": "^1.0.0",
     "lodash.debounce": "^4.0.8",
     "prop-types": "^15.8.1",
@@ -77,6 +74,9 @@
     "gh-pages": "^5.0.0",
     "postcss": "^8.4.21",
     "prettier": "^2.8.4",
-    "tailwindcss": "^3.2.7"
+    "tailwindcss": "^3.2.7",
+    "@testing-library/jest-dom": "^5.16.5",
+    "@testing-library/react": "^13.4.0",
+    "@testing-library/user-event": "^13.5.0"
   }
 }
