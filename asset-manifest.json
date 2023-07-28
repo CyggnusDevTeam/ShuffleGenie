@@ -1,15 +1,19 @@
 {
   "files": {
-    "main.css": "/ShuffleGenie/static/css/main.b9229e7c.css",
-    "main.js": "/ShuffleGenie/static/js/main.d2298fa6.js",
+    "main.css": "/ShuffleGenie/static/css/main.364970e1.css",
+    "main.js": "/ShuffleGenie/static/js/main.b737ef1a.js",
     "static/js/787.9d39fc0f.chunk.js": "/ShuffleGenie/static/js/787.9d39fc0f.chunk.js",
+    "static/media/cardHome.webp": "/ShuffleGenie/static/media/cardHome.099453814f09b38d7816.webp",
+    "static/media/404Error.svg": "/ShuffleGenie/static/media/404Error.86892f846fe21f77f3fd17f6303360a1.svg",
+    "static/media/lazyCard.webp": "/ShuffleGenie/static/media/lazyCard.792b0728fdc3cfd56f5e.webp",
     "index.html": "/ShuffleGenie/index.html",
-    "main.b9229e7c.css.map": "/ShuffleGenie/static/css/main.b9229e7c.css.map",
-    "main.d2298fa6.js.map": "/ShuffleGenie/static/js/main.d2298fa6.js.map",
+    "static/media/arrow.svg": "/ShuffleGenie/static/media/arrow.105fba293cb0847de1db618fa4e8c961.svg",
+    "main.364970e1.css.map": "/ShuffleGenie/static/css/main.364970e1.css.map",
+    "main.b737ef1a.js.map": "/ShuffleGenie/static/js/main.b737ef1a.js.map",
     "787.9d39fc0f.chunk.js.map": "/ShuffleGenie/static/js/787.9d39fc0f.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.b9229e7c.css",
-    "static/js/main.d2298fa6.js"
+    "static/css/main.364970e1.css",
+    "static/js/main.b737ef1a.js"
   ]
 }
