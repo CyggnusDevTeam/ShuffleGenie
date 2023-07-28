@@ -5,7 +5,7 @@ import arrowUp from '../../Img/arrow.svg';
 function BackToTopButton() {
   return (
     <button
-      className={`fixed bottom-28 md:right-16 right-5 translate-y-full transition-transform duration-200 ${
+      className={`backToTop fixed bottom-28 md:right-16 right-5 translate-y-full transition-transform duration-200 ${
         showBackToTopButton() ? 'visible' : 'invisible'
       }`}
       id='backToTopButton'
