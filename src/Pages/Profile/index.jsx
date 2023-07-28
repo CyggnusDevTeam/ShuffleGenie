@@ -25,7 +25,7 @@ function Profile() {
       ) : (
         <>
           {collection && (
-            <div className='my-[5%] px-3 flex flex-col items-center justify-center'>
+            <div className='my-[5%] px-3 flex flex-col items-center justify-center space-y-4'>
               {isDefaultUser ? (
                 <h2 className='defaultPageText'>{`Welcome to our app 👽, you are exploring the Default Collection with ${cardsNum} cards! Enjoy the diverse selection of cards from Pool 2 and below.`}</h2>
               ) : (
@@ -33,7 +33,10 @@ function Profile() {
               )}
               <h3 className='defaultPageText'>
                 To generate random decks click{' '}
-                <button type='button' onClick={handleRedirectHome}>
+                <button
+                  className='text-violet-1'
+                  type='button'
+                  onClick={handleRedirectHome}>
                   here
                 </button>
                 .

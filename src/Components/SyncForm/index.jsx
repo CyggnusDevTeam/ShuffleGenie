@@ -79,7 +79,7 @@ function SyncPage() {
       <div className='flex flex-col w-auto'>
         {isInputFocused && (
           <span className='text-blue-gray-200 text-sm pb-4'>
-            (leave blank to use Pool 2 collection)
+            (leave blank to use default collection)
           </span>
         )}
         <Input

@@ -11,9 +11,9 @@ function NewUser() {
   return (
     <>
       <section
-        className='flex flex-col justify-center items-center mt-[50%] sm:mt-[25%] lg:mt-0 lg:flex-row lg:justify-around bg-gray-1'
+        className='z-20 flex flex-col justify-center items-center mt-[50%] sm:mt-[25%] lg:mt-0 lg:flex-row lg:justify-around bg-gray-1'
         style={{ height: '91vh' }}>
-        <div className='flex flex-col justify-center items-center max-w-screen lg:w-4/12 space-y-16 p-4'>
+        <div className='flex flex-col justify-center items-center max-w-screen lg:w-4/12 space-y-11 sm:space-y-16 p-4'>
           <h2 className='text-violet-1 text-center lg:mt-0 font-bold text-2xl'>
             Welcome to the ShuffleGenie 👋
           </h2>
