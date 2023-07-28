@@ -4,8 +4,8 @@ import { faCopy } from '@fortawesome/free-regular-svg-icons';
 import Swal from 'sweetalert2';
 import AppContext from '../../Context/AppContext';
 import DeckBuilder from '../../Components/DeckBuilder';
+import LoadingSpinner from '../../Components/LoadingSpinner';
 import NewUser from '../NewUser';
-import Spinner from '../../Components/Spinner';
 import generateDeckCode from '../../Utils/generateDeckCode';
 import shuffleDeck from '../../Utils/shuffler';
 
@@ -45,7 +45,7 @@ function Home() {
   return (
     <div>
       {isLoading ? (
-        <Spinner />
+        <LoadingSpinner />
       ) : (
         <>
           <div />

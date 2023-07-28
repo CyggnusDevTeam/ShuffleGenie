@@ -1,6 +1,6 @@
 import React, { useContext } from 'react';
 import AppContext from '../../Context/AppContext';
-import Spinner from '../../Components/Spinner';
+import LoadingSpinner from '../../Components/LoadingSpinner';
 import SyncForm from '../../Components/SyncForm';
 
 function Help() {
@@ -9,7 +9,7 @@ function Help() {
   return (
     <section className='flex justify-around bg-gray-1 h-screen'>
       {isLoading ? (
-        <Spinner />
+        <LoadingSpinner />
       ) : (
         <div className='flex flex-col justify-center itens-center space-y-10 p-6'>
           <p className='defaultPageText'>

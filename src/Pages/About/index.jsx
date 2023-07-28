@@ -3,7 +3,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faLinkedin, faGithub } from '@fortawesome/free-brands-svg-icons';
 import { Link } from 'react-router-dom';
 import AppContext from '../../Context/AppContext';
-import Spinner from '../../Components/Spinner';
+import LoadingSpinner from '../../Components/LoadingSpinner';
 
 function About() {
   const { isLoading } = useContext(AppContext);
@@ -12,7 +12,7 @@ function About() {
     <>
       <div />
       {isLoading ? (
-        <Spinner />
+        <LoadingSpinner />
       ) : (
         <section className='flex flex-col justify-center my-[5%] bg-gray-1'>
           <div>
