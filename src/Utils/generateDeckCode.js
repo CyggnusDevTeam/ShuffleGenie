@@ -1,7 +1,7 @@
 import { encode } from 'base-64';
 import cardDefIds from '../data/cardDefIds';
 
-const generateDeckCode = (randomDeck) => {
+const generateDeckCode = (randomDeck, deckName) => {
   const mappedNames = randomDeck.map((card) => {
     const foundCard = cardDefIds.find(
       (cardDef) => cardDef.name.toLowerCase() === card.name.toLowerCase()
@@ -10,7 +10,7 @@ const generateDeckCode = (randomDeck) => {
   });
 
   const deckCodeObject = {
-    Name: 'Random Deck',
+    Name: deckName,
     Cards: mappedNames.map((name) => ({ CardDefId: name })),
   };
 

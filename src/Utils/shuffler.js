@@ -1,3 +1,5 @@
+import { LAST_NAME, MIDDLE_NAME } from './variables';
+
 function shuffleDeck(array) {
   let currentIndex = array.length;
   let randomIndex;
@@ -17,4 +19,19 @@ function shuffleDeck(array) {
   return selectedCards;
 }
 
-export default shuffleDeck;
+function getRandomItemFromArray(array) {
+  return array[Math.floor(Math.random() * array.length)];
+}
+
+function getRandomAdjective() {
+  return getRandomItemFromArray(MIDDLE_NAME);
+}
+
+function generateRandomName(randomDeck) {
+  const randomCard = getRandomItemFromArray(randomDeck);
+  const adjective = getRandomAdjective();
+  const randomWord = getRandomItemFromArray(LAST_NAME);
+  return `${randomCard.name}'s ${adjective} ${randomWord}`;
+}
+
+export { shuffleDeck, generateRandomName };
