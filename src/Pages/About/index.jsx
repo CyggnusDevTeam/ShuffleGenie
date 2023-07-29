@@ -20,12 +20,13 @@ function About() {
           </div>
 
           <div className='flex flex-col justify-center space-y-8 lg:flex-row lg:space-x-80'>
-            <div className='flex flex-col justify-center items-center'>
+            <div className='flex flex-col justify-center items-center space-y-4'>
               <img
                 className='rounded-[50px] max-w-[180px] md:rounded-[80px] md:max-w-[250px]'
                 src='https://github.com/lkotlarenko.png'
                 alt=''
               />
+              <p className='defaultPageText'>Leonardo Kotlarenko</p>
               <Link
                 to='https://linkedin.com/in/lkotlarenko'
                 title="lkotlarenko's LinkedIn"
@@ -38,12 +39,13 @@ function About() {
               </Link>
             </div>
 
-            <div className='flex flex-col justify-center items-center'>
+            <div className='flex flex-col justify-center items-center space-y-4'>
               <img
                 className='rounded-[50px] max-w-[180px] md:rounded-[80px] md:max-w-[250px]'
                 src='https://github.com/LeonardoKleimpaul.png'
                 alt=''
               />
+              <p className='defaultPageText'>Leonardo Kleimpaul</p>
               <Link
                 to='https://linkedin.com/in/leonardo-kleimpaul'
                 title="Kleimpaul's LinkedIn"
