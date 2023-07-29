@@ -75,6 +75,7 @@ function NavMobile() {
           <button
             className='hamburger-btn text-white navLink'
             type='button'
+            title='navbar hamburger menu'
             onClick={() => setIsOpen(!isOpen)}>
             <FontAwesomeIcon
               icon={faBars}
