@@ -32,7 +32,8 @@ function Footer() {
           <img
             className='w-10 h-10 rounded-lg ml-2 md:block'
             src='https://github.com/Cyggnus.png'
-            alt='Cyggnus Logo'
+            alt='Cyggnus Organization Logo'
+            loading='lazy'
           />
         </a>
       </div>

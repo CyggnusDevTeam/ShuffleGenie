@@ -24,7 +24,8 @@ function About() {
               <img
                 className='rounded-[50px] max-w-[180px] md:rounded-[80px] md:max-w-[250px]'
                 src='https://github.com/lkotlarenko.png'
-                alt=''
+                alt='Leonardo Kotlarenko'
+                loading='lazy'
               />
               <p className='defaultPageText'>Leonardo Kotlarenko</p>
               <Link
@@ -43,7 +44,8 @@ function About() {
               <img
                 className='rounded-[50px] max-w-[180px] md:rounded-[80px] md:max-w-[250px]'
                 src='https://github.com/LeonardoKleimpaul.png'
-                alt=''
+                alt='Leonardo Kleimpaul'
+                loading='lazy'
               />
               <p className='defaultPageText'>Leonardo Kleimpaul</p>
               <Link
@@ -63,7 +65,8 @@ function About() {
             <img
               className='max-w-[120px] rounded-2xl'
               src='https://github.com/Cyggnus.png'
-              alt=''
+              alt='Cyggnus Organization Logo'
+              loading='lazy'
             />
             <p className='defaultPageText'>
               Cyggnus was founded by Leonardo Kotlarenko and Leonardo Kleimpaul;
