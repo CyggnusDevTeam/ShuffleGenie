@@ -10,17 +10,15 @@ function NewUser() {
 
   return (
     <>
-      <section
-        className='z-20 flex flex-col justify-center items-center mt-[50%] sm:mt-[25%] lg:mt-0 lg:flex-row lg:justify-around bg-gray-1'
-        style={{ height: '91vh' }}>
-        <div className='flex flex-col justify-center items-center max-w-screen lg:w-4/12 space-y-11 sm:space-y-16 p-4'>
-          <h2 className='text-violet-1 text-center lg:mt-0 font-bold text-2xl'>
-            Welcome to the ShuffleGenie 👋
+      <section className='z-20 flex flex-col justify-center items-center mt-[10%] sm:mt-[15%] lg:m-[12%] lg:flex-row lg:justify-around bg-gray-1'>
+        <div className='flex flex-col justify-center items-center max-w-screen lg:w-4/12 space-y-11 sm:space-y-16'>
+          <h2 className='text-violet-1 text-center lg:mt-0 font-bold text-2xl max-w-[90%] lg:max-w-[100%]'>
+            Welcome to ShuffleGenie 👋
           </h2>
-          <h1 className='h1Title'>
+          <h1 className='h1Title max-w-[90%] lg:max-w-[100%]'>
             Create a new random deck with your owned collection cards!
           </h1>
-          <p className='defaultPageText'>
+          <p className='defaultPageText max-w-[90%] lg:max-w-[100%]'>
             Sync your Marvel Snap Zone account username to generate a new
             completely random deck with cards from your snap collection.
           </p>
