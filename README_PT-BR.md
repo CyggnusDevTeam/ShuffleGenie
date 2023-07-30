@@ -2,12 +2,16 @@ _This README is available in [english](https://github.com/Cyggnus/ShuffleGenie/b
 
 # Shuffle Genie - Gerador de Baralhos Aleatórios para Marvel Snap
 
-![Shuffle Genie](https://github.com/Cyggnus/ShuffleGenie/blob/main/src/Img/cardHome.webp)
+<div align="center">
+  <a href="https://github.com/Cyggnus/ShuffleGenie">
+    <img src="https://github.com/Cyggnus/ShuffleGenie/blob/main/src/Img/cardHome.webp" alt="ShuffleGenie escrito em uma carta com um viking no fundo" width="260" height="300" />
+  </a>
+</div>
 
 O Shuffle Genie é um aplicativo web desenvolvido por [Leonardo Kleimpaul](https://github.com/LeonardoKleimpaul) e [Leonardo Kotlarenko](https://github.com/lkotlarenko) que permite aos jogadores de Marvel Snap gerar baralhos aleatórios e copiar facilmente o código deles para experimenta-los no jogo. 
 Os dados das cartas são obtidos dos sites MarvelSnapZone.com e MarvelSnap.Pro. O projeto é completamente de código aberto e foi desenvolvido usando React, Tailwind CSS, SweetAlerts2 e ícones do FontAwesome.
 
-## Experimente
+## Experimente agora
 
 Você pode testar o aplicativo visitando o seguinte link:
 [https://cyggnus.github.io/ShuffleGenie/](https://cyggnus.github.io/ShuffleGenie/)
@@ -28,12 +32,13 @@ Você pode testar o aplicativo visitando o seguinte link:
 
 - React
 - Tailwind CSS
+- Material Tailwind
 - SweetAlerts2
 - Ícones FontAwesome
 
 ## Contribuições
 
-Se você deseja contribuir com o Shuffle Genie, sinta-se à vontade para abrir issues e enviar pull requests. Agradecemos as contribuições da comunidade!
+Se você deseja contribuir com o Shuffle Genie, sinta-se à vontade para abrir issues e enviar pull requests. Agradecemos contribuições da comunidade!
 
 ## Licença
 

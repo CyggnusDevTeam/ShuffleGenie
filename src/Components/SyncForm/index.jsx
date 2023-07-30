@@ -85,6 +85,7 @@ function SyncPage() {
         <Input
           variant='standard'
           label='Your Username'
+          aria-label='Username input'
           color='white'
           id='username'
           onFocus={handleInputFocus}

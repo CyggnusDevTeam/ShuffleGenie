@@ -7,20 +7,24 @@ import DeckBuilder from '../../Components/DeckBuilder';
 import LoadingSpinner from '../../Components/LoadingSpinner';
 import NewUser from '../NewUser';
 import generateDeckCode from '../../Utils/generateDeckCode';
-import shuffleDeck from '../../Utils/shuffler';
+import { generateRandomName, shuffleDeck } from '../../Utils/shuffler';
 
 function Home() {
+  const [deckName, setDeckName] = useState('');
   const [isBuildingDeck, setIsBuildingDeck] = useState(false);
   const [randomDeck, setRandomDeck] = useState([]);
   const { collection, isLoading, needSync } = useContext(AppContext);
 
   const generateRandomDeck = () => {
-    setRandomDeck(shuffleDeck(collection));
+    const shuffledDeck = shuffleDeck(collection);
+    setRandomDeck(shuffledDeck);
     setIsBuildingDeck(true);
+    const randomDeckName = generateRandomName(shuffledDeck);
+    setDeckName(randomDeckName);
   };
 
   const copyDeckCode = () => {
-    const deckCode = generateDeckCode(randomDeck);
+    const deckCode = generateDeckCode(randomDeck, deckName);
     // Copy the deck code to the clipboard
     navigator.clipboard
       .writeText(deckCode)
@@ -53,11 +57,11 @@ function Home() {
             <NewUser />
           ) : (
             <section className='bg-gray-1'>
-              <h4 className='text-white font-medium text-sm defaultPageText p-8'>
+              <h3 className='text-sm defaultPageText p-8'>
                 Easily generate new random decks using your MarvelSnap©
                 collection.
-              </h4>
-              <div className='flex justify-around items-center'>
+              </h3>
+              <div className='flex justify-around flex-col lg:flex-row items-center space-y-4'>
                 <button
                   type='button'
                   title='Generate a new random Deck'
@@ -65,6 +69,9 @@ function Home() {
                   className='defaultButton'>
                   New Random Deck
                 </button>
+                {isBuildingDeck && (
+                  <h2 className='defaultPageText'>{deckName}</h2>
+                )}
                 {isBuildingDeck && (
                   <button
                     type='button'
