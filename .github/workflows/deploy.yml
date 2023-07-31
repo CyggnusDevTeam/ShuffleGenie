@@ -7,7 +7,10 @@ on:
 
 jobs:
   deploy:
+    name: Deploy app to GitHub Pages
     runs-on: ubuntu-latest
+    env:
+      CI: true
     permissions:
       contents: write
     concurrency:
@@ -28,11 +31,12 @@ jobs:
           restore-keys: |
             ${{ runner.os }}-node-
 
-      - name: Install dependencies
-        run: npm ci
-
-      - name: Build App
-        run: npm run build
+      - name: Install dependencies and build app
+        run: | 
+          npm ci
+          npm run build
+        env:
+          REACT_APP_API_URL: ${{ secrets.REACT_APP_API_URL }}
 
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
