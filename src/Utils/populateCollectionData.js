@@ -14,7 +14,7 @@ const populateCollectionData = async (
     if (data === '' || data.length === 0) {
       throw new Error(ERROR_FAILED_COLLECTION);
     }
-    const numOfCards = data.length + 1;
+    const numOfCards = data.length;
     const collectionData = JSON.stringify({ user, numOfCards, data });
     localStorage.setItem('collection', collectionData);
     setCollection(data);
