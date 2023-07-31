@@ -9,6 +9,7 @@ jobs:
   deploy:
     name: Deploy app to GitHub Pages
     runs-on: ubuntu-latest
+    environment: github-pages
     env:
       CI: true
     permissions:
