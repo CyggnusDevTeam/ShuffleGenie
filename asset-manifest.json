@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/ShuffleGenie/static/css/main.0138e0ff.css",
-    "main.js": "/ShuffleGenie/static/js/main.5291dc01.js",
+    "main.js": "/ShuffleGenie/static/js/main.41c6ebb1.js",
     "static/js/787.9d39fc0f.chunk.js": "/ShuffleGenie/static/js/787.9d39fc0f.chunk.js",
     "static/media/cardHome.webp": "/ShuffleGenie/static/media/cardHome.099453814f09b38d7816.webp",
     "static/media/404Error.svg": "/ShuffleGenie/static/media/404Error.86892f846fe21f77f3fd17f6303360a1.svg",
@@ -9,11 +9,11 @@
     "index.html": "/ShuffleGenie/index.html",
     "static/media/arrow.svg": "/ShuffleGenie/static/media/arrow.105fba293cb0847de1db618fa4e8c961.svg",
     "main.0138e0ff.css.map": "/ShuffleGenie/static/css/main.0138e0ff.css.map",
-    "main.5291dc01.js.map": "/ShuffleGenie/static/js/main.5291dc01.js.map",
+    "main.41c6ebb1.js.map": "/ShuffleGenie/static/js/main.41c6ebb1.js.map",
     "787.9d39fc0f.chunk.js.map": "/ShuffleGenie/static/js/787.9d39fc0f.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.0138e0ff.css",
-    "static/js/main.5291dc01.js"
+    "static/js/main.41c6ebb1.js"
   ]
 }
