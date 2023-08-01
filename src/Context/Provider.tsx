@@ -1,16 +1,18 @@
 import React, { useState, useMemo, useEffect } from 'react';
 import PropTypes from 'prop-types';
 import AppContext from './AppContext';
+import { CollectionItem } from '../Interfaces/CollectionItem';
+import { AppContextValues } from '../Interfaces/AppContextValues';
 
-function AppProvider({ children }) {
-  const [cardsNum, setCardsNum] = useState(0);
-  const [collection, setCollection] = useState([]);
-  const [isLoading, setIsLoading] = useState(true);
-  const [lastCalledTime, setLCT] = useState('first');
-  const [needSync, setNeedSync] = useState(true);
-  const [username, setUsername] = useState('');
+function AppProvider({ children }: { children: React.ReactNode }) {
+  const [cardsNum, setCardsNum] = useState<number>(0);
+  const [collection, setCollection] = useState<CollectionItem[]>([]);
+  const [isLoading, setIsLoading] = useState<boolean>(true);
+  const [lastCalledTime, setLCT] = useState<string>('first');
+  const [needSync, setNeedSync] = useState<boolean>(true);
+  const [username, setUsername] = useState<string>('');
 
-  const context = useMemo(
+  const context: AppContextValues = useMemo(
     () => ({
       cardsNum,
       setCardsNum,
@@ -25,17 +27,18 @@ function AppProvider({ children }) {
       username,
       setUsername,
     }),
-    [collection, isLoading]
+    [cardsNum, collection, isLoading, lastCalledTime, needSync, username]
   );
 
   const retrieveUserFromLocalStorage = () => {
     const usrFromLocal = localStorage.getItem('activeUser');
     const storedCollection = localStorage.getItem('collection');
-    if (usrFromLocal !== '') {
+    if (usrFromLocal !== null && usrFromLocal !== '') {
       setUsername(usrFromLocal);
     }
     if (storedCollection) {
-      const parsedCollection = JSON.parse(storedCollection);
+      const parsedCollection: { numOfCards: number; data: CollectionItem[] } =
+        JSON.parse(storedCollection);
       const { numOfCards, data } = parsedCollection;
       setCardsNum(numOfCards);
       setCollection(data);
@@ -52,7 +55,7 @@ function AppProvider({ children }) {
 }
 
 AppProvider.propTypes = {
-  children: PropTypes.node,
-}.isRequired;
+  children: PropTypes.node.isRequired,
+};
 
 export default AppProvider;
