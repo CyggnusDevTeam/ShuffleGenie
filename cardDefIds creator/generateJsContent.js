@@ -1,7 +1,8 @@
 const generateJsContent = (array) => {
   const content = `
-      // Array with correct CardDefIds
-      const cardDefIds = ${JSON.stringify(array)};
+      import { CardDef } from '../Interfaces/CardDef';
+
+      const cardDefIds: CardDef[] = ${JSON.stringify(array)};
   
       export default cardDefIds;
     `;

@@ -6,7 +6,7 @@ const { executablePath } = require('puppeteer');
 const generateJsContent = require('./generateJsContent');
 require('dotenv').config();
 
-const outputPath = '../src/data/cardDefIds.js';
+const outputPath = '../src/data/cardDefIds.ts';
 
 const DATA_DOMAIN = process.env.DATA_URL;
 
@@ -45,7 +45,7 @@ const scrapeData = async () => {
     if (err) {
       console.error('Error writing file:', err);
     } else {
-      console.log('cardDefIds.js has been written successfully to "src/data".');
+      console.log('cardDefIds.ts has been written successfully to "src/data".');
     }
   });
 };
