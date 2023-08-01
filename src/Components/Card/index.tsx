@@ -1,15 +1,14 @@
 import React, { useState } from 'react';
 import PropTypes from 'prop-types';
 import lazyCard from '../../Img/lazyCard.webp';
+import { CardIProps } from '../../Interfaces/CardIProps';
 
-function Card({ cardName, cardImg }) {
-  const convertToSlug = (inputString) =>
+const Card: React.FC<CardIProps> = ({ cardName, cardImg }) => {
+  const convertToSlug = (inputString: string) =>
     inputString.toLowerCase().replace(/\s+/g, '-');
 
-  // State to track whether the actual image is loaded
-  const [imageLoaded, setImageLoaded] = useState(false);
+  const [imageLoaded, setImageLoaded] = useState<boolean>(false);
 
-  // Handler function for when the actual image is loaded
   const handleImageLoad = () => {
     setImageLoaded(true);
   };
@@ -40,11 +39,11 @@ function Card({ cardName, cardImg }) {
       </a>
     </div>
   );
-}
+};
 
 Card.propTypes = {
-  cardName: PropTypes.string,
-  cardImg: PropTypes.string,
-}.isRequired;
+  cardName: PropTypes.string.isRequired,
+  cardImg: PropTypes.string.isRequired,
+};
 
 export default Card;

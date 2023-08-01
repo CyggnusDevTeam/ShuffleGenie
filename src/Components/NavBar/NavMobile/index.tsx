@@ -9,7 +9,7 @@ import {
 import AppContext from '../../../Context/AppContext';
 import { confirmAlert, handleSync } from '../handleSync';
 
-function NavMobile() {
+const NavMobile: React.FC = () => {
   const [isButtonDisabled, setIsButtonDisabled] = useState(false);
   const [isOpen, setIsOpen] = useState(false);
   const {
@@ -43,7 +43,7 @@ function NavMobile() {
     handleLinkClick();
   };
 
-  const dispatchConfimAlert = () => {
+  const dispatchConfirmAlert = () => {
     confirmAlert(navigate);
   };
 
@@ -155,7 +155,7 @@ function NavMobile() {
                   type='button'
                   title='LogOut'
                   onClick={() => {
-                    dispatchConfimAlert();
+                    dispatchConfirmAlert();
                     handleLinkClick();
                   }}
                   className='navLink block w-full'>
@@ -173,6 +173,6 @@ function NavMobile() {
       </div>
     </nav>
   );
-}
+};
 
 export default NavMobile;

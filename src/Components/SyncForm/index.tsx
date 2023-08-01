@@ -1,4 +1,4 @@
-import React, { useContext, useState } from 'react';
+import React, { useContext, useState, FormEvent } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { Input } from '@material-tailwind/react';
 import Swal from 'sweetalert2';
@@ -8,7 +8,7 @@ import populateCollectionData from '../../Utils/populateCollectionData';
 import { reloadApp } from '../NavBar/handleSync';
 import { API_ISSUE_REPORT } from '../../Utils/variables';
 
-function SyncPage() {
+const SyncPage: React.FC = () => {
   const [isInputFocused, setIsInputFocused] = useState(false);
   const {
     lastCalledTime,
@@ -22,7 +22,7 @@ function SyncPage() {
 
   const navigate = useNavigate();
 
-  const handleChangeUser = async (user) => {
+  const handleChangeUser = async (user: string) => {
     localStorage.setItem('activeUser', user);
     try {
       await populateCollectionData(
@@ -56,9 +56,12 @@ function SyncPage() {
     navigate('/profile');
   };
 
-  const handleSubmit = (event) => {
+  const handleSubmit = (event: FormEvent<HTMLFormElement>) => {
     event.preventDefault();
-    let userFromEvent = event.target.elements.username.value.trim();
+    const userInputElement = event.currentTarget.elements.namedItem(
+      'username'
+    ) as HTMLInputElement;
+    let userFromEvent = userInputElement.value.trim();
     if (!userFromEvent) userFromEvent = 'DefaultPool2';
     backToTopAction();
     handleChangeUser(userFromEvent);
@@ -97,6 +100,6 @@ function SyncPage() {
       </button>
     </form>
   );
-}
+};
 
 export default SyncPage;

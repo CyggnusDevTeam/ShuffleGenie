@@ -8,7 +8,7 @@ import {
 import AppContext from '../../../Context/AppContext';
 import { confirmAlert, handleSync } from '../handleSync';
 
-function NavDesktop() {
+const NavDesktop: React.FC = () => {
   const [isButtonDisabled, setIsButtonDisabled] = useState(false);
   const {
     lastCalledTime,
@@ -36,7 +36,7 @@ function NavDesktop() {
     );
   };
 
-  const dispatchConfimAlert = () => {
+  const dispatchConfirmAlert = () => {
     confirmAlert(navigate);
   };
 
@@ -86,7 +86,7 @@ function NavDesktop() {
                 type='button'
                 title='LogOut'
                 onClick={() => {
-                  dispatchConfimAlert();
+                  dispatchConfirmAlert();
                 }}
                 className='defaultButton'>
                 <FontAwesomeIcon icon={faRightFromBracket} />
@@ -97,6 +97,6 @@ function NavDesktop() {
       </div>
     </nav>
   );
-}
+};
 
 export default NavDesktop;

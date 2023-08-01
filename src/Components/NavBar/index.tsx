@@ -3,7 +3,7 @@ import debounce from 'lodash.debounce';
 import NavDesktop from './NavDesktop';
 import NavMobile from './NavMobile';
 
-function NavBar() {
+const NavBar: React.FC = () => {
   const [isUserOnMobile, setIsUserOnMobile] = useState(false);
   const [hasResized, setHasResized] = useState(false);
 
@@ -34,6 +34,6 @@ function NavBar() {
       <div />
     </>
   );
-}
+};
 
 export default NavBar;

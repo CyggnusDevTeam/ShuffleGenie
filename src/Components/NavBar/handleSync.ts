@@ -1,22 +1,27 @@
+import { SetStateAction, Dispatch } from 'react';
 import Swal from 'sweetalert2';
 import populateCollectionData from '../../Utils/populateCollectionData';
 import { API_ISSUE_REPORT } from '../../Utils/variables';
 
-const reloadApp = (logOut, navigate, route) => {
+const reloadApp = (
+  logOut: boolean,
+  navigate: (path: string) => void,
+  route: string
+) => {
   if (logOut) localStorage.clear();
   navigate(route);
   window.location.reload();
 };
 
 const handleSync = async (
-  setBtnDisabled,
-  setLCT,
-  lastCalledTime,
-  setCardsNum,
-  setCollection,
-  setIsLoading,
-  username,
-  navigate
+  setBtnDisabled: Dispatch<SetStateAction<boolean>>,
+  setLCT: Dispatch<SetStateAction<number>>,
+  lastCalledTime: number,
+  setCardsNum: Dispatch<SetStateAction<number>>,
+  setCollection: Dispatch<SetStateAction<any[]>>, // Replace 'any[]' with the actual type of 'setCollection' state
+  setIsLoading: Dispatch<SetStateAction<boolean>>,
+  username: string,
+  navigate: (path: string) => void
 ) => {
   setBtnDisabled(true);
   try {
@@ -61,7 +66,7 @@ const handleSync = async (
   }, 30000);
 };
 
-const confirmAlert = (navigate) => {
+const confirmAlert = (navigate: (path: string) => void) => {
   Swal.fire({
     title: 'LogOut',
     icon: 'warning',
