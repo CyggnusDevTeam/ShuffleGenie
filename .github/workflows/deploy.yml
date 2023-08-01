@@ -37,7 +37,7 @@ jobs:
           npm ci
           npm run build
         env:
-          REACT_APP_API_URL: ${{ secrets.REACT_APP_API_URL }}
+          VITE_SHUFFLE_API_URL: ${{ secrets.VITE_SHUFFLE_API_URL }}
 
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
