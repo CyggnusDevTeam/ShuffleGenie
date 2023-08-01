@@ -1,6 +1,6 @@
 import React from 'react';
 import { Routes, Route, HashRouter } from 'react-router-dom';
-import Help from '../Pages/Help/index';
+import Help from '../Pages/Help';
 import Profile from '../Pages/Profile';
 import Layout from '../Pages/Layout';
 import NoPage from '../Pages/NoPage';
@@ -9,7 +9,7 @@ import SyncForm from '../Components/SyncForm';
 import Home from '../Pages/Home';
 import About from '../Pages/About';
 
-const createRoutes = () => (
+const createRoutes = (): React.JSX.Element => (
   <AppProvider>
     <HashRouter>
       <Routes>
