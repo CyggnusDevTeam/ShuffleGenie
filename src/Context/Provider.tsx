@@ -1,0 +1,61 @@
+import React, { useState, useMemo, useEffect } from 'react';
+import PropTypes from 'prop-types';
+import AppContext from './AppContext';
+import { CollectionItem } from '../Interfaces/CollectionItem';
+import { AppContextValues } from '../Interfaces/AppContextValues';
+
+function AppProvider({ children }: { children: React.ReactNode }) {
+  const [cardsNum, setCardsNum] = useState<number>(0);
+  const [collection, setCollection] = useState<CollectionItem[]>([]);
+  const [isLoading, setIsLoading] = useState<boolean>(true);
+  const [lastCalledTime, setLCT] = useState<string>('first');
+  const [needSync, setNeedSync] = useState<boolean>(true);
+  const [username, setUsername] = useState<string>('');
+
+  const context: AppContextValues = useMemo(
+    () => ({
+      cardsNum,
+      setCardsNum,
+      collection,
+      setCollection,
+      isLoading,
+      setIsLoading,
+      lastCalledTime,
+      setLCT,
+      needSync,
+      setNeedSync,
+      username,
+      setUsername,
+    }),
+    [cardsNum, collection, isLoading, lastCalledTime, needSync, username]
+  );
+
+  const retrieveUserFromLocalStorage = () => {
+    const usrFromLocal = localStorage.getItem('activeUser');
+    const storedCollection = localStorage.getItem('collection');
+    if (usrFromLocal !== null && usrFromLocal !== '') {
+      setUsername(usrFromLocal);
+    }
+    if (storedCollection) {
+      const parsedCollection: { numOfCards: number; data: CollectionItem[] } =
+        JSON.parse(storedCollection);
+      const { numOfCards, data } = parsedCollection;
+      setCardsNum(numOfCards);
+      setCollection(data);
+      setNeedSync(false);
+    }
+  };
+
+  useEffect(() => {
+    retrieveUserFromLocalStorage();
+    setIsLoading(false);
+  }, []);
+
+  return <AppContext.Provider value={context}>{children}</AppContext.Provider>;
+}
+
+AppProvider.propTypes = {
+  children: PropTypes.node.isRequired,
+};
+
+export default AppProvider;

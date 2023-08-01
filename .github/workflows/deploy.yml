@@ -33,15 +33,16 @@ jobs:
             ${{ runner.os }}-node-
 
       - name: Install dependencies and build app
-        run: | 
+        run: |
           npm ci
           npm run build
         env:
-          REACT_APP_API_URL: ${{ secrets.REACT_APP_API_URL }}
+          VITE_SHUFFLE_API_URL: ${{ secrets.VITE_SHUFFLE_API_URL }}
 
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
+        if: github.ref == 'refs/heads/main'
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./build
+          publish_dir: ./dist
           publish_branch: gh-pages
