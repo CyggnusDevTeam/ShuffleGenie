@@ -4,7 +4,7 @@ import AppContext from '../../Context/AppContext';
 import LoadingSpinner from '../../Components/LoadingSpinner';
 import SyncForm from '../../Components/SyncForm';
 
-function Help() {
+const Help: React.FC = () => {
   const { isLoading, needSync } = useContext(AppContext);
   const navigate = useNavigate();
 
@@ -50,7 +50,7 @@ function Help() {
                   rel='noopener noreferrer'>
                   MarvelSnapZone
                 </a>{' '}
-                username bellow then click on &apos;Sync your collection&apos;.
+                username below then click on &apos;Sync your collection&apos;.
               </p>
               <SyncForm />
             </div>
@@ -59,6 +59,6 @@ function Help() {
       )}
     </section>
   );
-}
+};
 
 export default Help;

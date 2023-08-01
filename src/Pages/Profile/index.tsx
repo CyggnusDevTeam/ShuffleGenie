@@ -3,8 +3,9 @@ import { useNavigate } from 'react-router-dom';
 import AppContext from '../../Context/AppContext';
 import Card from '../../Components/Card';
 import LoadingSpinner from '../../Components/LoadingSpinner';
+import { CollectionItem } from '../../Interfaces/CollectionItem';
 
-function Profile() {
+const Profile: React.FC = () => {
   const { cardsNum, collection, isLoading, needSync, username } =
     useContext(AppContext);
   const isDefaultUser = username === 'DefaultPool2';
@@ -45,7 +46,7 @@ function Profile() {
           )}
           <div className='flex flex-wrap justify-center mx-auto lg:px-20 md:px-10 px-3'>
             {collection &&
-              collection.map((card) => (
+              collection.map((card: CollectionItem) => (
                 <Card
                   key={card.name}
                   cardName={card.name}
@@ -57,6 +58,6 @@ function Profile() {
       )}
     </section>
   );
-}
+};
 
 export default Profile;

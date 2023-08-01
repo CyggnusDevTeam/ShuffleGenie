@@ -8,11 +8,12 @@ import LoadingSpinner from '../../Components/LoadingSpinner';
 import NewUser from '../NewUser';
 import generateDeckCode from '../../Utils/generateDeckCode';
 import { generateRandomName, shuffleDeck } from '../../Utils/shuffler';
+import { CollectionItem } from '../../Interfaces/CollectionItem';
 
-function Home() {
+const Home: React.FC = () => {
   const [deckName, setDeckName] = useState('');
   const [isBuildingDeck, setIsBuildingDeck] = useState(false);
-  const [randomDeck, setRandomDeck] = useState([]);
+  const [randomDeck, setRandomDeck] = useState<CollectionItem[]>([]);
   const { collection, isLoading, needSync } = useContext(AppContext);
 
   const generateRandomDeck = () => {
@@ -25,7 +26,7 @@ function Home() {
 
   const copyDeckCode = () => {
     const deckCode = generateDeckCode(randomDeck, deckName);
-    // Copy the deck code to the clipboard
+
     navigator.clipboard
       .writeText(deckCode)
       .then(() => {
@@ -89,6 +90,6 @@ function Home() {
       )}
     </div>
   );
-}
+};
 
 export default Home;

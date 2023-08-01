@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom';
 import AppContext from '../../Context/AppContext';
 import LoadingSpinner from '../../Components/LoadingSpinner';
 
-function About() {
+const About: React.FC = () => {
   const { isLoading } = useContext(AppContext);
 
   return (
@@ -89,6 +89,6 @@ function About() {
       )}
     </>
   );
-}
+};
 
 export default About;

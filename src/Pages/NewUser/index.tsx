@@ -2,10 +2,10 @@ import React, { useRef } from 'react';
 import SyncForm from '../../Components/SyncForm';
 import cardImg from '../../Img/cardHome.webp';
 
-function NewUser() {
-  const syncSectionRef = useRef(null);
+const NewUser: React.FC = () => {
+  const syncSectionRef = useRef<HTMLDivElement>(null);
   const focusSyncSection = () => {
-    syncSectionRef.current.scrollIntoView({ behavior: 'smooth' });
+    syncSectionRef.current?.scrollIntoView({ behavior: 'smooth' });
   };
 
   return (
@@ -46,6 +46,6 @@ function NewUser() {
       </section>
     </>
   );
-}
+};
 
 export default NewUser;
