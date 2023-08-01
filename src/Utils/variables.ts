@@ -1,10 +1,10 @@
-const DEFAULT_USER = 'DefaultPool2';
-const ERROR_FAILED_COLLECTION = 'ERROR: Failed to fetch collection';
-const ERROR_TOO_MANY = 'ERROR: Too many API calls!';
-const BACKEND_URL = 'http://localhost:3001/user/';
-const API_ISSUE_REPORT =
+const DEFAULT_USER: string = 'DefaultPool2';
+const ERROR_FAILED_COLLECTION: string = 'ERROR: Failed to fetch collection';
+const ERROR_TOO_MANY: string = 'ERROR: Too many API calls!';
+const BACKEND_URL: string = 'http://localhost:3001/user/';
+const API_ISSUE_REPORT: string =
   'https://github.com/Cyggnus/ShuffleGenie-API/issues/new?assignees=&labels=&projects=&template=bug_report.md&title=';
-const MIDDLE_NAME = [
+const MIDDLE_NAME: string[] = [
   'Silly',
   'Crazy',
   'Awesome',
@@ -61,7 +61,7 @@ const MIDDLE_NAME = [
   'Cantankerous',
   'Scrumdiddlyumptious',
 ];
-const LAST_NAME = [
+const LAST_NAME: string[] = [
   'Banana',
   'Penguin',
   'Jellyfish',

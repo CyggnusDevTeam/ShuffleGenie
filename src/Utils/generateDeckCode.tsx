@@ -1,10 +1,15 @@
 import { encode } from 'base-64';
+import { CardDef, RandomDeckItem } from '../Interfaces/CardDef';
 import cardDefIds from '../data/cardDefIds';
 
-const generateDeckCode = (randomDeck, deckName) => {
+const generateDeckCode = (
+  randomDeck: RandomDeckItem[],
+  deckName: string
+): string => {
   const mappedNames = randomDeck.map((card) => {
     const foundCard = cardDefIds.find(
-      (cardDef) => cardDef.name.toLowerCase() === card.name.toLowerCase()
+      (cardDef: CardDef) =>
+        cardDef.name.toLowerCase() === card.name.toLowerCase()
     );
     return foundCard ? foundCard.carddefid : card.name.replace(/[\s-]/g, '');
   });

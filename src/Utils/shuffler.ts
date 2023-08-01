@@ -1,6 +1,7 @@
+import { Card } from '../Interfaces/Card';
 import { LAST_NAME, MIDDLE_NAME } from './variables';
 
-function shuffleDeck(array) {
+const shuffleDeck = (array: Card[]): Card[] => {
   let currentIndex = array.length;
   let randomIndex;
   const randomArray = [...array];
@@ -17,21 +18,18 @@ function shuffleDeck(array) {
 
   const selectedCards = randomArray.slice(0, 12);
   return selectedCards;
-}
+};
 
-function getRandomItemFromArray(array) {
-  return array[Math.floor(Math.random() * array.length)];
-}
+const getRandomItemFromArray = <T>(array: T[]): T =>
+  array[Math.floor(Math.random() * array.length)];
 
-function getRandomAdjective() {
-  return getRandomItemFromArray(MIDDLE_NAME);
-}
+const getRandomAdjective = (): string => getRandomItemFromArray(MIDDLE_NAME);
 
-function generateRandomName(randomDeck) {
+const generateRandomName = (randomDeck: Card[]): string => {
   const randomCard = getRandomItemFromArray(randomDeck);
   const adjective = getRandomAdjective();
   const randomWord = getRandomItemFromArray(LAST_NAME);
   return `${randomCard.name}'s ${adjective} ${randomWord}`;
-}
+};
 
 export { shuffleDeck, generateRandomName };

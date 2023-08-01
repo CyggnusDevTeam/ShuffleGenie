@@ -1,7 +1,7 @@
-import { useEffect, useState, useCallback } from 'react';
+import { useCallback, useEffect, useState } from 'react';
 
-export function showBackToTopButton() {
-  const [buttonBackToTop, setButtonBackToTop] = useState(false);
+export function showBackToTopButton(): boolean {
+  const [buttonBackToTop, setButtonBackToTop] = useState<boolean>(false);
 
   const handleScroll = useCallback(() => {
     const { scrollY: scrollPosition } = window;
@@ -24,6 +24,6 @@ export function showBackToTopButton() {
   return buttonBackToTop;
 }
 
-export function backToTopAction() {
+export function backToTopAction(): void {
   window.scrollTo({ top: 0, behavior: 'smooth' });
 }

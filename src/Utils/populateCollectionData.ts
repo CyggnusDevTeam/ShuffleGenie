@@ -1,13 +1,15 @@
+import { SetStateAction, Dispatch } from 'react';
 import fetchCollection from './GenieAPI';
 import { ERROR_FAILED_COLLECTION } from './variables';
+import { CollectionItem } from '../Interfaces/CollectionItem';
 
 const populateCollectionData = async (
-  user,
-  setCollection,
-  setCardsNum,
-  setIsLoading,
-  lastCalledTime
-) => {
+  user: string,
+  setCollection: Dispatch<SetStateAction<CollectionItem[]>>,
+  setCardsNum: Dispatch<SetStateAction<number>>,
+  setIsLoading: Dispatch<SetStateAction<boolean>>,
+  lastCalledTime: number | string
+): Promise<void> => {
   setIsLoading(true);
   try {
     const data = await fetchCollection(user, lastCalledTime);
