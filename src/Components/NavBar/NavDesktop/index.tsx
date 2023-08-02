@@ -1,11 +1,10 @@
 import React, { useContext, useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { useTranslation } from 'react-i18next';
 import {
-  faArrowsRotate,
-  faRightFromBracket,
-} from '@fortawesome/free-solid-svg-icons';
+  ArrowPathIcon,
+  ArrowLeftOnRectangleIcon,
+} from '@heroicons/react/24/solid';
 import AppContext from '../../../Context/AppContext';
 import { confirmAlert, handleSync } from '../handleSync';
 
@@ -69,11 +68,7 @@ const NavDesktop: React.FC = () => {
                 disabled={isButtonDisabled}
                 title={t('nav.btnTitle.sync')}
                 className='navLink'>
-                <FontAwesomeIcon
-                  className='fa-spin-hover'
-                  size='lg'
-                  icon={faArrowsRotate}
-                />
+                <ArrowPathIcon className='h-5 w-5 spinHover' />
               </button>
             )}
           </div>
@@ -94,8 +89,8 @@ const NavDesktop: React.FC = () => {
                 onClick={() => {
                   dispatchConfirmAlert();
                 }}
-                className='defaultButton'>
-                <FontAwesomeIcon icon={faRightFromBracket} />
+                className='defaultButton flex'>
+                <ArrowLeftOnRectangleIcon className='h-5 w-5' />
               </button>
             )}
           </div>

@@ -1,8 +1,7 @@
 import React, { useContext } from 'react';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faLinkedin, faGithub } from '@fortawesome/free-brands-svg-icons';
 import { useTranslation } from 'react-i18next';
 import { Link } from 'react-router-dom';
+import { LinkIcon } from '@heroicons/react/24/solid';
 import AppContext from '../../Context/AppContext';
 import LoadingSpinner from '../../Components/LoadingSpinner';
 
@@ -21,8 +20,8 @@ const About: React.FC = () => {
             <h1 className='h1Title text-white mb-14'>{t('nav.link.about')}</h1>
           </div>
 
-          <div className='flex flex-col justify-center space-y-8 lg:flex-row lg:space-x-80'>
-            <div className='flex flex-col justify-center items-center space-y-4'>
+          <div className='flex flex-col justify-center space-y-8 lg:space-y-0 lg:flex-row lg:space-x-80'>
+            <div className='flex flex-col items-center justify-center space-y-4'>
               <img
                 className='rounded-[50px] max-w-[180px] md:rounded-[80px] md:max-w-[250px]'
                 src='https://github.com/lkotlarenko.png'
@@ -36,13 +35,16 @@ const About: React.FC = () => {
                 target='_blank'
                 rel='noopener noreferrer'
                 className='navLink'>
-                <button className='defaultButton mt-2' type='button'>
-                  <FontAwesomeIcon icon={faLinkedin} />
+                <button
+                  className='defaultButton mt-2 flex items-center'
+                  type='button'>
+                  LinkedIn
+                  <LinkIcon className='h-5 w-5 pl-1' />
                 </button>
               </Link>
             </div>
 
-            <div className='flex flex-col justify-center items-center space-y-4'>
+            <div className='flex flex-col items-center justify-center space-y-4'>
               <img
                 className='rounded-[50px] max-w-[180px] md:rounded-[80px] md:max-w-[250px]'
                 src='https://github.com/LeonardoKleimpaul.png'
@@ -56,8 +58,11 @@ const About: React.FC = () => {
                 target='_blank'
                 rel='noopener noreferrer'
                 className='navLink'>
-                <button className='defaultButton mt-2' type='button'>
-                  <FontAwesomeIcon icon={faLinkedin} />
+                <button
+                  className='defaultButton mt-2 flex items-center'
+                  type='button'>
+                  LinkedIn
+                  <LinkIcon className='h-5 w-5 pl-1' />
                 </button>
               </Link>
             </div>
@@ -78,8 +83,11 @@ const About: React.FC = () => {
               target='_blank'
               rel='noopener noreferrer'
               className='navLink'>
-              <button className='defaultButton mt-2' type='button'>
-                <FontAwesomeIcon icon={faGithub} />
+              <button
+                className='defaultButton mt-2 flex items-center'
+                type='button'>
+                GitHub
+                <LinkIcon className='h-5 w-5 pl-1' />
               </button>
             </Link>
           </div>

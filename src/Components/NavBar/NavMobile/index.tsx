@@ -1,11 +1,6 @@
 import React, { useContext, useEffect, useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import {
-  faArrowsRotate,
-  faRightFromBracket,
-  faBars,
-} from '@fortawesome/free-solid-svg-icons';
+import { Bars3Icon } from '@heroicons/react/24/solid';
 import { useTranslation } from 'react-i18next';
 import AppContext from '../../../Context/AppContext';
 import { confirmAlert, handleSync } from '../handleSync';
@@ -81,11 +76,7 @@ const NavMobile: React.FC = () => {
             title={t('nav.btnTitle.hamburgerMenu')}
             aria-label='navbar hamburger menu'
             onClick={() => setIsOpen(!isOpen)}>
-            <FontAwesomeIcon
-              icon={faBars}
-              size='2xl'
-              style={{ color: '#9b51e0' }}
-            />
+            <Bars3Icon className='h-8 w-8' style={{ color: '#9b51e0' }} />
           </button>
           <div
             id='hamburger-items'
@@ -128,13 +119,8 @@ const NavMobile: React.FC = () => {
                   onClick={handleClick}
                   disabled={isButtonDisabled}
                   title={t('nav.btnTitle.sync')}
-                  className='navLink block w-full'>
+                  className='navLink w-full items-center'>
                   {t('nav.link.sync')}
-                  <FontAwesomeIcon
-                    className='pl-2'
-                    size='sm'
-                    icon={faArrowsRotate}
-                  />
                 </button>
               </div>
             )}
@@ -161,13 +147,8 @@ const NavMobile: React.FC = () => {
                     dispatchConfirmAlert();
                     handleLinkClick();
                   }}
-                  className='navLink block w-full'>
+                  className='navLink w-full items-center'>
                   {t('nav.btnTitle.logout')}
-                  <FontAwesomeIcon
-                    className='pl-2'
-                    size='sm'
-                    icon={faRightFromBracket}
-                  />
                 </button>
               </div>
             )}

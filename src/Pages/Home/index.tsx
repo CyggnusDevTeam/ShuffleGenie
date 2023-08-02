@@ -1,6 +1,5 @@
 import React, { useContext, useState, useEffect } from 'react';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faCopy } from '@fortawesome/free-regular-svg-icons';
+import { ClipboardDocumentIcon } from '@heroicons/react/24/solid';
 import { useTranslation } from 'react-i18next';
 import Swal from 'sweetalert2';
 import AppContext from '../../Context/AppContext';
@@ -78,7 +77,7 @@ const Home: React.FC = () => {
                     title={t('home.copy.title')}
                     onClick={copyDeckCode}
                     className='defaultButton'>
-                    <FontAwesomeIcon icon={faCopy} />
+                    <ClipboardDocumentIcon className='h-5 w-5' />
                   </button>
                 )}
               </div>
