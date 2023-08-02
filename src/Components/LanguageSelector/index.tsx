@@ -6,20 +6,14 @@ const LanguageSelector: React.FC = () => {
   const { t } = useTranslation();
   const [showModal, setShowModal] = useState(false);
 
-  const openModal = () => {
-    setShowModal(true);
-  };
-
-  const closeModal = () => {
-    setShowModal(false);
-  };
+  const toggleModal = () => setShowModal(!showModal);
 
   return (
     <div>
-      <button className='defaultButton' type='button' onClick={openModal}>
+      <button className='defaultButton' type='button' onClick={toggleModal}>
         {t('misc.selectLanguage')}
       </button>
-      {showModal && <LanguageModal onClose={closeModal} />}
+      {showModal && <LanguageModal onClose={toggleModal} />}
     </div>
   );
 };

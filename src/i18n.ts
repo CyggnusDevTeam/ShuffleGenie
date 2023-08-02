@@ -15,6 +15,6 @@ i18next
     },
     resources: {
       en: defaultLanguage,
-      pt_BR: brazilian,
+      'pt-BR': brazilian,
     },
   });

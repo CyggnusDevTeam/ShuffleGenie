@@ -35,19 +35,19 @@ function AppProvider({ children }: { children: React.ReactNode }) {
   const retrieveUserFromLocalStorage = () => {
     const usrFromLocal = localStorage.getItem('activeUser');
     const storedCollection = localStorage.getItem('collection');
-    let savedLanguage = localStorage.getItem('userDefLang');
-    if (savedLanguage === 'pt-BR') savedLanguage = 'pt_BR';
+    const savedLanguage = localStorage.getItem('userDefLang');
+
     if (savedLanguage) {
       i18n.changeLanguage(savedLanguage);
-    }
-    if (!savedLanguage) {
-      let detectedLanguage = i18n.language;
-      if (detectedLanguage === 'pt-BR') detectedLanguage = 'pt_BR';
+    } else {
+      const detectedLanguage = i18n.language;
       i18n.changeLanguage(detectedLanguage);
     }
+
     if (usrFromLocal !== null && usrFromLocal !== '') {
       setUsername(usrFromLocal);
     }
+
     if (storedCollection) {
       const parsedCollection: { numOfCards: number; data: CollectionItem[] } =
         JSON.parse(storedCollection);
