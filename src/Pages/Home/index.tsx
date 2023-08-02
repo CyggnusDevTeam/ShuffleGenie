@@ -1,6 +1,7 @@
 import React, { useContext, useState, useEffect } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCopy } from '@fortawesome/free-regular-svg-icons';
+import { useTranslation } from 'react-i18next';
 import Swal from 'sweetalert2';
 import AppContext from '../../Context/AppContext';
 import DeckBuilder from '../../Components/DeckBuilder';
@@ -11,6 +12,7 @@ import { generateRandomName, shuffleDeck } from '../../Utils/shuffler';
 import { CollectionItem } from '../../Interfaces/CollectionItem';
 
 const Home: React.FC = () => {
+  const { t } = useTranslation();
   const [deckName, setDeckName] = useState('');
   const [isBuildingDeck, setIsBuildingDeck] = useState(false);
   const [randomDeck, setRandomDeck] = useState<CollectionItem[]>([]);
@@ -31,7 +33,7 @@ const Home: React.FC = () => {
       .writeText(deckCode)
       .then(() => {
         Swal.fire({
-          title: 'Deck code copied to clipboard!',
+          title: t('home.copy.deckCopied'),
           icon: 'success',
           allowOutsideClick: true,
           allowEscapeKey: true,
@@ -58,17 +60,14 @@ const Home: React.FC = () => {
             <NewUser />
           ) : (
             <section className='bg-gray-1'>
-              <h3 className='text-sm defaultPageText p-8'>
-                Easily generate new random decks using your MarvelSnap©
-                collection.
-              </h3>
+              <h3 className='text-sm defaultPageText p-8'>{t('home.intro')}</h3>
               <div className='flex justify-around flex-col lg:flex-row items-center space-y-4'>
                 <button
                   type='button'
-                  title='Generate a new random Deck'
+                  title={t('home.randomDeckBtn.title')}
                   onClick={generateRandomDeck}
                   className='defaultButton'>
-                  New Random Deck
+                  {t('home.randomDeckBtn.text')}
                 </button>
                 {isBuildingDeck && (
                   <h2 className='defaultPageText'>{deckName}</h2>
@@ -76,7 +75,7 @@ const Home: React.FC = () => {
                 {isBuildingDeck && (
                   <button
                     type='button'
-                    title='Copy Deck Code'
+                    title={t('home.copy.title')}
                     onClick={copyDeckCode}
                     className='defaultButton'>
                     <FontAwesomeIcon icon={faCopy} />
