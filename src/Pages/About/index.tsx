@@ -1,12 +1,14 @@
 import React, { useContext } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faLinkedin, faGithub } from '@fortawesome/free-brands-svg-icons';
+import { useTranslation } from 'react-i18next';
 import { Link } from 'react-router-dom';
 import AppContext from '../../Context/AppContext';
 import LoadingSpinner from '../../Components/LoadingSpinner';
 
 const About: React.FC = () => {
   const { isLoading } = useContext(AppContext);
+  const { t } = useTranslation();
 
   return (
     <>
@@ -16,7 +18,7 @@ const About: React.FC = () => {
       ) : (
         <section className='flex flex-col justify-center my-[5%] bg-gray-1'>
           <div>
-            <h1 className='h1Title text-white mb-14'>About Us</h1>
+            <h1 className='h1Title text-white mb-14'>{t('about.title')}</h1>
           </div>
 
           <div className='flex flex-col justify-center space-y-8 lg:flex-row lg:space-x-80'>
@@ -30,7 +32,7 @@ const About: React.FC = () => {
               <p className='defaultPageText'>Leonardo Kotlarenko</p>
               <Link
                 to='https://linkedin.com/in/lkotlarenko'
-                title="lkotlarenko's LinkedIn"
+                title={t('about.btnTitle.linkedInKotlarenko')}
                 target='_blank'
                 rel='noopener noreferrer'
                 className='navLink'>
@@ -50,7 +52,7 @@ const About: React.FC = () => {
               <p className='defaultPageText'>Leonardo Kleimpaul</p>
               <Link
                 to='https://linkedin.com/in/leonardo-kleimpaul'
-                title="Kleimpaul's LinkedIn"
+                title={t('about.btnTitle.linkedInKleimpaul')}
                 target='_blank'
                 rel='noopener noreferrer'
                 className='navLink'>
@@ -65,18 +67,18 @@ const About: React.FC = () => {
             <img
               className='max-w-[120px] rounded-2xl'
               src='https://github.com/Cyggnus.png'
-              alt='Cyggnus Organization Logo'
+              alt={t('about.altImg.cyggnusLogo')}
               loading='lazy'
             />
             <p className='defaultPageText'>
-              Cyggnus was founded by Leonardo Kotlarenko and Leonardo Kleimpaul;
+              {t('about.description.part1')}
             </p>
             <p className='defaultPageText'>
-              Our aim is to create fun and useful open source applications.
+              {t('about.description.part2')}
             </p>
             <Link
               to='https://github.com/Cyggnus'
-              title='Cyggnus Organization'
+              title={t('about.btnTitle.cyggnusGitHub')}
               target='_blank'
               rel='noopener noreferrer'
               className='navLink'>

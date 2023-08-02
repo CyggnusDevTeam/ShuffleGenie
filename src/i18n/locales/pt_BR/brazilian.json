@@ -1,6 +1,33 @@
 {
   "brazilian": {
     "translation": {
+      "about": {
+        "title": "Sobre Nós",
+        "description": {
+          "part1": "Cyggnus foi fundada por Leonardo Kotlarenko e Leonardo Kleimpaul;",
+          "part2": "Nosso objetivo é criar aplicações de código aberto divertidas e úteis."
+        },
+        "altImg": {
+          "cyggnusLogo": "Logo da Organização Cyggnus"
+        },
+        "btnTitle": {
+          "linkedInKotlarenko": "LinkedIn de lkotlarenko",
+          "linkedInKleimpaul": "LinkedIn de Kleimpaul",
+          "cyggnusGitHub": "Organização Cyggnus"
+        }
+      },
+      "help": {
+        "newUserDesc1": {
+          "part1": "Para sincronizar sua coleção, você precisará de uma conta ",
+          "part2": "."
+        },
+        "newUserDesc2": {
+          "part1": "Para usar sua coleção, forneça seu nome de usuário do ",
+          "part2": " abaixo e clique em 'Sincronizar sua coleção'."
+        },
+        "description": "Para gerar decks aleatórios, clique ",
+        "button": "aqui"
+      },
       "title": "Bem Vindo ao ShuffleGenie 👋",
       "selectLanguage": "Selecione a Linguagem do App",
       "description": {

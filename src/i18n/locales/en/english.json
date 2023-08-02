@@ -1,6 +1,33 @@
 {
   "defaultLanguage": {
     "translation": {
+      "about": {
+        "title": "About Us",
+        "description": {
+          "part1": "Cyggnus was founded by Leonardo Kotlarenko and Leonardo Kleimpaul;",
+          "part2": "Our aim is to create fun and useful open source applications."
+        },
+        "altImg": {
+          "cyggnusLogo": "Cyggnus Organization Logo"
+        },
+        "btnTitle": {
+          "linkedInKotlarenko": "lkotlarenko's LinkedIn",
+          "linkedInKleimpaul": "Kleimpaul's LinkedIn",
+          "cyggnusGitHub": "Cyggnus Organization"
+        }
+      },
+      "help": {
+        "newUserDesc1": {
+          "part1": "To Sync Your Collection you will need a ",
+          "part2": "account."
+        },
+        "newUserDesc2": {
+          "part1": "To use your collection provide your ",
+          "part2": " username below then click on 'Sync your collection'."
+        },
+        "description": "To generate random decks click ",
+        "button": "here"
+      },
       "title": "Welcome to ShuffleGenie 👋",
       "selectLanguage": "Select App Language",
       "description": {
