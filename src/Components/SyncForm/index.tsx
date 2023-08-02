@@ -2,6 +2,7 @@ import React, { useContext, useState, FormEvent } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { Input } from '@material-tailwind/react';
 import Swal from 'sweetalert2';
+import { useTranslation } from 'react-i18next';
 import AppContext from '../../Context/AppContext';
 import { backToTopAction } from '../../Utils/useBackToTop';
 import populateCollectionData from '../../Utils/populateCollectionData';
@@ -9,6 +10,7 @@ import { reloadApp } from '../NavBar/handleSync';
 import { API_ISSUE_REPORT } from '../../Utils/variables';
 
 const SyncPage: React.FC = () => {
+  const { t } = useTranslation();
   const [isInputFocused, setIsInputFocused] = useState(false);
   const {
     lastCalledTime,
@@ -35,12 +37,10 @@ const SyncPage: React.FC = () => {
     } catch (error) {
       setIsLoading(true);
       Swal.fire({
-        title: 'Failed to contact our API!',
+        title: t('misc.apiMsgs.fail.title'),
         icon: 'error',
-        text: 'Sorry, something went wrong!',
-        html: `<b>If this error persists you can report an issue
-          <a target='_blank' rel='noopener noreferrer' href=${API_ISSUE_REPORT}>here.</a>
-          </b>`,
+        text: t('misc.apiMsgs.fail.text'),
+        html: t('misc.apiMsgs.fail.html', { issuesLink: API_ISSUE_REPORT }),
         allowOutsideClick: true,
         allowEscapeKey: true,
       }).then((result) => {
@@ -82,13 +82,13 @@ const SyncPage: React.FC = () => {
       <div className='flex flex-col w-auto'>
         {isInputFocused && (
           <span className='text-blue-gray-200 text-sm pb-4'>
-            (leave blank to use default collection)
+            {t('misc.syncForm.inputDesc')}
           </span>
         )}
         <Input
           variant='standard'
-          label='Your Username'
-          aria-label='Username input'
+          label={t('misc.syncForm.label')}
+          aria-label={t('misc.syncForm.aria-label')}
           color='white'
           id='username'
           onFocus={handleInputFocus}
@@ -96,7 +96,7 @@ const SyncPage: React.FC = () => {
         />
       </div>
       <button className='defaultButton' type='submit'>
-        SYNC COLLECTION
+        {t('misc.syncForm.syncBtn')}
       </button>
     </form>
   );

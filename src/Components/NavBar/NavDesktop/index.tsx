@@ -34,12 +34,13 @@ const NavDesktop: React.FC = () => {
       setCollection,
       setIsLoading,
       username,
-      navigate
+      navigate,
+      t
     );
   };
 
   const dispatchConfirmAlert = () => {
-    confirmAlert(navigate);
+    confirmAlert(navigate, t);
   };
 
   return (

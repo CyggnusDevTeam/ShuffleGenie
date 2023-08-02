@@ -40,13 +40,14 @@ const NavMobile: React.FC = () => {
       setCollection,
       setIsLoading,
       username,
-      navigate
+      navigate,
+      t
     );
     handleLinkClick();
   };
 
   const dispatchConfirmAlert = () => {
-    confirmAlert(navigate);
+    confirmAlert(navigate, t);
   };
 
   useEffect(() => {

@@ -1,5 +1,6 @@
 import { SetStateAction, Dispatch } from 'react';
 import Swal from 'sweetalert2';
+import { TFunction } from 'i18next';
 import populateCollectionData from '../../Utils/populateCollectionData';
 import { API_ISSUE_REPORT } from '../../Utils/variables';
 
@@ -8,7 +9,10 @@ const reloadApp = (
   navigate: (path: string) => void,
   route: string
 ) => {
-  if (logOut) localStorage.clear();
+  if (logOut) {
+    localStorage.removeItem('activeUser');
+    localStorage.removeItem('collection');
+  }
   navigate(route);
   window.location.reload();
 };
@@ -21,7 +25,8 @@ const handleSync = async (
   setCollection: Dispatch<SetStateAction<any[]>>, // Replace 'any[]' with the actual type of 'setCollection' state
   setIsLoading: Dispatch<SetStateAction<boolean>>,
   username: string,
-  navigate: (path: string) => void
+  navigate: (path: string) => void,
+  t: TFunction
 ) => {
   setBtnDisabled(true);
   try {
@@ -33,7 +38,7 @@ const handleSync = async (
       lastCalledTime
     ).then(() => {
       Swal.fire({
-        title: 'Synchronized with success!',
+        title: t('misc.apiMsgs.success.title'),
         icon: 'success',
         allowOutsideClick: true,
         allowEscapeKey: true,
@@ -49,12 +54,10 @@ const handleSync = async (
     });
   } catch (error) {
     Swal.fire({
-      title: 'Failed to contact our API!',
+      title: t('misc.apiMsgs.fail.title'),
       icon: 'error',
-      text: 'Sorry, something went wrong!',
-      html: `<b>If this error persists you can report an issue
-          <a target='_blank' rel='noopener noreferrer' href=${API_ISSUE_REPORT}>here.</a>
-          </b>`,
+      text: t('misc.apiMsgs.fail.text'),
+      html: t('misc.apiMsgs.fail.html', { issuesLink: API_ISSUE_REPORT }),
       allowOutsideClick: true,
       allowEscapeKey: true,
     });
@@ -66,9 +69,9 @@ const handleSync = async (
   }, 30000);
 };
 
-const confirmAlert = (navigate: (path: string) => void) => {
+const confirmAlert = (navigate: (path: string) => void, t: TFunction) => {
   Swal.fire({
-    title: 'LogOut',
+    title: t('nav.btnTitle.logout'),
     icon: 'warning',
     showCancelButton: true,
     confirmButtonColor: '#3085d6',
