@@ -7,7 +7,7 @@ import AppContext from '../../Context/AppContext';
 import { backToTopAction } from '../../Utils/useBackToTop';
 import populateCollectionData from '../../Utils/populateCollectionData';
 import { reloadApp } from '../NavBar/handleSync';
-import { API_ISSUE_REPORT } from '../../Utils/variables';
+import { API_ISSUE_REPORT } from '../../data/variables';
 
 const SyncPage: React.FC = () => {
   const { t } = useTranslation();

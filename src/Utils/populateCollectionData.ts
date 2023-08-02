@@ -1,6 +1,6 @@
 import { SetStateAction, Dispatch } from 'react';
 import fetchCollection from './GenieAPI';
-import { ERROR_FAILED_COLLECTION } from './variables';
+import { ERROR_FAILED_COLLECTION } from '../data/variables';
 import { CollectionItem } from '../Interfaces/CollectionItem';
 
 const populateCollectionData = async (

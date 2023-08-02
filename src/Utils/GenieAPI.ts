@@ -1,4 +1,4 @@
-import { ERROR_FAILED_COLLECTION, ERROR_TOO_MANY } from './variables';
+import { ERROR_FAILED_COLLECTION, ERROR_TOO_MANY } from '../data/variables';
 
 const SHUFFLE_API_URL = import.meta.env.VITE_SHUFFLE_API_URL;
 

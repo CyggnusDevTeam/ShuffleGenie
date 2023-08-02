@@ -1,5 +1,5 @@
 import { Card } from '../Interfaces/Card';
-import { LAST_NAME, MIDDLE_NAME } from './variables';
+import { LAST_NAME, MIDDLE_NAME } from '../data/variables';
 
 const shuffleDeck = (array: Card[]): Card[] => {
   let currentIndex = array.length;
