@@ -6,9 +6,9 @@ import LoadingSpinner from '../../Components/LoadingSpinner';
 import SyncForm from '../../Components/SyncForm';
 
 const Help: React.FC = () => {
+  const { t } = useTranslation();
   const { isLoading, needSync } = useContext(AppContext);
   const navigate = useNavigate();
-  const { t } = useTranslation();
 
   const handleRedirectHome = () => {
     navigate('/');
@@ -41,7 +41,7 @@ const Help: React.FC = () => {
                   target='_blank'
                   rel='noopener noreferrer'>
                   MarvelSnapZone
-                </a>{' '}
+                </a>
                 {t('help.newUserDesc1.part2')}
               </p>
               <p className='defaultPageText'>
@@ -54,6 +54,7 @@ const Help: React.FC = () => {
                 </a>
                 {t('help.newUserDesc2.part2')}
               </p>
+              <p className='defaultPageText'>{t('help.newUserDesc2.part3')}</p>
               <SyncForm />
             </div>
           )}

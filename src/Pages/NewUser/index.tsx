@@ -4,8 +4,8 @@ import SyncForm from '../../Components/SyncForm';
 import cardImg from '../../Img/cardHome.webp';
 
 const NewUser: React.FC = () => {
-  const syncSectionRef = useRef<HTMLDivElement>(null);
   const { t } = useTranslation();
+  const syncSectionRef = useRef<HTMLDivElement>(null);
   const focusSyncSection = () => {
     syncSectionRef.current?.scrollIntoView({ behavior: 'smooth' });
   };
@@ -15,19 +15,19 @@ const NewUser: React.FC = () => {
       <section className='z-20 flex flex-col justify-center items-center mt-[10%] sm:mt-[15%] lg:m-[12%] lg:flex-row lg:justify-around bg-gray-1'>
         <div className='flex flex-col justify-center items-center max-w-screen lg:w-4/12 space-y-11 sm:space-y-16'>
           <h2 className='text-violet-1 text-center lg:mt-0 font-bold text-2xl max-w-[90%] lg:max-w-[100%]'>
-            {t('title')}
+            {t('home.newUser.title')}
           </h2>
           <h1 className='h1Title max-w-[90%] lg:max-w-[100%]'>
-            {t('description.part1')}
+            {t('home.newUser.description.part1')}
           </h1>
           <p className='defaultPageText max-w-[90%] lg:max-w-[100%]'>
-            {t('description.part2')}
+            {t('home.newUser.description.part2')}
           </p>
           <button
             type='button'
             onClick={focusSyncSection}
             className='defaultButton'>
-            {t('syncCollection')}
+            {t('misc.syncCollection')}
           </button>
         </div>
         <div className='flex flex-col justify-center mb-[55%] sm:mb-[25%] md:mb-[25%] lg:mb-0'>

@@ -7,8 +7,8 @@ import AppContext from '../../Context/AppContext';
 import LoadingSpinner from '../../Components/LoadingSpinner';
 
 const About: React.FC = () => {
-  const { isLoading } = useContext(AppContext);
   const { t } = useTranslation();
+  const { isLoading } = useContext(AppContext);
 
   return (
     <>
@@ -18,7 +18,7 @@ const About: React.FC = () => {
       ) : (
         <section className='flex flex-col justify-center my-[5%] bg-gray-1'>
           <div>
-            <h1 className='h1Title text-white mb-14'>{t('about.title')}</h1>
+            <h1 className='h1Title text-white mb-14'>{t('nav.link.about')}</h1>
           </div>
 
           <div className='flex flex-col justify-center space-y-8 lg:flex-row lg:space-x-80'>
@@ -70,12 +70,8 @@ const About: React.FC = () => {
               alt={t('about.altImg.cyggnusLogo')}
               loading='lazy'
             />
-            <p className='defaultPageText'>
-              {t('about.description.part1')}
-            </p>
-            <p className='defaultPageText'>
-              {t('about.description.part2')}
-            </p>
+            <p className='defaultPageText'>{t('about.description.part1')}</p>
+            <p className='defaultPageText'>{t('about.description.part2')}</p>
             <Link
               to='https://github.com/Cyggnus'
               title={t('about.btnTitle.cyggnusGitHub')}
