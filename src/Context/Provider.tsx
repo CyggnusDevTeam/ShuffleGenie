@@ -35,12 +35,14 @@ function AppProvider({ children }: { children: React.ReactNode }) {
   const retrieveUserFromLocalStorage = () => {
     const usrFromLocal = localStorage.getItem('activeUser');
     const storedCollection = localStorage.getItem('collection');
-    const savedLanguage = localStorage.getItem('userLang');
+    let savedLanguage = localStorage.getItem('userDefLang');
+    if (savedLanguage === 'pt-BR') savedLanguage = 'pt_BR';
     if (savedLanguage) {
       i18n.changeLanguage(savedLanguage);
     }
     if (!savedLanguage) {
-      const detectedLanguage = i18n.language;
+      let detectedLanguage = i18n.language;
+      if (detectedLanguage === 'pt-BR') detectedLanguage = 'pt_BR';
       i18n.changeLanguage(detectedLanguage);
     }
     if (usrFromLocal !== null && usrFromLocal !== '') {

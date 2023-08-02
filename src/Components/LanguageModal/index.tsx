@@ -7,6 +7,7 @@ const LanguageModal: React.FC<LanguageModalIProps> = ({ onClose }) => {
   const { t, i18n } = useTranslation();
 
   const handleChangeLanguage = (language: string) => {
+    localStorage.setItem('userDefLang', language);
     i18n.changeLanguage(language);
     onClose();
   };

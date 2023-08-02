@@ -2,7 +2,7 @@ import { SetStateAction, Dispatch } from 'react';
 import Swal from 'sweetalert2';
 import { TFunction } from 'i18next';
 import populateCollectionData from '../../Utils/populateCollectionData';
-import { API_ISSUE_REPORT } from '../../Utils/variables';
+import { API_ISSUE_REPORT } from '../../data/variables';
 
 const reloadApp = (
   logOut: boolean,
