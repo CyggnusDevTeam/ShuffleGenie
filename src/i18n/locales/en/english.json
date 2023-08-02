@@ -41,23 +41,50 @@
       },
 
       "home": {
+        "copy": {
+          "deckCopied": "Deck code copied to clipboard!",
+          "title": "Copy Deck Code"
+        },
+        "intro": "Easily generate new random decks using your MarvelSnap© collection.",
         "newUser": {
           "title": "Welcome to ShuffleGenie 👋",
           "description": {
             "part1": "Create a new random deck with your owned collection cards!",
             "part2": "Sync your Marvel Snap Zone account username to generate a new completely random deck with cards from your snap collection."
           }
+        },
+        "randomDeckBtn": {
+          "text": "New Random Deck",
+          "title": "Generate a new random Deck"
         }
       },
 
       "misc": {
+        "apiMsgs": {
+          "fail": {
+            "html": "<b>If this error persists you can report an issue <a target='_blank' rel='noopener noreferrer' href={{issuesLink}}>here.</a> </b>",
+            "text": "Sorry, something went wrong!",
+            "title": "Failed to contact our API!"
+          },
+          "success": {
+            "title": "Synchronized with success!"
+          }
+        },
+        "card": {
+          "title": "View '{{name}}' on MarvelSnapZone©"
+        },
         "close": "Close",
         "langList": {
           "en": "English",
           "pt_BR": "Brazilian Portuguese"
         },
         "selectLanguage": "Select Language",
-        "syncCollection": "SYNC COLLECTION"
+        "syncForm": {
+          "label": "Your Username",
+          "aria-label": "Username input",
+          "inputDesc": "(leave blank to use default collection)",
+          "syncBtn": "SYNC COLLECTION"
+        }
       },
 
       "nav": {
@@ -76,6 +103,17 @@
           "logout": "Logout",
           "profile": "Go to your profile page",
           "sync": "Re-Sync Your Collection"
+        }
+      },
+
+      "profile": {
+        "greetings": {
+          "defaultUser": "Welcome to our app 👽, you are exploring the Default Collection with {{numCards}} cards! Enjoy the diverse selection of cards from Pool 2 and below.",
+          "loggedUser": "Hi {{user}} 👽, here is your snap collection of {{numCards}} cards!"
+        },
+        "info": {
+          "part1": "To generate random decks click ",
+          "part2": "here"
         }
       }
     }

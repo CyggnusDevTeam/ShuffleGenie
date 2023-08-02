@@ -40,23 +40,50 @@
       },
 
       "home": {
+        "copy": {
+          "deckCopied": "Deck copiado para a area de transferência!",
+          "title": "Copiar código do Deck"
+        },
+        "intro": "Gere facilmente novos decks aleatórios usando sua coleção do MarvelSnap©.",
         "newUser": {
           "title": "Bem Vindo ao ShuffleGenie 👋",
           "description": {
             "part1": "Crie um novo deck randomizado com as cartas da sua coleção!",
             "part2": "Sincronize seu nome de usuário da conta Marvel Snap Zone para gerar um novo deck completamente aleatório com cartas de sua coleção do Snap."
           }
+        },
+        "randomDeckBtn": {
+          "text": "Novo Deck Aleatório",
+          "title": "Gerar um novo Deck Aleatório"
         }
       },
 
       "misc": {
+        "apiMsgs": {
+          "fail": {
+            "html": "<b>Se esse erro persistir, você pode relatar um problema <a target='_blank' rel='noopener noreferrer' href={{issuesLink}}>aqui.</a> </b>",
+            "text": "Desculpe, algo deu errado!",
+            "title": "Falha ao contactar nossa API!"
+          },
+          "success": {
+            "title": "Sincronizado com sucesso!"
+          }
+        },
+        "card": {
+          "title": "Ver '{{name}}' no MarvelSnapZone©"
+        },
         "close": "Fechar",
         "langList": {
           "en": "Inglês",
           "pt_BR": "Português Brasileiro"
         },
         "selectLanguage": "Selecionar Lingua",
-        "syncCollection": "SINCRONIZAR COLEÇÃO"
+        "syncForm": {
+          "label": "Seu nome de usuário",
+          "aria-label": "Entrada nome de usuário",
+          "inputDesc": "(deixe o campo em branco para usar a coleção padrão)",
+          "syncBtn": "SINCRONIZAR COLEÇÃO"
+        }
       },
 
       "nav": {
@@ -75,6 +102,17 @@
           "logout": "Sair",
           "profile": "Vá para a pagina do seu perfil",
           "sync": "Re-sincronizar sua coleção"
+        }
+      },
+
+      "profile": {
+        "greetings": {
+          "defaultUser": "Bem-vindo ao nosso aplicativo 👽, você está explorando a Coleção Padrão com {{numCards}} cartas! Aproveite essa seleção de cartas da Pool 2 e abaixo.",
+          "loggedUser": "Olá {{user}} 👽, aqui está sua coleção Snap com {{numCards}} cartas!"
+        },
+        "info": {
+          "part1": "Para gerar decks aleatórios clique ",
+          "part2": "aqui"
         }
       }
     }
