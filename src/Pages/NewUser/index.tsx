@@ -27,7 +27,7 @@ const NewUser: React.FC = () => {
             type='button'
             onClick={focusSyncSection}
             className='defaultButton'>
-            {t('misc.syncCollection')}
+            {t('misc.syncForm.syncBtn')}
           </button>
         </div>
         <div className='flex flex-col justify-center mb-[55%] sm:mb-[25%] md:mb-[25%] lg:mb-0'>
