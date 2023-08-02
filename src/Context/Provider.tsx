@@ -1,10 +1,12 @@
 import React, { useState, useMemo, useEffect } from 'react';
 import PropTypes from 'prop-types';
+import { useTranslation } from 'react-i18next';
 import AppContext from './AppContext';
 import { CollectionItem } from '../Interfaces/CollectionItem';
 import { AppContextValues } from '../Interfaces/AppContextValues';
 
 function AppProvider({ children }: { children: React.ReactNode }) {
+  const { i18n } = useTranslation();
   const [cardsNum, setCardsNum] = useState<number>(0);
   const [collection, setCollection] = useState<CollectionItem[]>([]);
   const [isLoading, setIsLoading] = useState<boolean>(true);
@@ -33,6 +35,14 @@ function AppProvider({ children }: { children: React.ReactNode }) {
   const retrieveUserFromLocalStorage = () => {
     const usrFromLocal = localStorage.getItem('activeUser');
     const storedCollection = localStorage.getItem('collection');
+    const savedLanguage = localStorage.getItem('userLang');
+    if (savedLanguage) {
+      i18n.changeLanguage(savedLanguage);
+    }
+    if (!savedLanguage) {
+      const detectedLanguage = i18n.language;
+      i18n.changeLanguage(detectedLanguage);
+    }
     if (usrFromLocal !== null && usrFromLocal !== '') {
       setUsername(usrFromLocal);
     }

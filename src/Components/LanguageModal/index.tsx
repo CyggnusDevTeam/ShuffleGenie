@@ -1,17 +1,13 @@
-// LanguageModal.tsx
-
 import React from 'react';
 import { useTranslation } from 'react-i18next';
+
 import { LanguageModalIProps } from '../../Interfaces/LanguageModalIProps';
 
-const LanguageModal: React.FC<LanguageModalIProps> = ({
-  onClose,
-  onChangeLanguage,
-}) => {
-  const { t } = useTranslation();
+const LanguageModal: React.FC<LanguageModalIProps> = ({ onClose }) => {
+  const { t, i18n } = useTranslation();
 
   const handleChangeLanguage = (language: string) => {
-    onChangeLanguage(language);
+    i18n.changeLanguage(language);
     onClose();
   };
 
