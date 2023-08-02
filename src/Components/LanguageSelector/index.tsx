@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import LanguageModal from '../LanguageModal';
 
@@ -18,22 +18,10 @@ const LanguageSelector: React.FC = () => {
     i18n.changeLanguage(language);
   };
 
-  useEffect(() => {
-    if (showModal) {
-      document.body.classList.add('no-scroll');
-    } else {
-      document.body.classList.remove('no-scroll');
-    }
-
-    return () => {
-      document.body.classList.remove('no-scroll');
-    };
-  }, [showModal]);
-
   return (
     <div>
       <button className='defaultButton' type='button' onClick={openModal}>
-        {t('selectLanguage')}
+        {t('misc.selectLanguage')}
       </button>
       {showModal && (
         <LanguageModal

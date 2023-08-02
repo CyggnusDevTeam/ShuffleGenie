@@ -9,16 +9,18 @@ const Footer: React.FC = () => {
     <footer className='flex md:flex-row justify-around w-full bg-gray-3 lg:h-48 flex-wrap p-3 space-y-4'>
       <div className='flex flex-col justify-center space-y-3 items-center md:max-w-sm lg:w-1/3'>
         <p className='text-white text-sm font-bold defaultPageText'>
-          {t('copyright.allRights')}
+          {t('footer.copyright.allRights')}
         </p>
-        <p className='text-sm defaultPageText'>{t('copyright.affiliation')}</p>
         <p className='text-sm defaultPageText'>
-          {t('copyright.providedBy')}
+          {t('footer.copyright.affiliation')}
+        </p>
+        <p className='text-sm defaultPageText'>
+          {t('footer.copyright.providedBy')}
           <a
             href='https://marvelsnapzone.com/'
             target='_blank'
             rel='noopener noreferrer'>
-            {t('copyright.dataFrom')}
+            {t('footer.copyright.dataFrom')}
           </a>
           .
         </p>

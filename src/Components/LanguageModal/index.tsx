@@ -16,23 +16,25 @@ const LanguageModal: React.FC<LanguageModalIProps> = ({
   };
 
   return (
-    <div className='fixed top-0 left-0 right-0 bottom-0 bg-gray-800 bg-opacity-50 flex items-center justify-center'>
+    <div className='fixed top-0 left-0 right-0 bottom-0 flex items-center justify-center'>
       <div className='bg-white p-6 rounded-lg'>
-        <h2 className='text-lg font-semibold mb-4'>{t('selectLanguage')}</h2>
+        <h2 className='text-lg font-semibold mb-4'>
+          {t('misc.selectLanguage')}
+        </h2>
         <button
           className='block w-full text-left mb-2'
           type='button'
           onClick={() => handleChangeLanguage('en')}>
-          English
+          {t('misc.langList.en')}
         </button>
         <button
           className='block w-full text-left'
           type='button'
           onClick={() => handleChangeLanguage('pt_BR')}>
-          Português Brasileiro
+          {t('misc.langList.pt_BR')}
         </button>
         <button className='mt-4' type='button' onClick={onClose}>
-          Close
+          {t('misc.close')}
         </button>
       </div>
     </div>
