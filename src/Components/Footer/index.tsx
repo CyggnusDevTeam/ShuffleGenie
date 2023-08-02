@@ -26,9 +26,6 @@ const Footer: React.FC = () => {
         </p>
       </div>
       <div className='flex items-center'>
-        <LanguageSelector />
-      </div>
-      <div className='flex items-center'>
         <a
           className='text-white md:text-sm text-base font-bold inline-flex items-center'
           href='https://github.com/Cyggnus'

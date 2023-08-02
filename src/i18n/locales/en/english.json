@@ -100,6 +100,7 @@
           "hamburgerMenu": "Open navigation menu",
           "help": "Go to help page",
           "home": "Go to home page",
+          "locale": "Change App Language",
           "logout": "Logout",
           "profile": "Go to your profile page",
           "sync": "Re-Sync Your Collection"

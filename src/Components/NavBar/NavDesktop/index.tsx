@@ -7,6 +7,7 @@ import {
 } from '@heroicons/react/24/solid';
 import AppContext from '../../../Context/AppContext';
 import { confirmAlert, handleSync } from '../handleSync';
+import LanguageSelector from '../../LanguageSelector';
 
 const NavDesktop: React.FC = () => {
   const { t } = useTranslation();
@@ -93,6 +94,7 @@ const NavDesktop: React.FC = () => {
                 <ArrowLeftOnRectangleIcon className='h-5 w-5' />
               </button>
             )}
+            <LanguageSelector />
           </div>
         </div>
       </div>
