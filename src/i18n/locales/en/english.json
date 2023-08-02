@@ -16,31 +16,68 @@
           "cyggnusGitHub": "Cyggnus Organization"
         }
       },
+
+      "footer": {
+        "copyright": {
+          "allRights": "ShuffleGenie © 2023. All Rights Reserved.",
+          "affiliation": "ShuffleGenie is not affiliated with MarvelSnapZone, Nuverse, Second Dinner, or Marvel.",
+          "providedBy": "Collection data is provided by ",
+          "dataFrom": "MarvelSnapZone©"
+        }
+      },
+
       "help": {
         "newUserDesc1": {
           "part1": "To Sync Your Collection you will need a ",
-          "part2": "account."
+          "part2": " account."
         },
         "newUserDesc2": {
-          "part1": "To use your collection provide your ",
-          "part2": " username below then click on 'Sync your collection'."
+          "part1": "Use your collection by providing your ",
+          "part2": " username below and then clicking on 'SYNC COLLECTION'.",
+          "part3": "You can also leave the text field empty to use the default collection."
         },
         "description": "To generate random decks click ",
         "button": "here"
       },
-      "title": "Welcome to ShuffleGenie 👋",
-      "selectLanguage": "Select App Language",
-      "description": {
-        "part1": "Create a new random deck with your owned collection cards!",
-        "part2": "Sync your Marvel Snap Zone account username to generate a new completely random deck with cards from your snap collection."
+
+      "home": {
+        "newUser": {
+          "title": "Welcome to ShuffleGenie 👋",
+          "description": {
+            "part1": "Create a new random deck with your owned collection cards!",
+            "part2": "Sync your Marvel Snap Zone account username to generate a new completely random deck with cards from your snap collection."
+          }
+        }
       },
-      "copyright": {
-        "allRights": "ShuffleGenie © 2023. All Rights Reserved.",
-        "affiliation": "ShuffleGenie is not affiliated with MarvelSnapZone, Nuverse, Second Dinner, or Marvel.",
-        "providedBy": "Collection data is provided by ",
-        "dataFrom": "MarvelSnapZone©"
+
+      "misc": {
+        "close": "Close",
+        "langList": {
+          "en": "English",
+          "pt_BR": "Brazilian Portuguese"
+        },
+        "selectLanguage": "Select Language",
+        "syncCollection": "SYNC COLLECTION"
       },
-      "syncCollection": "SYNC COLLECTION"
+
+      "nav": {
+        "link": {
+          "about": "About Us",
+          "help": "Help",
+          "home": "Home",
+          "profile": "Profile",
+          "sync": "Re-Sync"
+        },
+        "btnTitle": {
+          "about": "Go to about us page",
+          "hamburgerMenu": "Open navigation menu",
+          "help": "Go to help page",
+          "home": "Go to home page",
+          "logout": "Logout",
+          "profile": "Go to your profile page",
+          "sync": "Re-Sync Your Collection"
+        }
+      }
     }
   }
 }
