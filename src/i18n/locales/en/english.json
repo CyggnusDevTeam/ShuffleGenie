@@ -1,0 +1,19 @@
+{
+  "defaultLanguage": {
+    "translation": {
+      "title": "Welcome to ShuffleGenie 👋",
+      "selectLanguage": "Select App Language",
+      "description": {
+        "part1": "Create a new random deck with your owned collection cards!",
+        "part2": "Sync your Marvel Snap Zone account username to generate a new completely random deck with cards from your snap collection."
+      },
+      "copyright": {
+        "allRights": "ShuffleGenie © 2023. All Rights Reserved.",
+        "affiliation": "ShuffleGenie is not affiliated with MarvelSnapZone, Nuverse, Second Dinner, or Marvel.",
+        "providedBy": "Collection data is provided by ",
+        "dataFrom": "MarvelSnapZone©"
+      },
+      "syncCollection": "SYNC COLLECTION"
+    }
+  }
+}

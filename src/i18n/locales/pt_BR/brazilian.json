@@ -1,0 +1,19 @@
+{
+  "brazilian": {
+    "translation": {
+      "title": "Bem Vindo ao ShuffleGenie 👋",
+      "selectLanguage": "Selecione a Linguagem do App",
+      "description": {
+        "part1": "Crie um novo deck randomizado com as cartas da sua coleção!",
+        "part2": "Sincronize seu nome de usuário da conta Marvel Snap Zone para gerar um novo deck completamente aleatório com cartas de sua coleção do Snap."
+      },
+      "copyright": {
+        "allRights": "ShuffleGenie © 2023. Todos os direitos reservados.",
+        "affiliation": "O ShuffleGenie não possui afiliação com a MarvelSnapZone, Nuverse, Second Dinner ou Marvel.",
+        "providedBy": "Dados da coleção fornecidos por ",
+        "dataFrom": "MarvelSnapZone©"
+      },
+      "syncCollection": "SINCRONIZAR COLEÇÃO"
+    }
+  }
+}
