@@ -75,8 +75,19 @@
         },
         "close": "Close",
         "langList": {
+          "de": "German",
           "en": "English",
-          "pt_BR": "Brazilian Portuguese"
+          "es": "Spanish",
+          "fr": "French",
+          "hi": "Hindi",
+          "it": "Italian",
+          "ja": "Japanese",
+          "ko": "Korean",
+          "nl": "Dutch",
+          "pt-BR": "Brazilian Portuguese",
+          "ru": "Russian",
+          "uk": "Ukrainian",
+          "zh": "Chinese"
         },
         "selectLanguage": "Select Language",
         "syncForm": {

@@ -74,8 +74,19 @@
         },
         "close": "Fechar",
         "langList": {
+          "de": "Alemão",
           "en": "Inglês",
-          "pt_BR": "Português Brasileiro"
+          "es": "Espanhol",
+          "fr": "Francês",
+          "hi": "Hindi",
+          "it": "Italiano",
+          "ja": "Japonês",
+          "ko": "Coreano",
+          "nl": "Holandês",
+          "pt-BR": "Português Brasileiro",
+          "ru": "Russo",
+          "uk": "Ucraniano",
+          "zh": "Chinês"
         },
         "selectLanguage": "Selecionar Lingua",
         "syncForm": {

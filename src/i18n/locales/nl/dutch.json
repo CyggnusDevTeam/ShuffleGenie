@@ -1,0 +1,133 @@
+{
+  "dutch": {
+    "translation": {
+      "about": {
+        "title": "Over Ons",
+        "description": {
+          "part1": "Cyggnus is opgericht door Leonardo Kotlarenko en Leonardo Kleimpaul;",
+          "part2": "Ons doel is om leuke en nuttige open source applicaties te maken."
+        },
+        "altImg": {
+          "cyggnusLogo": "Cyggnus Organisatie Logo"
+        },
+        "btnTitle": {
+          "linkedInKotlarenko": "lkotlarenko's LinkedIn",
+          "linkedInKleimpaul": "Kleimpaul's LinkedIn",
+          "cyggnusGitHub": "Cyggnus Organisatie"
+        }
+      },
+
+      "footer": {
+        "copyright": {
+          "allRights": "ShuffleGenie © 2023. Alle rechten voorbehouden.",
+          "affiliation": "ShuffleGenie heeft geen affiliatie met MarvelSnapZone, Nuverse, Second Dinner, of Marvel.",
+          "providedBy": "Collectiegegevens worden verstrekt door ",
+          "dataFrom": "MarvelSnapZone©"
+        }
+      },
+
+      "help": {
+        "newUserDesc1": {
+          "part1": "Om je collectie te synchroniseren heb je een ",
+          "part2": " account nodig."
+        },
+        "newUserDesc2": {
+          "part1": "Gebruik je collectie door je ",
+          "part2": " gebruikersnaam hieronder in te voeren en vervolgens op 'COLLECTIE SYNCHRONISEREN' te klikken.",
+          "part3": "Je kunt ook het tekstveld leeg laten om de standaardcollectie te gebruiken."
+        },
+        "description": "Om willekeurige decks te genereren, klik ",
+        "button": "hier"
+      },
+
+      "home": {
+        "copy": {
+          "deckCopied": "Deckcode gekopieerd naar klembord!",
+          "title": "Kopieer Deckcode"
+        },
+        "intro": "Genereer eenvoudig nieuwe willekeurige decks met behulp van je MarvelSnap©-collectie.",
+        "newUser": {
+          "title": "Welkom bij ShuffleGenie 👋",
+          "description": {
+            "part1": "Creëer een nieuw willekeurig deck met je eigen collectiekaarten!",
+            "part2": "Synchroniseer je Marvel Snap Zone accountgebruikersnaam om een geheel nieuw willekeurig deck te genereren met kaarten uit je snap-collectie."
+          }
+        },
+        "randomDeckBtn": {
+          "text": "Nieuw Willekeurig Deck",
+          "title": "Genereer een nieuw willekeurig Deck"
+        }
+      },
+
+      "misc": {
+        "apiMsgs": {
+          "fail": {
+            "html": "<b>Als deze fout aanhoudt, kun je een probleem rapporteren <a target='_blank' rel='noopener noreferrer' href={{issuesLink}}>hier.</a> </b>",
+            "text": "Sorry, er is iets misgegaan!",
+            "title": "Kan geen contact maken met onze API!"
+          },
+          "success": {
+            "title": "Succesvol gesynchroniseerd!"
+          }
+        },
+        "card": {
+          "title": "Bekijk '{{name}}' op MarvelSnapZone©"
+        },
+        "close": "Sluiten",
+        "langList": {
+          "de": "Duits",
+          "en": "Engels",
+          "es": "Spaans",
+          "fr": "Frans",
+          "hi": "Hindi",
+          "it": "Italiaans",
+          "ja": "Japans",
+          "ko": "Koreaans",
+          "nl": "Nederlands",
+          "pt-BR": "Braziliaans Portugees",
+          "ru": "Russisch",
+          "uk": "Oekraïens",
+          "zh": "Chinees"
+        },
+        "selectLanguage": "Selecteer Taal",
+        "syncForm": {
+          "label": "Jouw Gebruikersnaam",
+          "aria-label": "Gebruikersnaam invoer",
+          "inputDesc": "(laat leeg om de standaardcollectie te gebruiken)",
+          "syncBtn": "COLLECTIE SYNCHRONISEREN"
+        }
+      },
+
+      "nav": {
+        "link": {
+          "about": "Over Ons",
+          "help": "Hulp",
+          "home": "Home",
+          "profile": "Profiel",
+          "sync": "Her-Synchroniseren"
+        },
+        "btnTitle": {
+          "about": "Ga naar over ons pagina",
+          "hamburgerMenu": "Open navigatiemenu",
+          "help": "Ga naar hulppagina",
+          "home": "Ga naar homepagina",
+          "locale": "Verander App Taal",
+          "logout": "Uitloggen",
+          "profile": "Ga naar jouw profielpagina",
+          "sync": "Her-Synchroniseer Jouw Collectie"
+        }
+      },
+
+      "profile": {
+        "greetings": {
+          "defaultUser": "Welkom bij onze app 👽, je verkent de Standaard Collectie met {{numCards}} kaarten! Geniet van de diverse selectie kaarten uit Pool 2 en lager.",
+          "loggedUser": "Hallo {{user}} 👽, hier is jouw snap-collectie met {{numCards}} kaarten!"
+        },
+        "info": {
+          "part1": "Om willekeurige decks te genereren, klik ",
+          "part2": "hier"
+        }
+      }
+    }
+  }
+}

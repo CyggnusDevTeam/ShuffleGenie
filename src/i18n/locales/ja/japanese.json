@@ -1,0 +1,132 @@
+{
+  "japanese": {
+    "translation": {
+      "about": {
+        "title": "私たちについて",
+        "description": {
+          "part1": "Cyggnusは、Leonardo KotlarenkoとLeonardo Kleimpaulによって設立されました。",
+          "part2": "私たちの目標は、楽しくて役に立つオープンソースアプリケーションを作成することです。"
+        },
+        "altImg": {
+          "cyggnusLogo": "Cyggnus組織のロゴ"
+        },
+        "btnTitle": {
+          "linkedInKotlarenko": "lkotlarenkoのLinkedIn",
+          "linkedInKleimpaul": "KleimpaulのLinkedIn",
+          "cyggnusGitHub": "Cyggnus組織"
+        }
+      },
+
+      "footer": {
+        "copyright": {
+          "allRights": "ShuffleGenie © 2023。全著作権所有。",
+          "affiliation": "ShuffleGenieは、MarvelSnapZone、Nuverse、Second Dinner、またはMarvelと提携していません。",
+          "providedBy": "コレクションデータは提供されています：",
+          "dataFrom": "MarvelSnapZone©"
+        }
+      },
+
+      "help": {
+        "newUserDesc1": {
+          "part1": "コレクションを同期するには、",
+          "part2": " アカウントが必要です。"
+        },
+        "newUserDesc2": {
+          "part1": "下のテキストフィールドに",
+          "part2": " アカウントのユーザー名を入力して、「コレクションを同期」をクリックしてください。テキストフィールドを空白のままにして、デフォルトのコレクションを使用することもできます。"
+        },
+        "description": "ランダムなデッキを生成するには、",
+        "button": "こちら"
+      },
+
+      "home": {
+        "copy": {
+          "deckCopied": "デッキコードがクリップボードにコピーされました！",
+          "title": "デッキコードのコピー"
+        },
+        "intro": "MarvelSnap©のコレクションを使用して新しいランダムなデッキを簡単に生成できます。",
+        "newUser": {
+          "title": "ShuffleGenieへようこそ 👋",
+          "description": {
+            "part1": "所持しているコレクションカードで新しいランダムなデッキを作成しましょう！",
+            "part2": "Marvel Snap Zoneアカウントのユーザー名を同期して、Snapコレクションから完全にランダムな新しいデッキを生成します。"
+          }
+        },
+        "randomDeckBtn": {
+          "text": "新しいランダムデッキ",
+          "title": "新しいランダムデッキを生成"
+        }
+      },
+
+      "misc": {
+        "apiMsgs": {
+          "fail": {
+            "html": "<b>このエラーが続く場合は、<a target='_blank' rel='noopener noreferrer' href={{issuesLink}}>こちら</a> で問題を報告できます。</b>",
+            "text": "申し訳ありませんが、何か問題が発生しました。",
+            "title": "APIのコンタクトに失敗しました！"
+          },
+          "success": {
+            "title": "正常に同期されました！"
+          }
+        },
+        "card": {
+          "title": "MarvelSnapZone©で '{{name}}' を表示"
+        },
+        "close": "閉じる",
+        "langList": {
+          "de": "ドイツ語",
+          "en": "英語",
+          "es": "スペイン語",
+          "fr": "フランス語",
+          "hi": "ヒンディー語",
+          "it": "イタリア語",
+          "ja": "日本語",
+          "ko": "韓国語",
+          "nl": "オランダ語",
+          "pt-BR": "ブラジルポルトガル語",
+          "ru": "ロシア語",
+          "uk": "ウクライナ語",
+          "zh": "中国語"
+        },
+        "selectLanguage": "言語を選択",
+        "syncForm": {
+          "label": "ユーザー名",
+          "aria-label": "ユーザー名入力",
+          "inputDesc": "（デフォルトのコレクションを使用する場合は空白のままにしてください）",
+          "syncBtn": "コレクションを同期"
+        }
+      },
+
+      "nav": {
+        "link": {
+          "about": "私たちについて",
+          "help": "ヘルプ",
+          "home": "ホーム",
+          "profile": "プロフィール",
+          "sync": "再同期"
+        },
+        "btnTitle": {
+          "about": "私たちについてのページに移動",
+          "hamburgerMenu": "ナビゲーションメニューを開く",
+          "help": "ヘルプページに移動",
+          "home": "ホームページに移動",
+          "locale": "アプリ言語を変更",
+          "logout": "ログアウト",
+          "profile": "プロフィールページに移動",
+          "sync": "コレクションを再同期"
+        }
+      },
+
+      "profile": {
+        "greetings": {
+          "defaultUser": "私たちのアプリへようこそ 👽、{{numCards}} 枚のデフォルトコレクションを探索しています！ Pool 2以下のカードの多様な選択肢をお楽しみください。",
+          "loggedUser": "こんにちは {{user}} 👽、こちらは{{numCards}} 枚のSnapコレクションです！"
+        },
+        "info": {
+          "part1": "ランダムなデッキを生成するには、",
+          "part2": "こちら"
+        }
+      }
+    }
+  }
+}

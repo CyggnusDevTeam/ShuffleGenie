@@ -1,0 +1,133 @@
+{
+  "french": {
+    "translation": {
+      "about": {
+        "title": "À Propos de Nous",
+        "description": {
+          "part1": "Cyggnus a été fondé par Leonardo Kotlarenko et Leonardo Kleimpaul;",
+          "part2": "Notre objectif est de créer des applications open source amusantes et utiles."
+        },
+        "altImg": {
+          "cyggnusLogo": "Logo de l'Organisation Cyggnus"
+        },
+        "btnTitle": {
+          "linkedInKotlarenko": "LinkedIn de lkotlarenko",
+          "linkedInKleimpaul": "LinkedIn de Kleimpaul",
+          "cyggnusGitHub": "Organisation Cyggnus"
+        }
+      },
+
+      "footer": {
+        "copyright": {
+          "allRights": "ShuffleGenie © 2023. Tous droits réservés.",
+          "affiliation": "ShuffleGenie n'est pas affilié à MarvelSnapZone, Nuverse, Second Dinner ou Marvel.",
+          "providedBy": "Données de collection fournies par ",
+          "dataFrom": "MarvelSnapZone©"
+        }
+      },
+
+      "help": {
+        "newUserDesc1": {
+          "part1": "Pour synchroniser votre collection, vous aurez besoin d'un compte ",
+          "part2": "."
+        },
+        "newUserDesc2": {
+          "part1": "Utilisez votre collection en fournissant votre nom d'utilisateur ",
+          "part2": " ci-dessous, puis cliquez sur 'SYNCHRONISER LA COLLECTION'.",
+          "part3": "Vous pouvez également laisser le champ de texte vide pour utiliser la collection par défaut."
+        },
+        "description": "Pour générer des decks aléatoires, cliquez ",
+        "button": "ici"
+      },
+
+      "home": {
+        "copy": {
+          "deckCopied": "Code de deck copié dans le presse-papiers !",
+          "title": "Copier le Code du Deck"
+        },
+        "intro": "Générez facilement de nouveaux decks aléatoires en utilisant votre collection MarvelSnap©.",
+        "newUser": {
+          "title": "Bienvenue sur ShuffleGenie 👋",
+          "description": {
+            "part1": "Créez un nouveau deck aléatoire avec vos cartes de collection !",
+            "part2": "Synchronisez votre nom d'utilisateur de Marvel Snap Zone pour générer un nouveau deck complètement aléatoire avec des cartes de votre collection Snap."
+          }
+        },
+        "randomDeckBtn": {
+          "text": "Nouveau Deck Aléatoire",
+          "title": "Générer un Nouveau Deck Aléatoire"
+        }
+      },
+
+      "misc": {
+        "apiMsgs": {
+          "fail": {
+            "html": "<b>Si cette erreur persiste, vous pouvez signaler un problème <a target='_blank' rel='noopener noreferrer' href={{issuesLink}}>ici.</a> </b>",
+            "text": "Désolé, quelque chose s'est mal passé !",
+            "title": "Échec de la connexion à notre API !"
+          },
+          "success": {
+            "title": "Synchronisé avec succès !"
+          }
+        },
+        "card": {
+          "title": "Voir '{{name}}' sur MarvelSnapZone©"
+        },
+        "close": "Fermer",
+        "langList": {
+          "de": "Allemand",
+          "en": "Anglais",
+          "es": "Espagnol",
+          "fr": "Français",
+          "hi": "Hindi",
+          "it": "Italien",
+          "ja": "Japonais",
+          "ko": "Coréen",
+          "nl": "Néerlandais",
+          "pt-BR": "Portugais brésilien",
+          "ru": "Russe",
+          "uk": "Ukrainien",
+          "zh": "Chinois"
+        },
+        "selectLanguage": "Sélectionner la Langue",
+        "syncForm": {
+          "label": "Votre Nom d'Utilisateur",
+          "aria-label": "Entrée du nom d'utilisateur",
+          "inputDesc": "(laissez vide pour utiliser la collection par défaut)",
+          "syncBtn": "SYNCHRONISER LA COLLECTION"
+        }
+      },
+
+      "nav": {
+        "link": {
+          "about": "À Propos de Nous",
+          "help": "Aide",
+          "home": "Accueil",
+          "profile": "Profil",
+          "sync": "Re-Synchroniser"
+        },
+        "btnTitle": {
+          "about": "Aller à la page À Propos de Nous",
+          "hamburgerMenu": "Ouvrir le menu de navigation",
+          "help": "Aller à la page d'Aide",
+          "home": "Aller à la page d'Accueil",
+          "locale": "Changer la Langue de l'Application",
+          "logout": "Déconnexion",
+          "profile": "Aller à la page de votre Profil",
+          "sync": "Re-Synchroniser Votre Collection"
+        }
+      },
+
+      "profile": {
+        "greetings": {
+          "defaultUser": "Bienvenue sur notre application 👽, vous explorez la Collection par Défaut avec {{numCards}} cartes ! Profitez de la sélection variée de cartes de la Pool 2 et en dessous.",
+          "loggedUser": "Bonjour {{user}} 👽, voici votre collection Snap avec {{numCards}} cartes !"
+        },
+        "info": {
+          "part1": "Pour générer des decks aléatoires, cliquez ",
+          "part2": "ici"
+        }
+      }
+    }
+  }
+}
