@@ -1,14 +1,16 @@
-import React, { useContext, useState, useEffect } from 'react';
+import React, { lazy, useContext, useState, useEffect, Suspense } from 'react';
 import { ClipboardDocumentIcon } from '@heroicons/react/24/solid';
 import { useTranslation } from 'react-i18next';
 import Swal from 'sweetalert2';
 import AppContext from '../../Context/AppContext';
-import DeckBuilder from '../../Components/DeckBuilder';
 import LoadingSpinner from '../../Components/LoadingSpinner';
-import NewUser from '../NewUser';
 import generateDeckCode from '../../Utils/generateDeckCode';
 import { generateRandomName, shuffleDeck } from '../../Utils/shuffler';
 import { CollectionItem } from '../../Interfaces/CollectionItem';
+
+// lazy loading to save performance
+const DeckBuilder = lazy(() => import('../../Components/DeckBuilder'));
+const NewUser = lazy(() => import('../NewUser'));
 
 const Home: React.FC = () => {
   const { t } = useTranslation();
@@ -56,7 +58,9 @@ const Home: React.FC = () => {
         <>
           <div />
           {needSync ? (
-            <NewUser />
+            <Suspense fallback={<LoadingSpinner />}>
+              <NewUser />
+            </Suspense>
           ) : (
             <section className='bg-gray-1'>
               <h3 className='text-sm defaultPageText p-8'>{t('home.intro')}</h3>
@@ -81,7 +85,11 @@ const Home: React.FC = () => {
                   </button>
                 )}
               </div>
-              {isBuildingDeck && <DeckBuilder userDeck={randomDeck} />}
+              {isBuildingDeck && (
+                <Suspense fallback={<LoadingSpinner />}>
+                  <DeckBuilder userDeck={randomDeck} />
+                </Suspense>
+              )}
             </section>
           )}
         </>

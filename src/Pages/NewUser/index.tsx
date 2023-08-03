@@ -1,7 +1,9 @@
-import React, { useRef } from 'react';
+import React, { lazy, useRef, Suspense } from 'react';
 import { useTranslation } from 'react-i18next';
-import SyncForm from '../../Components/SyncForm';
 import cardImg from '../../Img/cardHome.webp';
+import LoadingSpinner from '../../Components/LoadingSpinner';
+
+const SyncForm = lazy(() => import('../../Components/SyncForm'));
 
 const NewUser: React.FC = () => {
   const { t } = useTranslation();
@@ -43,7 +45,9 @@ const NewUser: React.FC = () => {
         id='sync-section'
         className='bg-gray-2 flex flex-col justify-center'
         style={{ height: '85vh' }}>
-        <SyncForm />
+        <Suspense fallback={<LoadingSpinner />}>
+          <SyncForm />
+        </Suspense>
       </section>
     </>
   );

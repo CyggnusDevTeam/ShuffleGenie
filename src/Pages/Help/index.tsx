@@ -1,9 +1,10 @@
-import React, { useContext } from 'react';
+import React, { lazy, useContext, Suspense } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
 import AppContext from '../../Context/AppContext';
 import LoadingSpinner from '../../Components/LoadingSpinner';
-import SyncForm from '../../Components/SyncForm';
+
+const SyncForm = lazy(() => import('../../Components/SyncForm'));
 
 const Help: React.FC = () => {
   const { t } = useTranslation();
@@ -55,7 +56,9 @@ const Help: React.FC = () => {
                 {t('help.newUserDesc2.part2')}
               </p>
               <p className='defaultPageText'>{t('help.newUserDesc2.part3')}</p>
-              <SyncForm />
+              <Suspense fallback={<LoadingSpinner />}>
+                <SyncForm />
+              </Suspense>
             </div>
           )}
         </div>
