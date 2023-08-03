@@ -54,17 +54,17 @@ footer {
   flex-shrink: 0;
 }
 
-.backToTop {
+.backToTopAnimation {
   transform: translateY(0%);
   transition: ease-out 200ms;
   transition-property: transform, background-color;
 }
 
-.backToTop:hover {
+.backToTopAnimation:hover {
   transform: translateY(-10%);
 }
 
-.backToTop:active {
+.backToTopAnimation:active {
   transform: scale(90%);
 }
 
