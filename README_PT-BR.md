@@ -21,6 +21,7 @@ Você pode testar o aplicativo visitando o seguinte link:
 - Todos os dados das cartas são obtidos dos sites [Marvel Snap Zone©](https://marvelsnapzone.com/) e [MarvelSnap.Pro©](https://marvelsnap.pro/).
 - Para usar este aplicativo, basta fornecer seu nome de usuário do [Marvel Snap Zone©](https://marvelsnapzone.com/users/).
 - O Shuffle Genie não possui nenhuma afiliação com a Marvel, Nuverse, Second Dinner ou Marvel Snap Zone.
+- Por favor nos avise sobre erros de digitação por [aqui](https://github.com/Cyggnus/ShuffleGenie/issues/new?assignees=&labels=&projects=&template=bug_report.md&title=[Typo]).;
 
 ## Recursos
 
