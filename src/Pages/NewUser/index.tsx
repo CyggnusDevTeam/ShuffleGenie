@@ -32,7 +32,7 @@ const NewUser: React.FC = () => {
         </div>
         <div className='flex flex-col justify-center mb-[55%] sm:mb-[25%] md:mb-[25%] lg:mb-0'>
           <img
-            className='flex w-[320px] h-[384px] lg:w-[358px] lg:h-[429px] xl:w-[417px] xl:h-[501px]'
+            className='flex cardHome lg:w-[358px] lg:h-[429px] xl:w-[417px] xl:h-[501px]'
             src={cardImg}
             alt='card'
           />

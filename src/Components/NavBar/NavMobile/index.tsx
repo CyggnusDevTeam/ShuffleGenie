@@ -86,7 +86,7 @@ const NavMobile: React.FC = () => {
                 ? 'flex flex-col items-start space-y-7 pt-12 fixed top-20 right-0 bg-violet-1 w-full h-screen shadow-md z-50'
                 : 'hidden'
             }`}>
-            <LanguageSelector />
+            <LanguageSelector handleNavMenu={handleLinkClick} />
             <div className='w-full'>
               <Link
                 to='/'

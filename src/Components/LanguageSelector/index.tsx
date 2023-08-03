@@ -1,13 +1,19 @@
 import React, { useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import { LanguageIcon } from '@heroicons/react/24/solid';
+import { LanguageSelectorIProps } from '../../Interfaces/LanguageSelectorIProps';
 import LanguageModal from '../LanguageModal';
 
-const LanguageSelector: React.FC = () => {
+const LanguageSelector: React.FC<LanguageSelectorIProps> = ({
+  handleNavMenu,
+}) => {
   const { t } = useTranslation();
   const [showModal, setShowModal] = useState(false);
 
-  const toggleModal = () => setShowModal(!showModal);
+  const toggleModal = () => {
+    setShowModal(!showModal);
+    if (showModal && handleNavMenu) handleNavMenu();
+  };
 
   return (
     <div className='w-full flex flex-col items-center'>

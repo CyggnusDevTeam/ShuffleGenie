@@ -68,6 +68,11 @@ footer {
   transform: scale(90%);
 }
 
+.cardHome {
+  width: 320px;
+  height: 384px;
+}
+
 .dimmedBg {
   background-color: rgba(0, 0, 0, 0.5);
   position: fixed;
