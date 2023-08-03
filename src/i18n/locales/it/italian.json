@@ -1,0 +1,133 @@
+{
+  "italian": {
+    "translation": {
+      "about": {
+        "title": "Chi Siamo",
+        "description": {
+          "part1": "Cyggnus è stata fondata da Leonardo Kotlarenko e Leonardo Kleimpaul;",
+          "part2": "Il nostro obiettivo è creare applicazioni open source divertenti e utili."
+        },
+        "altImg": {
+          "cyggnusLogo": "Logo dell'Organizzazione Cyggnus"
+        },
+        "btnTitle": {
+          "linkedInKotlarenko": "LinkedIn di lkotlarenko",
+          "linkedInKleimpaul": "LinkedIn di Kleimpaul",
+          "cyggnusGitHub": "Organizzazione Cyggnus"
+        }
+      },
+
+      "footer": {
+        "copyright": {
+          "allRights": "ShuffleGenie © 2023. Tutti i diritti riservati.",
+          "affiliation": "ShuffleGenie non è affiliato a MarvelSnapZone, Nuverse, Second Dinner o Marvel.",
+          "providedBy": "I dati della collezione sono forniti da ",
+          "dataFrom": "MarvelSnapZone©"
+        }
+      },
+
+      "help": {
+        "newUserDesc1": {
+          "part1": "Per sincronizzare la tua collezione avrai bisogno di un ",
+          "part2": " account."
+        },
+        "newUserDesc2": {
+          "part1": "Utilizza la tua collezione fornendo il tuo nome utente di ",
+          "part2": " qui sotto e poi clicca su 'SINCRONIZZA COLLEZIONE'.",
+          "part3": "Puoi anche lasciare il campo di testo vuoto per utilizzare la collezione predefinita."
+        },
+        "description": "Per generare mazzi casuali clicca ",
+        "button": "qui"
+      },
+
+      "home": {
+        "copy": {
+          "deckCopied": "Codice del mazzo copiato negli appunti!",
+          "title": "Copia Codice del Mazzo"
+        },
+        "intro": "Genera facilmente nuovi mazzi casuali utilizzando la tua collezione di MarvelSnap©.",
+        "newUser": {
+          "title": "Benvenuto in ShuffleGenie 👋",
+          "description": {
+            "part1": "Crea un nuovo mazzo casuale con le carte della tua collezione!",
+            "part2": "Sincronizza il nome utente del tuo account Marvel Snap Zone per generare un nuovo mazzo completamente casuale con carte dalla tua collezione snap."
+          }
+        },
+        "randomDeckBtn": {
+          "text": "Nuovo Mazzo Casuale",
+          "title": "Genera un nuovo Mazzo Casuale"
+        }
+      },
+
+      "misc": {
+        "apiMsgs": {
+          "fail": {
+            "html": "<b>Se questo errore persiste, puoi segnalare un problema <a target='_blank' rel='noopener noreferrer' href={{issuesLink}}>qui.</a> </b>",
+            "text": "Spiacenti, qualcosa è andato storto!",
+            "title": "Impossibile contattare la nostra API!"
+          },
+          "success": {
+            "title": "Sincronizzato con successo!"
+          }
+        },
+        "card": {
+          "title": "Visualizza '{{name}}' su MarvelSnapZone©"
+        },
+        "close": "Chiudi",
+        "langList": {
+          "de": "Tedesco",
+          "en": "Inglese",
+          "es": "Spagnolo",
+          "fr": "Francese",
+          "hi": "Hindi",
+          "it": "Italiano",
+          "ja": "Giapponese",
+          "ko": "Coreano",
+          "nl": "Olandese",
+          "pt-BR": "Portoghese Brasiliano",
+          "ru": "Russo",
+          "uk": "Ucraino",
+          "zh": "Cinese"
+        },
+        "selectLanguage": "Seleziona Lingua",
+        "syncForm": {
+          "label": "Il Tuo Nome Utente",
+          "aria-label": "Inserimento Nome Utente",
+          "inputDesc": "(lascia vuoto per utilizzare la collezione predefinita)",
+          "syncBtn": "SINCRONIZZA COLLEZIONE"
+        }
+      },
+
+      "nav": {
+        "link": {
+          "about": "Chi Siamo",
+          "help": "Aiuto",
+          "home": "Home",
+          "profile": "Profilo",
+          "sync": "Re-Sync"
+        },
+        "btnTitle": {
+          "about": "Vai alla pagina Chi Siamo",
+          "hamburgerMenu": "Apri il menu di navigazione",
+          "help": "Vai alla pagina di Aiuto",
+          "home": "Vai alla pagina Home",
+          "locale": "Cambia Lingua dell'App",
+          "logout": "Logout",
+          "profile": "Vai alla pagina del tuo profilo",
+          "sync": "Re-Sincronizza la Tua Collezione"
+        }
+      },
+
+      "profile": {
+        "greetings": {
+          "defaultUser": "Benvenuto nella nostra app 👽, stai esplorando la Collezione Predefinita con {{numCards}} carte! Goditi la selezione variegata di carte dalla Pool 2 in giù.",
+          "loggedUser": "Ciao {{user}} 👽, ecco la tua collezione snap di {{numCards}} carte!"
+        },
+        "info": {
+          "part1": "Per generare mazzi casuali clicca ",
+          "part2": "qui"
+        }
+      }
+    }
+  }
+}

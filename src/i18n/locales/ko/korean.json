@@ -1,0 +1,133 @@
+{
+  "korean": {
+    "translation": {
+      "about": {
+        "title": "회사 소개",
+        "description": {
+          "part1": "Cyggnus는 Leonardo Kotlarenko와 Leonardo Kleimpaul에 의해 설립되었습니다;",
+          "part2": "우리의 목표는 재미있고 유용한 오픈 소스 애플리케이션을 만드는 것입니다."
+        },
+        "altImg": {
+          "cyggnusLogo": "Cyggnus 조직 로고"
+        },
+        "btnTitle": {
+          "linkedInKotlarenko": "lkotlarenko의 LinkedIn",
+          "linkedInKleimpaul": "Kleimpaul의 LinkedIn",
+          "cyggnusGitHub": "Cyggnus 조직"
+        }
+      },
+
+      "footer": {
+        "copyright": {
+          "allRights": "ShuffleGenie © 2023. 모든 권리 보유.",
+          "affiliation": "ShuffleGenie는 MarvelSnapZone, Nuverse, Second Dinner, 또는 Marvel과 관련이 없습니다.",
+          "providedBy": "컬렉션 데이터 제공: ",
+          "dataFrom": "MarvelSnapZone©"
+        }
+      },
+
+      "help": {
+        "newUserDesc1": {
+          "part1": "컬렉션을 동기화하려면 ",
+          "part2": " 계정이 필요합니다."
+        },
+        "newUserDesc2": {
+          "part1": "아래에 ",
+          "part2": " 사용자 이름을 입력하고 '컬렉션 동기화'를 클릭하여 컬렉션을 사용하세요.",
+          "part3": "또한 텍스트 필드를 비워두어 기본 컬렉션을 사용할 수 있습니다."
+        },
+        "description": "랜덤 덱 생성을 위해 여기를 클릭하세요 ",
+        "button": "여기"
+      },
+
+      "home": {
+        "copy": {
+          "deckCopied": "덱 코드가 클립 보드에 복사되었습니다!",
+          "title": "덱 코드 복사"
+        },
+        "intro": "MarvelSnap© 컬렉션을 사용하여 새로운 랜덤 덱을 쉽게 생성하세요.",
+        "newUser": {
+          "title": "ShuffleGenie에 오신 것을 환영합니다 👋",
+          "description": {
+            "part1": "소유한 컬렉션 카드로 새로운 랜덤 덱을 생성하세요!",
+            "part2": "Marvel Snap Zone 계정 사용자 이름을 동기화하여 스냅 컬렉션의 카드를 사용하여 완전히 새로운 랜덤 덱을 생성하세요."
+          }
+        },
+        "randomDeckBtn": {
+          "text": "새로운 랜덤 덱",
+          "title": "새로운 랜덤 덱 생성"
+        }
+      },
+
+      "misc": {
+        "apiMsgs": {
+          "fail": {
+            "html": "<b>이 오류가 지속되면 <a target='_blank' rel='noopener noreferrer' href={{issuesLink}}>여기</a>에 문제를 보고할 수 있습니다.</b>",
+            "text": "죄송합니다. 오류가 발생했습니다.",
+            "title": "API 연결에 실패했습니다!"
+          },
+          "success": {
+            "title": "성공적으로 동기화되었습니다!"
+          }
+        },
+        "card": {
+          "title": "MarvelSnapZone©에서 '{{name}}' 보기"
+        },
+        "close": "닫기",
+        "langList": {
+          "de": "독일어",
+          "en": "영어",
+          "es": "스페인어",
+          "fr": "프랑스어",
+          "hi": "힌디어",
+          "it": "이탈리아어",
+          "ja": "일본어",
+          "ko": "한국어",
+          "nl": "네덜란드어",
+          "pt-BR": "브라질 포르투갈어",
+          "ru": "러시아어",
+          "uk": "우크라이나어",
+          "zh": "중국어"
+        },
+        "selectLanguage": "언어 선택",
+        "syncForm": {
+          "label": "사용자 이름",
+          "aria-label": "사용자 이름 입력",
+          "inputDesc": "(기본 컬렉션 사용을 위해 비워두세요)",
+          "syncBtn": "컬렉션 동기화"
+        }
+      },
+
+      "nav": {
+        "link": {
+          "about": "회사 소개",
+          "help": "도움말",
+          "home": "홈",
+          "profile": "프로필",
+          "sync": "재동기화"
+        },
+        "btnTitle": {
+          "about": "회사 소개 페이지로 이동",
+          "hamburgerMenu": "네비게이션 메뉴 열기",
+          "help": "도움말 페이지로 이동",
+          "home": "홈 페이지로 이동",
+          "locale": "앱 언어 변경",
+          "logout": "로그아웃",
+          "profile": "프로필 페이지로 이동",
+          "sync": "컬렉션 재동기화"
+        }
+      },
+
+      "profile": {
+        "greetings": {
+          "defaultUser": "앱에 오신 것을 환영합니다 👽, {{numCards}} 개의 카드가 있는 기본 컬렉션을 탐색하고 있습니다! Pool 2 이하의 다양한 선택 가능한 카드를 즐겨보세요.",
+          "loggedUser": "{{user}}님 안녕하세요 👽, 여기 {{numCards}} 개의 스냅 컬렉션 카드가 있습니다!"
+        },
+        "info": {
+          "part1": "랜덤 덱을 생성하려면 여기를 클릭하세요 ",
+          "part2": "여기"
+        }
+      }
+    }
+  }
+}
