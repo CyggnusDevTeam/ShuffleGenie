@@ -25,6 +25,7 @@ const LanguageModal: React.FC<LanguageModalIProps> = ({ onClose }) => {
         <h2 className='text-lg font-semibold mb-4'>
           {t('misc.selectLanguage')}
         </h2>
+        <hr className='mb-6' />
         <button
           className='block w-full text-left mb-2 navLink'
           type='button'

@@ -10,9 +10,9 @@ const LanguageSelector: React.FC = () => {
   const toggleModal = () => setShowModal(!showModal);
 
   return (
-    <div className='w-full items-center text-center'>
+    <div className='w-full flex flex-col items-center'>
       <button
-        className='items-center navLink'
+        className='navLink flex items-center w-full justify-center'
         title={t('nav.btnTitle.locale')}
         type='button'
         onClick={toggleModal}>
