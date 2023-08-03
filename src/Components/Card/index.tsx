@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import PropTypes from 'prop-types';
+import { useTranslation } from 'react-i18next';
 import lazyCard from '../../Img/lazyCard.webp';
 import { CardIProps } from '../../Interfaces/CardIProps';
 
@@ -7,6 +8,7 @@ const Card: React.FC<CardIProps> = ({ cardName, cardImg }) => {
   const convertToSlug = (inputString: string) =>
     inputString.toLowerCase().replace(/\s+/g, '-');
 
+  const { t } = useTranslation();
   const [imageLoaded, setImageLoaded] = useState<boolean>(false);
 
   const handleImageLoad = () => {
@@ -20,7 +22,7 @@ const Card: React.FC<CardIProps> = ({ cardName, cardImg }) => {
         href={`https://marvelsnapzone.com/cards/${convertToSlug(cardName)}`}
         target='_blank'
         rel='noopener noreferrer'
-        title={`View ${cardName} on MarvelSnapZone©`}>
+        title={t('misc.card.title', { name: cardName })}>
         {!imageLoaded && (
           <img
             className='lg:max-w-[230px] lg:max-h-[230px] md:max-w-[140px] md:max-h-[140px] max-w-[140px] max-h-[140px] cursor-pointer transition-transform duration-300 transform-gpu group-hover:-translate-y-1 group-hover:scale-105'

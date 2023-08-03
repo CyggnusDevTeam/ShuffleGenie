@@ -54,18 +54,33 @@ footer {
   flex-shrink: 0;
 }
 
-.backToTop {
+.backToTopAnimation {
   transform: translateY(0%);
   transition: ease-out 200ms;
   transition-property: transform, background-color;
 }
 
-.backToTop:hover {
+.backToTopAnimation:hover {
   transform: translateY(-10%);
 }
 
-.backToTop:active {
+.backToTopAnimation:active {
   transform: scale(90%);
+}
+
+.cardHome {
+  width: 320px;
+  height: 384px;
+}
+
+.dimmedBg {
+  background-color: rgba(0, 0, 0, 0.5);
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1000;
 }
 
 /*----------Custom Styles----------*/
@@ -116,12 +131,22 @@ footer {
   }
 }
 
-/* Font Awesome Icons Spin on Hover */
+/* Spin on Hover */
+/* Define spin keyframes */
+@keyframes spin {
+  0% {
+    transform: rotate(0);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
 @layer components {
-  .fa-spin-hover:hover {
-    -webkit-animation: fa-spin 2s infinite linear;
-    -moz-animation: fa-spin 2s infinite linear;
-    -o-animation: fa-spin 2s infinite linear;
-    animation: fa-spin 2s infinite linear;
+  .spinHover:hover {
+    -webkit-animation: spin 2s infinite linear;
+    -moz-animation: spin 2s infinite linear;
+    -o-animation: spin 2s infinite linear;
+    animation: spin 2s infinite linear;
   }
 }

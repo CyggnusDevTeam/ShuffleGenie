@@ -1,16 +1,16 @@
 import React from 'react';
+import { ArrowUpIcon } from '@heroicons/react/24/solid';
 import { showBackToTopButton, backToTopAction } from '../../Utils/useBackToTop';
-import arrowUp from '../../Img/arrow.svg';
 
 const BackToTopButton: React.FC = () => (
   <button
-    className={`backToTop fixed bottom-28 md:right-16 right-5 translate-y-full transition-transform duration-200 ${
+    className={`backToTopAnimation px-4 defaultButton fixed bottom-20 lg:bottom-28 md:right-16 right-5 translate-y-full transition-transform duration-200 ${
       showBackToTopButton() ? 'visible' : 'invisible'
     }`}
     id='backToTopButton'
     type='button'
     onClick={backToTopAction}>
-    <img className='lg:max-w-[50px] max-w-[35px]' src={arrowUp} alt='arrowUp' />
+    <ArrowUpIcon className='h-6 w-6 text-white' />
   </button>
 );
 

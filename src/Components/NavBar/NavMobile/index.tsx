@@ -1,15 +1,13 @@
 import React, { useContext, useEffect, useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import {
-  faArrowsRotate,
-  faRightFromBracket,
-  faBars,
-} from '@fortawesome/free-solid-svg-icons';
+import { Bars3Icon } from '@heroicons/react/24/solid';
+import { useTranslation } from 'react-i18next';
 import AppContext from '../../../Context/AppContext';
 import { confirmAlert, handleSync } from '../handleSync';
+import LanguageSelector from '../../LanguageSelector';
 
 const NavMobile: React.FC = () => {
+  const { t } = useTranslation();
   const [isButtonDisabled, setIsButtonDisabled] = useState(false);
   const [isOpen, setIsOpen] = useState(false);
   const {
@@ -38,13 +36,14 @@ const NavMobile: React.FC = () => {
       setCollection,
       setIsLoading,
       username,
-      navigate
+      navigate,
+      t
     );
     handleLinkClick();
   };
 
   const dispatchConfirmAlert = () => {
-    confirmAlert(navigate);
+    confirmAlert(navigate, t);
   };
 
   useEffect(() => {
@@ -67,7 +66,7 @@ const NavMobile: React.FC = () => {
             <Link
               to='/'
               onClick={handleLinkClick}
-              title='Home'
+              title={t('nav.btnTitle.home')}
               className='navLink'>
               <h1 className='text-white text-3xl font-bold'>ShuffleGenie</h1>
             </Link>
@@ -75,14 +74,10 @@ const NavMobile: React.FC = () => {
           <button
             className='hamburger-btn text-white navLink'
             type='button'
-            title='navbar hamburger menu'
+            title={t('nav.btnTitle.hamburgerMenu')}
             aria-label='navbar hamburger menu'
             onClick={() => setIsOpen(!isOpen)}>
-            <FontAwesomeIcon
-              icon={faBars}
-              size='2xl'
-              style={{ color: '#9b51e0' }}
-            />
+            <Bars3Icon className='h-8 w-8' style={{ color: '#9b51e0' }} />
           </button>
           <div
             id='hamburger-items'
@@ -91,31 +86,32 @@ const NavMobile: React.FC = () => {
                 ? 'flex flex-col items-start space-y-7 pt-12 fixed top-20 right-0 bg-violet-1 w-full h-screen shadow-md z-50'
                 : 'hidden'
             }`}>
+            <LanguageSelector handleNavMenu={handleLinkClick} />
             <div className='w-full'>
               <Link
                 to='/'
-                title='Go to Home'
+                title={t('nav.btnTitle.home')}
                 className='navLink block w-full'
                 onClick={handleLinkClick}>
-                Home
+                {t('nav.link.home')}
               </Link>
             </div>
             <div className='w-full'>
               <Link
                 to='/help'
-                title='Go to help page'
+                title={t('nav.btnTitle.help')}
                 className='navLink block w-full'
                 onClick={handleLinkClick}>
-                Help
+                {t('nav.link.help')}
               </Link>
             </div>
             <div className='w-full'>
               <Link
                 to='/about'
-                title='Go to about us page'
+                title={t('nav.btnTitle.about')}
                 className='navLink block w-full'
                 onClick={handleLinkClick}>
-                About Us
+                {t('nav.link.about')}
               </Link>
             </div>
             {!needSync && (
@@ -124,14 +120,9 @@ const NavMobile: React.FC = () => {
                   type='button'
                   onClick={handleClick}
                   disabled={isButtonDisabled}
-                  title='ReSync Your Collection'
-                  className='navLink block w-full'>
-                  ReSync
-                  <FontAwesomeIcon
-                    className='pl-2'
-                    size='sm'
-                    icon={faArrowsRotate}
-                  />
+                  title={t('nav.btnTitle.sync')}
+                  className='navLink w-full items-center'>
+                  {t('nav.link.sync')}
                 </button>
               </div>
             )}
@@ -139,13 +130,13 @@ const NavMobile: React.FC = () => {
               <div className='w-full'>
                 <button
                   type='button'
-                  title='Go to profile'
+                  title={t('nav.btnTitle.profile')}
                   onClick={() => {
                     navigate('/profile');
                     handleLinkClick();
                   }}
                   className='navLink block w-full'>
-                  Profile
+                  {t('nav.link.profile')}
                 </button>
               </div>
             )}
@@ -153,18 +144,13 @@ const NavMobile: React.FC = () => {
               <div className='w-full'>
                 <button
                   type='button'
-                  title='LogOut'
+                  title={t('nav.btnTitle.logout')}
                   onClick={() => {
                     dispatchConfirmAlert();
                     handleLinkClick();
                   }}
-                  className='navLink block w-full'>
-                  LogOut
-                  <FontAwesomeIcon
-                    className='pl-2'
-                    size='sm'
-                    icon={faRightFromBracket}
-                  />
+                  className='navLink w-full items-center'>
+                  {t('nav.btnTitle.logout')}
                 </button>
               </div>
             )}

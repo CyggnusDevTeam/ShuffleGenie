@@ -1,6 +1,7 @@
 import { createRoot } from 'react-dom/client';
 import createRoutes from './Router/index';
 import reportWebVitals from './reportWebVitals';
+import './i18n';
 import './styles/global.css';
 import './index.css';
 import './styles/sweetalert2Dark.css';

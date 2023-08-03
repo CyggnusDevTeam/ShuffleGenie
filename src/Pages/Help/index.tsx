@@ -1,10 +1,13 @@
-import React, { useContext } from 'react';
+import React, { lazy, useContext, Suspense } from 'react';
 import { useNavigate } from 'react-router-dom';
+import { useTranslation } from 'react-i18next';
 import AppContext from '../../Context/AppContext';
 import LoadingSpinner from '../../Components/LoadingSpinner';
-import SyncForm from '../../Components/SyncForm';
+
+const SyncForm = lazy(() => import('../../Components/SyncForm'));
 
 const Help: React.FC = () => {
+  const { t } = useTranslation();
   const { isLoading, needSync } = useContext(AppContext);
   const navigate = useNavigate();
 
@@ -20,12 +23,12 @@ const Help: React.FC = () => {
         <div className='flex flex-col justify-center itens-center space-y-10 p-6'>
           {!needSync && (
             <h3 className='defaultPageText'>
-              To generate random decks click{' '}
+              {t('help.description')}
               <button
                 className='text-violet-1'
                 type='button'
                 onClick={handleRedirectHome}>
-                here
+                {t('help.button')}
               </button>
               .
             </h3>
@@ -33,26 +36,29 @@ const Help: React.FC = () => {
           {needSync && (
             <div className='flex flex-col justify-center itens-center space-y-14'>
               <p className='defaultPageText'>
-                To Sync Your Collection you will need a{' '}
+                {t('help.newUserDesc1.part1')}
                 <a
                   href='https://marvelsnapzone.com/login/'
                   target='_blank'
                   rel='noopener noreferrer'>
                   MarvelSnapZone
-                </a>{' '}
-                account.
+                </a>
+                {t('help.newUserDesc1.part2')}
               </p>
               <p className='defaultPageText'>
-                To use your collection provide your{' '}
+                {t('help.newUserDesc2.part1')}
                 <a
                   href='https://marvelsnapzone.com/users/'
                   target='_blank'
                   rel='noopener noreferrer'>
                   MarvelSnapZone
-                </a>{' '}
-                username below then click on &apos;Sync your collection&apos;.
+                </a>
+                {t('help.newUserDesc2.part2')}
               </p>
-              <SyncForm />
+              <p className='defaultPageText'>{t('help.newUserDesc2.part3')}</p>
+              <Suspense fallback={<LoadingSpinner />}>
+                <SyncForm />
+              </Suspense>
             </div>
           )}
         </div>

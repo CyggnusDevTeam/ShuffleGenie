@@ -1,6 +1,6 @@
 {
   "name": "shufflegenie",
-  "version": "1.1.0",
+  "version": "1.2.0",
   "homepage": "https://cyggnus.github.io/ShuffleGenie",
   "repository": {
     "type": "git",
@@ -24,18 +24,17 @@
     "format": "prettier --write src/**/*.{js,jsx,ts,tsx,css,md,json,scss} --config ./.prettierrc"
   },
   "dependencies": {
-    "@fortawesome/fontawesome-svg-core": "^6.4.0",
-    "@fortawesome/free-brands-svg-icons": "^6.4.0",
-    "@fortawesome/free-regular-svg-icons": "^6.4.0",
-    "@fortawesome/free-solid-svg-icons": "^6.4.0",
-    "@fortawesome/react-fontawesome": "^0.2.0",
+    "@heroicons/react": "^2.0.18",
     "@material-tailwind/react": "2.0.5",
     "@vitejs/plugin-react-swc": "^3.3.2",
     "base-64": "^1.0.0",
+    "i18next": "^23.4.1",
+    "i18next-browser-languagedetector": "^7.1.0",
     "lodash.debounce": "^4.0.8",
     "prop-types": "^15.8.1",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
+    "react-i18next": "^13.0.3",
     "react-refresh": "^0.14.0",
     "react-router-dom": "^6.8.1",
     "sass": "^1.63.6",
