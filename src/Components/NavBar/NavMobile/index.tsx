@@ -83,7 +83,7 @@ const NavMobile: React.FC = () => {
             id='hamburger-items'
             className={`${
               isOpen
-                ? 'flex flex-col items-start space-y-7 pt-12 fixed top-20 right-0 bg-violet-1 w-full h-screen shadow-md z-50'
+                ? 'flex flex-col items-start space-y-7 border-b-[70px] p-12 fixed top-20 right-0 bg-violet-1 w-full h-screen shadow-md z-50 overflow-y-auto'
                 : 'hidden'
             }`}>
             <LanguageSelector handleNavMenu={handleLinkClick} />
