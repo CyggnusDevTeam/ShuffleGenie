@@ -8,7 +8,7 @@ _This README is available in [english](https://github.com/Cyggnus/ShuffleGenie/b
   </a>
 </div>
 
-O Shuffle Genie é um aplicativo web desenvolvido por [Leonardo Kleimpaul](https://github.com/LeonardoKleimpaul) e [Leonardo Kotlarenko](https://github.com/lkotlarenko) que permite aos jogadores de Marvel Snap gerar baralhos aleatórios e copiar facilmente o código deles para experimenta-los no jogo. 
+O Shuffle Genie é um aplicativo web desenvolvido por [Leonardo Kleimpaul](https://github.com/LeonardoKleimpaul) e [Leonardo Kotlarenko](https://github.com/lkotlarenko) que permite aos jogadores de Marvel Snap gerar baralhos aleatórios e copiar facilmente o código deles para experimenta-los no jogo.
 Os dados das cartas são obtidos dos sites MarvelSnapZone.com e MarvelSnap.Pro. O projeto é completamente de código aberto e foi desenvolvido usando React, Tailwind CSS, Material Tailwind, i18next, SweetAlerts2 e Heroicons.
 
 ## Experimente agora
@@ -21,7 +21,7 @@ Você pode testar o aplicativo visitando o seguinte link:
 - Todos os dados das cartas são obtidos dos sites [Marvel Snap Zone©](https://marvelsnapzone.com/) e [MarvelSnap.Pro©](https://marvelsnap.pro/).
 - Para usar este aplicativo, basta fornecer seu nome de usuário do [Marvel Snap Zone©](https://marvelsnapzone.com/users/).
 - O Shuffle Genie não possui nenhuma afiliação com a Marvel, Nuverse, Second Dinner ou Marvel Snap Zone.
-- Por favor nos avise sobre erros de digitação por [aqui](https://github.com/Cyggnus/ShuffleGenie/issues/new?assignees=&labels=&projects=&template=bug_report.md&title=[Typo]).;
+- Por favor nos avise sobre erros de digitação por [aqui](https://github.com/Cyggnus/ShuffleGenie/issues/new?assignees=&labels=&projects=&template=bug_report.md&title=[Typo]).
 
 ## Recursos
 

@@ -4,6 +4,7 @@ import { useTranslation } from 'react-i18next';
 import {
   ArrowPathIcon,
   ArrowLeftOnRectangleIcon,
+  UserCircleIcon,
 } from '@heroicons/react/24/solid';
 import AppContext from '../../../Context/AppContext';
 import { confirmAlert, handleSync } from '../handleSync';
@@ -80,7 +81,7 @@ const NavDesktop: React.FC = () => {
                 title={t('nav.btnTitle.profile')}
                 onClick={() => navigate('/profile')}
                 className='defaultButton'>
-                {t('nav.link.profile')}
+                <UserCircleIcon className="h-5 w-5" />
               </button>
             )}
             {!needSync && (
