@@ -57,15 +57,19 @@ const SyncPage: React.FC = () => {
   };
 
   const handleSubmit = (event: FormEvent<HTMLFormElement>) => {
-    event.preventDefault();
-    const userInputElement = event.currentTarget.elements.namedItem(
-      'username'
-    ) as HTMLInputElement;
-    let userFromEvent = userInputElement.value.trim();
-    if (!userFromEvent) userFromEvent = 'DefaultPool2';
-    backToTopAction();
-    handleChangeUser(userFromEvent);
-  };
+  event.preventDefault();
+  const userInputElement = event.currentTarget.elements.namedItem(
+    'username'
+  ) as HTMLInputElement;
+  
+  let userFromEvent = userInputElement.value;
+  if (!userFromEvent) userFromEvent = 'DefaultPool2';
+
+  const formattedUser = userFromEvent.replace(/\s+/g, '-');
+
+  backToTopAction();
+  handleChangeUser(formattedUser);
+};
 
   const handleInputFocus = () => {
     setIsInputFocused(true);
