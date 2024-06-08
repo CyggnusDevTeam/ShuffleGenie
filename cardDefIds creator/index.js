@@ -13,19 +13,24 @@ const DATA_DOMAIN = process.env.DATA_URL;
 const scrapeData = async () => {
   puppeteer.use(StealthPlugin());
   // launch the puppeteer
+  console.log('Launching the puppeteer...');
   const browser = await puppeteer.launch({
     headless: 'new',
     executablePath: executablePath(),
   });
   const page = await browser.newPage();
+  console.log('Requesting html from DATA_URL in .env file...');
   // Request html from DATA_URL in .env file
   await page.goto(`${DATA_DOMAIN}cards/`);
+  console.log('Waiting for the cards to load...');
   // Wait for the cards to load (modify the selector as needed)
   await page.waitForSelector('a.simple-card');
+  console.log('Get the HTML content after the cards are loaded...');
   // Get the HTML content after the cards are loaded
   const html = await page.content();
   // Close the browser
   await browser.close();
+  console.log('Generating the content for the .js file...');
   // Parse HTML using Cheerio
   const $ = cheerio.load(html);
 
