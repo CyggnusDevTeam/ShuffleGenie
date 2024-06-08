@@ -4,7 +4,7 @@
       "about": {
         "title": "关于我们",
         "description": {
-          "part1": "Cyggnus成立于Leonardo Kotlarenko和Leonardo Kleimpaul;",
+          "part1": "Cyggnus成立于@lkotlarenko和@Leonardo Kleimpaul;",
           "part2": "我们的目标是创建有趣且有用的开源应用程序。"
         },
         "altImg": {
@@ -76,7 +76,7 @@
         "close": "关闭",
         "langList": {
           "de": "德语",
-          "en": "英语",
+          "en": "English",
           "es": "西班牙语",
           "fr": "法语",
           "hi": "印地语",
@@ -84,7 +84,7 @@
           "ja": "日语",
           "ko": "韩语",
           "nl": "荷兰语",
-          "pt-BR": "巴西葡萄牙语",
+          "pt-BR": "Português Brasileiro",
           "ru": "俄语",
           "uk": "乌克兰语",
           "zh": "中文"

@@ -3,7 +3,7 @@
     "translation": {
       "about": {
         "description": {
-          "part1": "A Cyggnus foi fundada por Leonardo Kotlarenko e Leonardo Kleimpaul;",
+          "part1": "A Cyggnus foi fundada por @lkotlarenko e @Leonardo Kleimpaul;",
           "part2": "Nosso objetivo é criar aplicações de código aberto divertidas e úteis."
         },
         "altImg": {
@@ -75,7 +75,7 @@
         "close": "Fechar",
         "langList": {
           "de": "Alemão",
-          "en": "Inglês",
+          "en": "English",
           "es": "Espanhol",
           "fr": "Francês",
           "hi": "Hindi",
