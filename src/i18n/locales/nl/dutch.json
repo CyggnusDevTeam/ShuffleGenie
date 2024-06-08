@@ -4,7 +4,7 @@
       "about": {
         "title": "Over Ons",
         "description": {
-          "part1": "Cyggnus is opgericht door Leonardo Kotlarenko en Leonardo Kleimpaul;",
+          "part1": "Cyggnus is opgericht door @lkotlarenko en @Leonardo Kleimpaul;",
           "part2": "Ons doel is om leuke en nuttige open source applicaties te maken."
         },
         "altImg": {
@@ -76,7 +76,7 @@
         "close": "Sluiten",
         "langList": {
           "de": "Duits",
-          "en": "Engels",
+          "en": "English",
           "es": "Spaans",
           "fr": "Frans",
           "hi": "Hindi",
@@ -84,7 +84,7 @@
           "ja": "Japans",
           "ko": "Koreaans",
           "nl": "Nederlands",
-          "pt-BR": "Braziliaans Portugees",
+          "pt-BR": "Português Brasileiro",
           "ru": "Russisch",
           "uk": "Oekraïens",
           "zh": "Chinees"

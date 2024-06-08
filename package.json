@@ -1,6 +1,6 @@
 {
   "name": "shufflegenie",
-  "version": "1.3.0",
+  "version": "1.3.1",
   "homepage": "https://cyggnus.github.io/ShuffleGenie",
   "repository": {
     "type": "git",
@@ -39,7 +39,7 @@
     "react-refresh": "^0.14.0",
     "react-router-dom": "^6.8.1",
     "sass": "^1.63.6",
-    "sweetalert2": "^11.7.18",
+    "sweetalert2": "^11.6.13",
     "sweetalert2-react-content": "^5.0.7",
     "vite": "^4.4.7",
     "vite-plugin-svgr": "^3.2.0",

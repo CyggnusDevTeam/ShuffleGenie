@@ -4,7 +4,7 @@
       "about": {
         "title": "About Us",
         "description": {
-          "part1": "Cyggnus was founded by Leonardo Kotlarenko and Leonardo Kleimpaul;",
+          "part1": "Cyggnus was founded by @lkotlarenko and @Leonardo Kleimpaul;",
           "part2": "Our aim is to create fun and useful open source applications."
         },
         "altImg": {
@@ -84,7 +84,7 @@
           "ja": "Japanese",
           "ko": "Korean",
           "nl": "Dutch",
-          "pt-BR": "Brazilian Portuguese",
+          "pt-BR": "Português Brasileiro",
           "ru": "Russian",
           "uk": "Ukrainian",
           "zh": "Chinese"

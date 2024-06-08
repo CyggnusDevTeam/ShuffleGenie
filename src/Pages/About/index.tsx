@@ -25,10 +25,10 @@ const About: React.FC = () => {
               <img
                 className='rounded-[50px] max-w-[180px] md:rounded-[80px] md:max-w-[250px]'
                 src='https://github.com/lkotlarenko.png'
-                alt='Leonardo Kotlarenko'
+                alt='@lkotlarenko'
                 loading='lazy'
               />
-              <p className='defaultPageText'>Leonardo Kotlarenko</p>
+              <p className='defaultPageText'>@lkotlarenko</p>
               <Link
                 to='https://linkedin.com/in/lkotlarenko'
                 title={t('about.btnTitle.linkedInKotlarenko')}
@@ -48,10 +48,10 @@ const About: React.FC = () => {
               <img
                 className='rounded-[50px] max-w-[180px] md:rounded-[80px] md:max-w-[250px]'
                 src='https://github.com/LeonardoKleimpaul.png'
-                alt='Leonardo Kleimpaul'
+                alt='@LeonardoKleimpaul'
                 loading='lazy'
               />
-              <p className='defaultPageText'>Leonardo Kleimpaul</p>
+              <p className='defaultPageText'>@LeonardoKleimpaul</p>
               <Link
                 to='https://linkedin.com/in/leonardo-kleimpaul'
                 title={t('about.btnTitle.linkedInKleimpaul')}

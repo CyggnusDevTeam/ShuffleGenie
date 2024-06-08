@@ -4,7 +4,7 @@
       "about": {
         "title": "회사 소개",
         "description": {
-          "part1": "Cyggnus는 Leonardo Kotlarenko와 Leonardo Kleimpaul에 의해 설립되었습니다;",
+          "part1": "Cyggnus는 @lkotlarenko와 @Leonardo Kleimpaul에 의해 설립되었습니다;",
           "part2": "우리의 목표는 재미있고 유용한 오픈 소스 애플리케이션을 만드는 것입니다."
         },
         "altImg": {
@@ -76,7 +76,7 @@
         "close": "닫기",
         "langList": {
           "de": "독일어",
-          "en": "영어",
+          "en": "English",
           "es": "스페인어",
           "fr": "프랑스어",
           "hi": "힌디어",
@@ -84,7 +84,7 @@
           "ja": "일본어",
           "ko": "한국어",
           "nl": "네덜란드어",
-          "pt-BR": "브라질 포르투갈어",
+          "pt-BR": "Português Brasileiro",
           "ru": "러시아어",
           "uk": "우크라이나어",
           "zh": "중국어"

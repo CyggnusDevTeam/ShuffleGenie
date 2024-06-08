@@ -4,7 +4,7 @@
       "about": {
         "title": "Chi Siamo",
         "description": {
-          "part1": "Cyggnus è stata fondata da Leonardo Kotlarenko e Leonardo Kleimpaul;",
+          "part1": "Cyggnus è stata fondata da @lkotlarenko e @Leonardo Kleimpaul;",
           "part2": "Il nostro obiettivo è creare applicazioni open source divertenti e utili."
         },
         "altImg": {
@@ -76,7 +76,7 @@
         "close": "Chiudi",
         "langList": {
           "de": "Tedesco",
-          "en": "Inglese",
+          "en": "English",
           "es": "Spagnolo",
           "fr": "Francese",
           "hi": "Hindi",
@@ -84,7 +84,7 @@
           "ja": "Giapponese",
           "ko": "Coreano",
           "nl": "Olandese",
-          "pt-BR": "Portoghese Brasiliano",
+          "pt-BR": "Português Brasileiro",
           "ru": "Russo",
           "uk": "Ucraino",
           "zh": "Cinese"
